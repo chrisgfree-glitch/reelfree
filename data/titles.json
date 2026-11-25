@@ -1315,7 +1315,8 @@
     "featured": true,
     "rating": 5.8,
     "votes": 10,
-    "featuredRank": 1
+    "featuredRank": 1,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "buzzkill-2026-tmdb",
@@ -1337,7 +1338,8 @@
     "featured": true,
     "rating": 5.8,
     "votes": 12,
-    "featuredRank": 2
+    "featuredRank": 2,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "lion-fist-2026-tmdb",
@@ -1359,7 +1361,8 @@
     "featured": true,
     "rating": 7.2,
     "votes": 58,
-    "featuredRank": 3
+    "featuredRank": 3,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "hansel-gretel-s-halloween-2026-tmdb",
@@ -1382,7 +1385,8 @@
     "featured": true,
     "rating": 6.8,
     "votes": 9,
-    "featuredRank": 6
+    "featuredRank": 6,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-last-assassins-2026-tmdb",
@@ -1405,7 +1409,8 @@
     "featured": true,
     "rating": 5.9,
     "votes": 7,
-    "featuredRank": 9
+    "featuredRank": 9,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-odyssey-2026-tmdb",
@@ -1427,7 +1432,8 @@
     "featured": true,
     "rating": 4.0,
     "votes": 784,
-    "featuredRank": 20
+    "featuredRank": 20,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "kill-code-2026-tmdb",
@@ -1449,7 +1455,8 @@
     "featured": true,
     "rating": 4.1,
     "votes": 28,
-    "featuredRank": 35
+    "featuredRank": 35,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "winter-battleground-2026-tmdb",
@@ -1473,7 +1480,8 @@
     "featured": true,
     "rating": 4.0,
     "votes": 7,
-    "featuredRank": 39
+    "featuredRank": 39,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "rise-of-the-conqueror-2026-tmdb",
@@ -1497,7 +1505,8 @@
     "featured": true,
     "rating": 6.0,
     "votes": 33,
-    "featuredRank": 40
+    "featuredRank": 40,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "good-boy-2026-tmdb",
@@ -1521,7 +1530,8 @@
     "featured": true,
     "rating": 7.2,
     "votes": 406,
-    "featuredRank": 49
+    "featuredRank": 49,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "panda-plan-the-magical-tribe-2026-tmdb",
@@ -1544,7 +1554,8 @@
     "featured": true,
     "rating": 6.5,
     "votes": 28,
-    "featuredRank": 62
+    "featuredRank": 62,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-anacondas-2025-tmdb",
@@ -1566,7 +1577,8 @@
     "image": "https://image.tmdb.org/t/p/w780/ryA5uYC7mVZv9dEnAGvL9Iv8kVZ.jpg",
     "featured": true,
     "rating": 3.5,
-    "votes": 21
+    "votes": 21,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-wrecker-2025-tmdb",
@@ -1587,7 +1599,8 @@
     "image": "https://image.tmdb.org/t/p/w780/A9rGTysXjfMc1TbO7Mhsk1oX5Qz.jpg",
     "featured": true,
     "rating": 6.5,
-    "votes": 13
+    "votes": 13,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "lesbian-space-princess-2025-tmdb",
@@ -1609,7 +1622,8 @@
     "image": "https://image.tmdb.org/t/p/w780/rS0ewRtB2ugDvbaVUoCXOpBOppM.jpg",
     "featured": true,
     "rating": 3.8,
-    "votes": 251
+    "votes": 251,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-voice-of-hind-rajab-2025-tmdb",
@@ -1632,7 +1646,8 @@
     "featured": true,
     "rating": 8.1,
     "votes": 399,
-    "popRank": 40
+    "popRank": 40,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "great-white-waters-2025-tmdb",
@@ -1653,7 +1668,8 @@
     "image": "https://image.tmdb.org/t/p/w780/bKdoPItpm9XIB342Sc8a5UmJGqo.jpg",
     "featured": true,
     "rating": 3.8,
-    "votes": 22
+    "votes": 22,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-baby-in-the-basket-2025-tmdb",
@@ -1675,7 +1691,8 @@
     "image": "https://image.tmdb.org/t/p/w780/8QneCqkYuxUkOeTCAWh2Lmrfkpd.jpg",
     "featured": true,
     "rating": 4.8,
-    "votes": 11
+    "votes": 11,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "sidelined-the-qb-and-me-2025-tmdb",
@@ -1696,7 +1713,8 @@
     "image": "https://image.tmdb.org/t/p/w780/wbDkvShcrveXNFsgyujY4kdurVa.jpg",
     "featured": true,
     "rating": 6.4,
-    "votes": 283
+    "votes": 283,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "dark-nuns-2025-tmdb",
@@ -1719,7 +1737,8 @@
     "image": "https://image.tmdb.org/t/p/w780/bQdYYutvomoxfLQK8gTV8Z3qsmv.jpg",
     "featured": true,
     "rating": 6.2,
-    "votes": 107
+    "votes": 107,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-prosecutor-2024-tmdb",
@@ -1743,7 +1762,8 @@
     "image": "https://image.tmdb.org/t/p/w780/4frrYwamVG0eXhdMTy3cpNNcCBp.jpg",
     "featured": true,
     "rating": 7.1,
-    "votes": 249
+    "votes": 249,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "tell-me-what-you-want-2024-tmdb",
@@ -1765,7 +1785,8 @@
     "image": "https://image.tmdb.org/t/p/w780/kHJlXiwxcMAf9R934f0ncEBAMXg.jpg",
     "featured": true,
     "rating": 6.1,
-    "votes": 329
+    "votes": 329,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "hidden-face-2024-tmdb",
@@ -1787,7 +1808,8 @@
     "image": "https://image.tmdb.org/t/p/w780/g6JXk9xRGUMDjYtBfBMRy3G8t8l.jpg",
     "featured": true,
     "rating": 5.4,
-    "votes": 77
+    "votes": 77,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "a-christmas-castle-proposal-a-royal-in-paradise-2-2024-tmdb",
@@ -1808,7 +1830,8 @@
     "image": "https://image.tmdb.org/t/p/w780/5fTOeA4qulMp0sjwzuKsgl1ihoV.jpg",
     "featured": true,
     "rating": 6.9,
-    "votes": 16
+    "votes": 16,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-last-stand-of-ellen-cole-2024-tmdb",
@@ -1829,7 +1852,8 @@
     "image": "https://image.tmdb.org/t/p/w780/rRIz3KweJDjnJ4GtCZJT3JPEYgL.jpg",
     "featured": true,
     "rating": 8.1,
-    "votes": 88
+    "votes": 88,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-crow-2024-tmdb",
@@ -1850,7 +1874,8 @@
     "image": "https://image.tmdb.org/t/p/w780/503LUrI9juBk1rktOPzxyMUTDEu.jpg",
     "featured": true,
     "rating": 5.7,
-    "votes": 1382
+    "votes": 1382,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "transformers-age-of-extinction-2014-tmdb",
@@ -1870,7 +1895,8 @@
     "tmdbPopularity": 14.1,
     "image": "https://image.tmdb.org/t/p/w780/wxr4Z6E83h14CogsZOzDm1vuDX3.jpg",
     "rating": 6.0,
-    "votes": 9082
+    "votes": 9082,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-1966-tmdb",
@@ -1893,7 +1919,8 @@
     "endYear": 1969,
     "tvRank": 1,
     "rating": 8.0,
-    "votes": 1610
+    "votes": 1610,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "stargate-sg-1-1997-tmdb",
@@ -1917,7 +1944,8 @@
     "endYear": 2007,
     "tvRank": 2,
     "rating": 8.3,
-    "votes": 1947
+    "votes": 1947,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "murdoch-mysteries-2008-tmdb",
@@ -1941,7 +1969,8 @@
     "endYear": null,
     "tvRank": 4,
     "rating": 7.7,
-    "votes": 309
+    "votes": 309,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-rainmaker-2025-tmdb",
@@ -1964,7 +1993,8 @@
     "endYear": null,
     "tvRank": 5,
     "rating": 7.7,
-    "votes": 64
+    "votes": 64,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "tracker-2024-tmdb",
@@ -1987,7 +2017,8 @@
     "endYear": null,
     "tvRank": 6,
     "rating": 7.6,
-    "votes": 357
+    "votes": 357,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "survivor-2000-tmdb",
@@ -2010,7 +2041,8 @@
     "endYear": null,
     "tvRank": 7,
     "rating": 7.3,
-    "votes": 463
+    "votes": 463,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "ghosts-2021-tmdb",
@@ -2033,7 +2065,8 @@
     "endYear": null,
     "tvRank": 8,
     "rating": 8.1,
-    "votes": 523
+    "votes": 523,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "hot-ones-2015-tmdb",
@@ -2058,7 +2091,8 @@
     "endYear": null,
     "tvRank": 9,
     "rating": 7.1,
-    "votes": 84
+    "votes": 84,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "matlock-2024-tmdb",
@@ -2081,7 +2115,8 @@
     "endYear": null,
     "tvRank": 10,
     "rating": 6.9,
-    "votes": 172
+    "votes": 172,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "snowpiercer-2020-tmdb",
@@ -2105,7 +2140,8 @@
     "endYear": 2024,
     "tvRank": 11,
     "rating": 7.3,
-    "votes": 1529
+    "votes": 1529,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "killjoys-2015-tmdb",
@@ -2128,7 +2164,8 @@
     "endYear": 2019,
     "tvRank": 12,
     "rating": 6.9,
-    "votes": 548
+    "votes": 548,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-x-files-1993-tmdb",
@@ -2151,7 +2188,8 @@
     "endYear": 2018,
     "tvRank": 13,
     "rating": 8.4,
-    "votes": 3805
+    "votes": 3805,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "continuum-2012-tmdb",
@@ -2177,7 +2215,8 @@
     "endYear": 2015,
     "tvRank": 14,
     "rating": 7.5,
-    "votes": 998
+    "votes": 998,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "heroes-2006-tmdb",
@@ -2200,7 +2239,8 @@
     "endYear": 2010,
     "tvRank": 15,
     "rating": 7.4,
-    "votes": 2750
+    "votes": 2750,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "battlestar-galactica-2004-tmdb",
@@ -2223,7 +2263,8 @@
     "endYear": 2009,
     "tvRank": 16,
     "rating": 8.2,
-    "votes": 1910
+    "votes": 1910,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "stargate-atlantis-2004-tmdb",
@@ -2246,7 +2287,8 @@
     "endYear": 2009,
     "tvRank": 17,
     "rating": 8.0,
-    "votes": 1273
+    "votes": 1273,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "andromeda-2000-tmdb",
@@ -2270,7 +2312,8 @@
     "endYear": 2005,
     "tvRank": 18,
     "rating": 7.1,
-    "votes": 319
+    "votes": 319,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "farscape-1999-tmdb",
@@ -2296,7 +2339,8 @@
     "endYear": 2003,
     "tvRank": 19,
     "rating": 7.9,
-    "votes": 650
+    "votes": 650,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "earth-final-conflict-1997-tmdb",
@@ -2320,7 +2364,8 @@
     "endYear": 2002,
     "tvRank": 20,
     "rating": 6.9,
-    "votes": 107
+    "votes": 107,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-voyager-1995-tmdb",
@@ -2343,7 +2388,8 @@
     "endYear": 2001,
     "tvRank": 21,
     "rating": 7.8,
-    "votes": 1195
+    "votes": 1195,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "sliders-1995-tmdb",
@@ -2366,7 +2412,8 @@
     "endYear": 2000,
     "tvRank": 22,
     "rating": 7.6,
-    "votes": 500
+    "votes": 500,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-deep-space-nine-1993-tmdb",
@@ -2389,7 +2436,8 @@
     "endYear": 1999,
     "tvRank": 23,
     "rating": 7.9,
-    "votes": 1058
+    "votes": 1058,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-the-next-generation-1987-tmdb",
@@ -2412,7 +2460,8 @@
     "endYear": 1994,
     "tvRank": 24,
     "rating": 8.4,
-    "votes": 1910
+    "votes": 1910,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "quantum-leap-1989-tmdb",
@@ -2435,7 +2484,8 @@
     "endYear": 1993,
     "tvRank": 25,
     "rating": 8.0,
-    "votes": 828
+    "votes": 828,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-outer-limits-1963-tmdb",
@@ -2459,7 +2509,8 @@
     "endYear": 1965,
     "tvRank": 26,
     "rating": 7.8,
-    "votes": 170
+    "votes": 170,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "transformers-2007",
@@ -2472,7 +2523,8 @@
     "url": "https://pluto.tv/us/movies/663a63b3e42c230013e7c853/",
     "description": "Two robot races, the heroic Autobots and the evil Decepticons, bring their war to Earth, and a teenager holds the key to its outcome.",
     "rating": 6.9,
-    "votes": 12767
+    "votes": 12767,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-iii-search-for-spock",
@@ -2484,7 +2536,8 @@
     "url": "https://pluto.tv/us/movies/5cc2230e251c9fc6e72dde42/",
     "description": "Kirk and his crew risk their careers to return to the Genesis planet in search of Spock.",
     "rating": 6.6,
-    "votes": 1626
+    "votes": 1626,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-v-final-frontier",
@@ -2496,7 +2549,8 @@
     "url": "https://pluto.tv/us/movies/5f0f4d54f76d00001aed70e2/",
     "description": "Spock's long-lost half-brother hijacks the Enterprise on an obsessive quest to the center of the galaxy.",
     "rating": 5.7,
-    "votes": 1390
+    "votes": 1390,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-spirit-lock-2026-tmdb",
@@ -2517,7 +2571,8 @@
     "image": "https://image.tmdb.org/t/p/w780/6EAVlRVA0yMtz8sOVvdMpaqitvQ.jpg",
     "rating": 3.6,
     "votes": 7,
-    "featuredRank": 4
+    "featuredRank": 4,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "hive-2026-tmdb",
@@ -2538,7 +2593,8 @@
     "image": "https://image.tmdb.org/t/p/w780/kuYX624dH6P0LsWTEWuLo9d3kNV.jpg",
     "rating": 4.6,
     "votes": 8,
-    "featuredRank": 5
+    "featuredRank": 5,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "how-to-lose-a-popularity-contest-2026-tmdb",
@@ -2559,7 +2615,8 @@
     "image": "https://image.tmdb.org/t/p/w780/p6RXoveMLzMGrmfCsRgARNRIYHZ.jpg",
     "rating": 5.1,
     "votes": 16,
-    "featuredRank": 7
+    "featuredRank": 7,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "ip-man-kung-fu-legend-2026-tmdb",
@@ -2580,7 +2637,8 @@
     "image": "https://image.tmdb.org/t/p/w780/6HBbzW5D7StUBRi0yO6ZEq9rNB5.jpg",
     "rating": 7.0,
     "votes": 33,
-    "featuredRank": 8
+    "featuredRank": 8,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "alien-storm-2026-tmdb",
@@ -2601,7 +2659,8 @@
     "image": "https://image.tmdb.org/t/p/w780/vHToMb5AuLQPLCmeonZt1CnkDyO.jpg",
     "rating": 2.8,
     "votes": 6,
-    "featuredRank": 10
+    "featuredRank": 10,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "water-park-shark-2026-tmdb",
@@ -2622,7 +2681,8 @@
     "image": "https://image.tmdb.org/t/p/w780/lCEB4vJMHiT8KEWJ7h2dpM5Zya1.jpg",
     "rating": 5.2,
     "votes": 14,
-    "featuredRank": 11
+    "featuredRank": 11,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "kill-trip-2026-tmdb",
@@ -2643,7 +2703,8 @@
     "image": "https://image.tmdb.org/t/p/w780/9NkPCbhywlcINLUKQOGNHNp1ALk.jpg",
     "rating": 5.9,
     "votes": 5,
-    "featuredRank": 12
+    "featuredRank": 12,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "sunset-strip-killers-2026-tmdb",
@@ -2666,7 +2727,8 @@
     "image": "https://image.tmdb.org/t/p/w780/njzRgYxdvlVfxrponW24htVznCe.jpg",
     "rating": 7.5,
     "votes": 7,
-    "featuredRank": 13
+    "featuredRank": 13,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "mockbuster-2026-tmdb",
@@ -2687,7 +2749,8 @@
     "image": "https://image.tmdb.org/t/p/w780/jPHnzX5YzhkxMM46pmUYUrqzzjT.jpg",
     "rating": 6.2,
     "votes": 8,
-    "featuredRank": 14
+    "featuredRank": 14,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "cruel-love-2026-tmdb",
@@ -2708,7 +2771,8 @@
     "image": "https://image.tmdb.org/t/p/w780/T6vpaiIyZm756ZtKIiUYOL3o84.jpg",
     "rating": 6.4,
     "votes": 5,
-    "featuredRank": 15
+    "featuredRank": 15,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "infiltrate-2026-tmdb",
@@ -2729,7 +2793,8 @@
     "image": "https://image.tmdb.org/t/p/w780/cEvyR19pmQ2s3DE8mdyL0m2Lv2N.jpg",
     "rating": 7.4,
     "votes": 42,
-    "featuredRank": 16
+    "featuredRank": 16,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "dragn-2026-tmdb",
@@ -2751,7 +2816,8 @@
     "image": "https://image.tmdb.org/t/p/w780/8FJAKAcMHcjivv0uYAAGsA6DNJf.jpg",
     "rating": 4.0,
     "votes": 7,
-    "featuredRank": 17
+    "featuredRank": 17,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-leaching-2026-tmdb",
@@ -2772,7 +2838,8 @@
     "image": "https://image.tmdb.org/t/p/w780/sH85TD7mzEErRQhbodSP1hBkMdw.jpg",
     "rating": 5.7,
     "votes": 5,
-    "featuredRank": 18
+    "featuredRank": 18,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "popeye-4-resurrection-2026-tmdb",
@@ -2793,7 +2860,8 @@
     "image": "https://image.tmdb.org/t/p/w780/fQG8Qcxi5aroCNfKK2gM6sBF2b8.jpg",
     "rating": 5.9,
     "votes": 5,
-    "featuredRank": 19
+    "featuredRank": 19,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "summer-s-last-resort-2026-tmdb",
@@ -2814,7 +2882,8 @@
     "image": "https://image.tmdb.org/t/p/w780/7iMZWD9ecKLAKpi71zR3impjHxr.jpg",
     "rating": 6.4,
     "votes": 10,
-    "featuredRank": 21
+    "featuredRank": 21,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "blue-2026-tmdb",
@@ -2835,7 +2904,8 @@
     "image": "https://image.tmdb.org/t/p/w780/mnk9eSwyzKSj31z9qkX3GAtsQmJ.jpg",
     "rating": 6.8,
     "votes": 5,
-    "featuredRank": 22
+    "featuredRank": 22,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "beliath-2026-tmdb",
@@ -2856,7 +2926,8 @@
     "image": "https://image.tmdb.org/t/p/w780/k0oeZ2ox9yjhkJDl8DHIiyk6wkF.jpg",
     "rating": 5.4,
     "votes": 5,
-    "featuredRank": 23
+    "featuredRank": 23,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "land-of-wolves-2026-tmdb",
@@ -2877,7 +2948,8 @@
     "image": "https://image.tmdb.org/t/p/w780/FGjyKdJbrrqABr8x4ZwQLGrmbs.jpg",
     "rating": 7.2,
     "votes": 10,
-    "featuredRank": 24
+    "featuredRank": 24,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "stepfather-2026-tmdb",
@@ -2898,7 +2970,8 @@
     "image": "https://image.tmdb.org/t/p/w780/vFC87TKPZwPR7E7a8gkrYLSBkVR.jpg",
     "rating": 6.0,
     "votes": 12,
-    "featuredRank": 25
+    "featuredRank": 25,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "i-know-who-you-are-2026-tmdb",
@@ -2919,7 +2992,8 @@
     "image": "https://image.tmdb.org/t/p/w780/8Jjl0CUOt2T6Wf2hYcii4pd0SDR.jpg",
     "rating": 6.9,
     "votes": 20,
-    "featuredRank": 26
+    "featuredRank": 26,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "night-of-blood-2026-tmdb",
@@ -2940,7 +3014,8 @@
     "image": "https://image.tmdb.org/t/p/w780/sa7Ko9iXItGwtBmsBSehSyz6mk3.jpg",
     "rating": 6.1,
     "votes": 7,
-    "featuredRank": 27
+    "featuredRank": 27,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "40-dates-and-40-nights-2026-tmdb",
@@ -2961,7 +3036,8 @@
     "image": "https://image.tmdb.org/t/p/w780/dgleeErFcEHEacYabCTDwr1zAl2.jpg",
     "rating": 7.4,
     "votes": 44,
-    "featuredRank": 28
+    "featuredRank": 28,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "ninja-wars-blackfox-vs-shogun-s-ninja-2026-tmdb",
@@ -2983,7 +3059,8 @@
     "image": "https://image.tmdb.org/t/p/w780/6MqW1z9Mna9U66tzyx3dieVqtXL.jpg",
     "rating": 7.4,
     "votes": 12,
-    "featuredRank": 29
+    "featuredRank": 29,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "speed-demon-2026-tmdb",
@@ -3006,7 +3083,8 @@
     "image": "https://image.tmdb.org/t/p/w780/wivNPOtg6saz1XrCTU3C7sYYFt6.jpg",
     "rating": 4.7,
     "votes": 30,
-    "featuredRank": 30
+    "featuredRank": 30,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "sight-unseen-2026-tmdb",
@@ -3028,7 +3106,8 @@
     "image": "https://image.tmdb.org/t/p/w780/vdUv5ER7jaleeyiiDWxmMXnc4hk.jpg",
     "rating": 6.5,
     "votes": 5,
-    "featuredRank": 31
+    "featuredRank": 31,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-plastic-men-2026-tmdb",
@@ -3051,7 +3130,8 @@
     "image": "https://image.tmdb.org/t/p/w780/7Xb6T5B2wQy0dcKVlgriyVqYDdt.jpg",
     "rating": 6.7,
     "votes": 36,
-    "featuredRank": 32
+    "featuredRank": 32,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-wolf-and-the-lamb-2026-tmdb",
@@ -3072,7 +3152,8 @@
     "image": "https://image.tmdb.org/t/p/w780/b7SffvCoD0EQpmpR6g0YhUeFpdV.jpg",
     "rating": 4.9,
     "votes": 9,
-    "featuredRank": 33
+    "featuredRank": 33,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "dirty-hands-2026-tmdb",
@@ -3095,7 +3176,8 @@
     "image": "https://image.tmdb.org/t/p/w780/9znueRe5J8Q6b11wO3gzpxAWzZz.jpg",
     "rating": 4.6,
     "votes": 6,
-    "featuredRank": 34
+    "featuredRank": 34,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "special-op-rent-a-cop-2026-tmdb",
@@ -3116,7 +3198,8 @@
     "image": "https://image.tmdb.org/t/p/w780/4jdNu1k043yqWNaGvtYcBXtgruu.jpg",
     "rating": 5.8,
     "votes": 6,
-    "featuredRank": 36
+    "featuredRank": 36,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "thinestra-2026-tmdb",
@@ -3138,7 +3221,8 @@
     "image": "https://image.tmdb.org/t/p/w780/oKCgBKJxd9PjbaqhyPoSw6QyLLc.jpg",
     "rating": 5.3,
     "votes": 9,
-    "featuredRank": 37
+    "featuredRank": 37,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-morrigan-2026-tmdb",
@@ -3159,7 +3243,8 @@
     "image": "https://image.tmdb.org/t/p/w780/jdy2Q1JTKun986X6XOLWzGr7XB4.jpg",
     "rating": 3.7,
     "votes": 7,
-    "featuredRank": 38
+    "featuredRank": 38,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "refuge-2026-tmdb",
@@ -3182,7 +3267,8 @@
     "image": "https://image.tmdb.org/t/p/w780/br9kggMXsEVkyfTa5SHGzEEXeC2.jpg",
     "rating": 4.3,
     "votes": 10,
-    "featuredRank": 41
+    "featuredRank": 41,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "our-hero-balthazar-2026-tmdb",
@@ -3203,7 +3289,8 @@
     "image": "https://image.tmdb.org/t/p/w780/2xSg4ELiU3BAxHO2xVQjWxCMURJ.jpg",
     "rating": 6.4,
     "votes": 31,
-    "featuredRank": 42
+    "featuredRank": 42,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "capture-2026-tmdb",
@@ -3224,7 +3311,8 @@
     "image": "https://image.tmdb.org/t/p/w780/rBGP7dcuwBKif01Nb5FzVvHbxcY.jpg",
     "rating": 5.2,
     "votes": 22,
-    "featuredRank": 43
+    "featuredRank": 43,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "scared-to-death-2026-tmdb",
@@ -3245,7 +3333,8 @@
     "image": "https://image.tmdb.org/t/p/w780/3RjydMNJFUf6x71dNEelYYjZpeH.jpg",
     "rating": 6.1,
     "votes": 6,
-    "featuredRank": 44
+    "featuredRank": 44,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "elon-musk-unveiled-the-tesla-experiment-2026-tmdb",
@@ -3266,7 +3355,8 @@
     "image": "https://image.tmdb.org/t/p/w780/8kiI7O8EHGBxRZy93XLjSYSaVXt.jpg",
     "rating": 8.1,
     "votes": 5,
-    "featuredRank": 45
+    "featuredRank": 45,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "bad-men-must-bleed-2026-tmdb",
@@ -3288,7 +3378,8 @@
     "image": "https://image.tmdb.org/t/p/w780/k1eyz74wXgoQa8H7lwKwYHZH9e7.jpg",
     "rating": 7.4,
     "votes": 19,
-    "featuredRank": 46
+    "featuredRank": 46,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-deadly-little-mermaid-2026-tmdb",
@@ -3310,7 +3401,8 @@
     "image": "https://image.tmdb.org/t/p/w780/yzIjyPtwvyjHelxqIRXGpiaucPG.jpg",
     "rating": 4.7,
     "votes": 28,
-    "featuredRank": 47
+    "featuredRank": 47,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "nft-cursed-images-2026-tmdb",
@@ -3331,7 +3423,8 @@
     "image": "https://image.tmdb.org/t/p/w780/rVFW91FgYbya2Jeuu6MKhbwtawJ.jpg",
     "rating": 3.6,
     "votes": 6,
-    "featuredRank": 48
+    "featuredRank": 48,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "when-we-get-there-2026-tmdb",
@@ -3354,7 +3447,8 @@
     "image": "https://image.tmdb.org/t/p/w780/6FLeTgA5avNLZNAm35bFqTUFxKm.jpg",
     "rating": 4.6,
     "votes": 5,
-    "featuredRank": 50
+    "featuredRank": 50,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-napa-boys-2026-tmdb",
@@ -3378,7 +3472,8 @@
     "image": "https://image.tmdb.org/t/p/w780/2UO0hFKCrSMvYFF7R6TB4pBan9g.jpg",
     "rating": 5.0,
     "votes": 5,
-    "featuredRank": 51
+    "featuredRank": 51,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "matter-of-time-2026-tmdb",
@@ -3399,7 +3494,8 @@
     "image": "https://image.tmdb.org/t/p/w780/ApqTiOGKcclNTU1mnplJgthNVrd.jpg",
     "rating": 1.4,
     "votes": 5,
-    "featuredRank": 52
+    "featuredRank": 52,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "billy-idol-should-be-dead-2026-tmdb",
@@ -3420,7 +3516,8 @@
     "image": "https://image.tmdb.org/t/p/w780/yDwaf1LUyJnZf48XMfm0gJWhqb.jpg",
     "rating": 6.9,
     "votes": 16,
-    "featuredRank": 53
+    "featuredRank": 53,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "for-worse-2026-tmdb",
@@ -3441,7 +3538,8 @@
     "image": "https://image.tmdb.org/t/p/w780/kIEuiMepZ8gPjxQdplwZ7vf3pNG.jpg",
     "rating": 5.9,
     "votes": 8,
-    "featuredRank": 54
+    "featuredRank": 54,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "bring-the-law-2026-tmdb",
@@ -3462,7 +3560,8 @@
     "image": "https://image.tmdb.org/t/p/w780/iibib9kLskmOodcsOMedXXxRju5.jpg",
     "rating": 5.6,
     "votes": 8,
-    "featuredRank": 55
+    "featuredRank": 55,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "amityvillenado-2026-tmdb",
@@ -3484,7 +3583,8 @@
     "image": "https://image.tmdb.org/t/p/w780/ivtVqVvbN9QBiEIoVUyMQyfnXyo.jpg",
     "rating": 6.5,
     "votes": 5,
-    "featuredRank": 56
+    "featuredRank": 56,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "operation-taco-gary-s-2026-tmdb",
@@ -3505,7 +3605,8 @@
     "image": "https://image.tmdb.org/t/p/w780/bjWqyS38dQA1Ra9sNcL62gSEWor.jpg",
     "rating": 6.3,
     "votes": 22,
-    "featuredRank": 57
+    "featuredRank": 57,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "starbright-2026-tmdb",
@@ -3527,7 +3628,8 @@
     "image": "https://image.tmdb.org/t/p/w780/tZiRd4IpoNiaoLXr2o2YfhTMjE2.jpg",
     "rating": 5.7,
     "votes": 20,
-    "featuredRank": 58
+    "featuredRank": 58,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "holy-days-2026-tmdb",
@@ -3548,7 +3650,8 @@
     "image": "https://image.tmdb.org/t/p/w780/mSdaNfnszAhI14ZEJCJbz3vXSWD.jpg",
     "rating": 6.4,
     "votes": 12,
-    "featuredRank": 59
+    "featuredRank": 59,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "frankenstein-s-bride-2026-tmdb",
@@ -3569,7 +3672,8 @@
     "image": "https://image.tmdb.org/t/p/w780/idnxQjDQpwrcF2UnwHF5ZBkt4H1.jpg",
     "rating": 5.1,
     "votes": 5,
-    "featuredRank": 60
+    "featuredRank": 60,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "minnie-s-midnight-massacre-2026-tmdb",
@@ -3591,7 +3695,8 @@
     "image": "https://image.tmdb.org/t/p/w780/bPN80eWwrukw6EulhWu7Y3Ha5P4.jpg",
     "rating": 4.6,
     "votes": 7,
-    "featuredRank": 61
+    "featuredRank": 61,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "you-can-t-win-2026-tmdb",
@@ -3612,7 +3717,8 @@
     "image": "https://image.tmdb.org/t/p/w780/4c3yAe8HzNbrGHQefqXiKeGGrsJ.jpg",
     "rating": 4.9,
     "votes": 8,
-    "featuredRank": 63
+    "featuredRank": 63,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "quantum-supremacy-2026-tmdb",
@@ -3634,7 +3740,8 @@
     "image": "https://image.tmdb.org/t/p/w780/zEsFCfW7c8x2X7q3uLbZYoGka7O.jpg",
     "rating": 4.8,
     "votes": 82,
-    "featuredRank": 64
+    "featuredRank": 64,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "kissing-is-the-easy-part-2026-tmdb",
@@ -3655,7 +3762,8 @@
     "image": "https://image.tmdb.org/t/p/w780/7yuHdP85F2ZxhKbSoPgCBT9uJT3.jpg",
     "rating": 7.2,
     "votes": 111,
-    "featuredRank": 65
+    "featuredRank": 65,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "demon-squad-tooth-and-claw-2026-tmdb",
@@ -3677,7 +3785,8 @@
     "image": "https://image.tmdb.org/t/p/w780/xzvAhpvOcn2Lisjy4lqV7uRjNBb.jpg",
     "rating": 4.8,
     "votes": 6,
-    "featuredRank": 66
+    "featuredRank": 66,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "by-design-2026-tmdb",
@@ -3699,7 +3808,8 @@
     "image": "https://image.tmdb.org/t/p/w780/v8dorP6IGgBmH0DJYvA5SJ05D8m.jpg",
     "rating": 5.4,
     "votes": 10,
-    "featuredRank": 67
+    "featuredRank": 67,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "basta-mam-2026-tmdb",
@@ -3720,7 +3830,8 @@
     "image": "https://image.tmdb.org/t/p/w780/mlq3sZRQzcUmkGJSX1PZ7EMN1Bz.jpg",
     "rating": 6.9,
     "votes": 8,
-    "featuredRank": 68
+    "featuredRank": 68,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-grieving-2026-tmdb",
@@ -3743,7 +3854,8 @@
     "image": "https://image.tmdb.org/t/p/w780/im5reyQPEWcYTaK0Bz8tCpqPZj9.jpg",
     "rating": 3.8,
     "votes": 8,
-    "featuredRank": 69
+    "featuredRank": 69,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "bad-voodoo-2026-tmdb",
@@ -3764,7 +3876,8 @@
     "image": "https://image.tmdb.org/t/p/w780/6rLaRBNSwnrt9JG7himGqYpPnkz.jpg",
     "rating": 3.4,
     "votes": 8,
-    "featuredRank": 70
+    "featuredRank": 70,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "misdirection-2026-tmdb",
@@ -3785,7 +3898,8 @@
     "image": "https://image.tmdb.org/t/p/w780/pgVvGaqM77sQR90OeMMVNvQAxbg.jpg",
     "rating": 6.2,
     "votes": 111,
-    "featuredRank": 71
+    "featuredRank": 71,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-infinite-husk-2026-tmdb",
@@ -3806,7 +3920,8 @@
     "image": "https://image.tmdb.org/t/p/w780/72pMgMEHeh4tMhT0b8CQTU9rQUK.jpg",
     "rating": 5.2,
     "votes": 9,
-    "featuredRank": 72
+    "featuredRank": 72,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-huntsman-2026-tmdb",
@@ -3830,7 +3945,8 @@
     "image": "https://image.tmdb.org/t/p/w780/woAG66LiyVHaueMVLBkNbYSgJ4c.jpg",
     "rating": 6.1,
     "votes": 33,
-    "featuredRank": 73
+    "featuredRank": 73,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "lure-2026-tmdb",
@@ -3852,7 +3968,8 @@
     "image": "https://image.tmdb.org/t/p/w780/sLNRWSMJmPlQLJ3JhYaQYenkWDJ.jpg",
     "rating": 5.7,
     "votes": 5,
-    "featuredRank": 74
+    "featuredRank": 74,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "terri-joe-missionary-in-miami-2026-tmdb",
@@ -3873,7 +3990,8 @@
     "image": "https://image.tmdb.org/t/p/w780/dl0pL20Fnk1QpnZI0PCkC8EjEkd.jpg",
     "rating": 7.8,
     "votes": 6,
-    "featuredRank": 75
+    "featuredRank": 75,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "my-sister-s-bones-2026-tmdb",
@@ -3895,7 +4013,8 @@
     "image": "https://image.tmdb.org/t/p/w780/zxRhY6pLJCa9TBUbgcpl73ObeTZ.jpg",
     "rating": 7.0,
     "votes": 15,
-    "featuredRank": 76
+    "featuredRank": 76,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "vampire-zombies-from-space-2026-tmdb",
@@ -3917,7 +4036,8 @@
     "image": "https://image.tmdb.org/t/p/w780/fBYbbDPdugow2PSlIt6mJECiIRP.jpg",
     "rating": 6.4,
     "votes": 9,
-    "featuredRank": 77
+    "featuredRank": 77,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "love-in-paradise-2026-tmdb",
@@ -3938,7 +4058,8 @@
     "image": "https://image.tmdb.org/t/p/w780/sBUBeOikiWDqeJ5IS2fUOHPfHhQ.jpg",
     "rating": 5.3,
     "votes": 9,
-    "featuredRank": 78
+    "featuredRank": 78,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "a-sad-and-beautiful-world-2026-tmdb",
@@ -3959,7 +4080,8 @@
     "image": "https://image.tmdb.org/t/p/w780/lt7BVTAl7XL1uYYg8x6JI0LZWbb.jpg",
     "rating": 6.9,
     "votes": 26,
-    "featuredRank": 79
+    "featuredRank": 79,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "blackout-2026-tmdb",
@@ -3981,7 +4103,8 @@
     "image": "https://image.tmdb.org/t/p/w780/3m4jsYrVGx5hZCofSaUd6eNWzXD.jpg",
     "rating": 5.9,
     "votes": 11,
-    "featuredRank": 80
+    "featuredRank": 80,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "a-super-progressive-movie-2026-tmdb",
@@ -4002,7 +4125,8 @@
     "image": "https://image.tmdb.org/t/p/w780/atF22WebvvvMaED3Imuj5QsPaFy.jpg",
     "rating": 4.8,
     "votes": 11,
-    "featuredRank": 81
+    "featuredRank": 81,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "speed-faster-2026-tmdb",
@@ -4024,7 +4148,8 @@
     "image": "https://image.tmdb.org/t/p/w780/nUMclZJRRwREfeP8liJ7LOddjnY.jpg",
     "rating": 7.0,
     "votes": 10,
-    "featuredRank": 82
+    "featuredRank": 82,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "twin-2026-tmdb",
@@ -4045,7 +4170,8 @@
     "image": "https://image.tmdb.org/t/p/w780/kHWpCUd41muRgMtQyswd6sDsFCt.jpg",
     "rating": 4.4,
     "votes": 5,
-    "featuredRank": 83
+    "featuredRank": 83,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "busted-water-pipes-2026-tmdb",
@@ -4066,7 +4192,8 @@
     "image": "https://image.tmdb.org/t/p/w780/yBeSkhMSCA6FdckEMOQ9ROzibak.jpg",
     "rating": 5.7,
     "votes": 12,
-    "featuredRank": 84
+    "featuredRank": 84,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "he-s-watching-you-2026-tmdb",
@@ -4087,7 +4214,8 @@
     "image": "https://image.tmdb.org/t/p/w780/j4NdsFyYxPYAZl7ZYTD9wq1Tis2.jpg",
     "rating": 5.7,
     "votes": 16,
-    "featuredRank": 85
+    "featuredRank": 85,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-well-2026-tmdb",
@@ -4108,7 +4236,8 @@
     "image": "https://image.tmdb.org/t/p/w780/vuos5DEG6Bp6P0iBM4frmFYZIsM.jpg",
     "rating": 3.6,
     "votes": 5,
-    "featuredRank": 86
+    "featuredRank": 86,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "vhs-summer-camp-2026-tmdb",
@@ -4129,7 +4258,8 @@
     "image": "https://image.tmdb.org/t/p/w780/vsE3W0laXEEGf5509rnqAAVsO2C.jpg",
     "rating": 3.6,
     "votes": 5,
-    "featuredRank": 87
+    "featuredRank": 87,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "project-y-2026-tmdb",
@@ -4151,7 +4281,8 @@
     "image": "https://image.tmdb.org/t/p/w780/8yzfrJQRt90oBjSnKoziXl0A42l.jpg",
     "rating": 6.0,
     "votes": 21,
-    "featuredRank": 88
+    "featuredRank": 88,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-calling-witch-2026-tmdb",
@@ -4173,7 +4304,8 @@
     "image": "https://image.tmdb.org/t/p/w780/3ihuzorgMXhExPOlIiVirnLIS4s.jpg",
     "rating": 6.2,
     "votes": 16,
-    "featuredRank": 89
+    "featuredRank": 89,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "brother-2026-tmdb",
@@ -4194,7 +4326,8 @@
     "image": "https://image.tmdb.org/t/p/w780/wVmG8FLwr068ruowFIRIVi5oxck.jpg",
     "rating": 6.7,
     "votes": 5,
-    "featuredRank": 90
+    "featuredRank": 90,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "sleeping-beauty-next-door-2026-tmdb",
@@ -4216,7 +4349,8 @@
     "image": "https://image.tmdb.org/t/p/w780/lvCePLvpk7DIrxgWqusZCetjwT7.jpg",
     "rating": 8.5,
     "votes": 5,
-    "featuredRank": 91
+    "featuredRank": 91,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "rabisu-curse-of-the-demon-2026-tmdb",
@@ -4238,7 +4372,8 @@
     "image": "https://image.tmdb.org/t/p/w780/4gCf5Z0PEH5dkBtVySYnU2uVN77.jpg",
     "rating": 3.8,
     "votes": 7,
-    "featuredRank": 92
+    "featuredRank": 92,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "doctor-plague-2026-tmdb",
@@ -4259,7 +4394,8 @@
     "image": "https://image.tmdb.org/t/p/w780/p8BLVyC0aRgpGk3H5tQGR7e1fbL.jpg",
     "rating": 2.5,
     "votes": 5,
-    "featuredRank": 93
+    "featuredRank": 93,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "southern-scares-2026-tmdb",
@@ -4281,7 +4417,8 @@
     "image": "https://image.tmdb.org/t/p/w780/bKQqxyFm5xA9kZBwSlCB4ft75bR.jpg",
     "rating": 4.9,
     "votes": 10,
-    "featuredRank": 94
+    "featuredRank": 94,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-house-on-haunted-grounds-2026-tmdb",
@@ -4303,7 +4440,8 @@
     "image": "https://image.tmdb.org/t/p/w780/r9aYDDP7tHpwCvQbOxcfhZFBT63.jpg",
     "rating": 6.1,
     "votes": 29,
-    "featuredRank": 95
+    "featuredRank": 95,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "a-gangster-s-life-2026-tmdb",
@@ -4325,7 +4463,8 @@
     "image": "https://image.tmdb.org/t/p/w780/lq2wy4hY2iqcCRIn7Teh07QjfxR.jpg",
     "rating": 5.3,
     "votes": 6,
-    "featuredRank": 96
+    "featuredRank": 96,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "death-name-2026-tmdb",
@@ -4346,7 +4485,8 @@
     "image": "https://image.tmdb.org/t/p/w780/fEl0kNcRnhSpJTptb2yuVBYkPja.jpg",
     "rating": 4.7,
     "votes": 8,
-    "featuredRank": 97
+    "featuredRank": 97,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-butcher-s-blade-2026-tmdb",
@@ -4367,7 +4507,8 @@
     "image": "https://image.tmdb.org/t/p/w780/zYrldkWrMQO529xKQP7qRZUFKCD.jpg",
     "rating": 6.6,
     "votes": 18,
-    "featuredRank": 98
+    "featuredRank": 98,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-confession-2026-tmdb",
@@ -4388,7 +4529,8 @@
     "image": "https://image.tmdb.org/t/p/w780/lALfCsv7YMNrqpWzIaxjS81JKOm.jpg",
     "rating": 5.7,
     "votes": 34,
-    "featuredRank": 99
+    "featuredRank": 99,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "housemaid-2026-tmdb",
@@ -4410,7 +4552,8 @@
     "image": "https://image.tmdb.org/t/p/w780/aeq0CZZUV1pUr0jyah9YkNmVsLj.jpg",
     "rating": 4.0,
     "votes": 10,
-    "featuredRank": 100
+    "featuredRank": 100,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "forrest-gump-1994-tmdb",
@@ -4431,7 +4574,8 @@
     "image": "https://image.tmdb.org/t/p/w780/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
     "rating": 8.5,
     "votes": 30965,
-    "popRank": 1
+    "popRank": 1,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "fight-club-1999-tmdb",
@@ -4452,7 +4596,8 @@
     "image": "https://image.tmdb.org/t/p/w780/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
     "rating": 8.4,
     "votes": 33429,
-    "popRank": 2
+    "popRank": 2,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "lucy-shimmers-and-the-prince-of-peace-2020-tmdb",
@@ -4474,7 +4619,8 @@
     "image": "https://image.tmdb.org/t/p/w780/7jS69IM8bK7ooOWGFmM9G6JcenO.jpg",
     "rating": 8.4,
     "votes": 387,
-    "popRank": 3
+    "popRank": 3,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-legend-of-hei-2019-tmdb",
@@ -4496,7 +4642,8 @@
     "image": "https://image.tmdb.org/t/p/w780/niMCrXNVxEYXHSeQU0GPos0vdED.jpg",
     "rating": 8.4,
     "votes": 586,
-    "popRank": 4
+    "popRank": 4,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "hope-2013-tmdb",
@@ -4518,7 +4665,8 @@
     "image": "https://image.tmdb.org/t/p/w780/cri20wZDTl1X5QpxlWCSJ4HSpTF.jpg",
     "rating": 8.4,
     "votes": 933,
-    "popRank": 5
+    "popRank": 5,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "gabriel-s-inferno-2020-tmdb",
@@ -4539,7 +4687,8 @@
     "image": "https://image.tmdb.org/t/p/w780/nIkcTtuhmkl1GZO2LfZi7SwFz7F.jpg",
     "rating": 8.4,
     "votes": 2488,
-    "popRank": 6
+    "popRank": 6,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-pianist-2002-tmdb",
@@ -4561,7 +4710,8 @@
     "image": "https://image.tmdb.org/t/p/w780/c0fB9xk7D1aVb3Bg2rk2SVJcGn.jpg",
     "rating": 8.4,
     "votes": 10668,
-    "popRank": 7
+    "popRank": 7,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "once-upon-a-time-in-america-1984-tmdb",
@@ -4583,7 +4733,8 @@
     "image": "https://image.tmdb.org/t/p/w780/xlDUjb0Q5Dv6jPQRF5VE4IMjIy.jpg",
     "rating": 8.4,
     "votes": 6337,
-    "popRank": 8
+    "popRank": 8,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "gabriel-s-inferno-part-ii-2020-tmdb",
@@ -4604,7 +4755,8 @@
     "image": "https://image.tmdb.org/t/p/w780/jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg",
     "rating": 8.3,
     "votes": 1573,
-    "popRank": 9
+    "popRank": 9,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-legend-of-the-black-charro-2018-tmdb",
@@ -4625,7 +4777,8 @@
     "image": "https://image.tmdb.org/t/p/w780/3AXR3AFTHdU38OR14jfcK8FjJ5H.jpg",
     "rating": 8.3,
     "votes": 237,
-    "popRank": 10
+    "popRank": 10,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "gabriel-s-inferno-part-iii-2020-tmdb",
@@ -4646,7 +4799,8 @@
     "image": "https://image.tmdb.org/t/p/w780/cY9X3gHcu4zK9vAy3s77xyorm0d.jpg",
     "rating": 8.3,
     "votes": 1099,
-    "popRank": 11
+    "popRank": 11,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "ennio-2022-tmdb",
@@ -4669,7 +4823,8 @@
     "image": "https://image.tmdb.org/t/p/w780/iytQNneOp4lNSKktRh9T6Fo3UXk.jpg",
     "rating": 8.3,
     "votes": 397,
-    "popRank": 12
+    "popRank": 12,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "l-on-the-professional-1994-tmdb",
@@ -4691,7 +4846,8 @@
     "image": "https://image.tmdb.org/t/p/w780/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
     "rating": 8.3,
     "votes": 16841,
-    "popRank": 13
+    "popRank": 13,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-intouchables-2011-tmdb",
@@ -4714,7 +4870,8 @@
     "image": "https://image.tmdb.org/t/p/w780/q6OGlZ1KMEb14AC8KbPCxyNOal6.jpg",
     "rating": 8.3,
     "votes": 19112,
-    "popRank": 14
+    "popRank": 14,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "succubus-2024-tmdb",
@@ -4735,7 +4892,8 @@
     "image": "https://image.tmdb.org/t/p/w780/84h6avqHvW2TgLfERuqYkQwzjp1.jpg",
     "rating": 8.3,
     "votes": 281,
-    "popRank": 15
+    "popRank": 15,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "dedicated-to-my-ex-2019-tmdb",
@@ -4756,7 +4914,8 @@
     "image": "https://image.tmdb.org/t/p/w780/1fOsyhVz5qyX2rl1qqX6KImVhTx.jpg",
     "rating": 8.3,
     "votes": 517,
-    "popRank": 16
+    "popRank": 16,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "gladiator-2000-tmdb",
@@ -4777,7 +4936,8 @@
     "image": "https://image.tmdb.org/t/p/w780/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
     "rating": 8.2,
     "votes": 21935,
-    "popRank": 17
+    "popRank": 17,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "baraka-1992-tmdb",
@@ -4800,7 +4960,8 @@
     "image": "https://image.tmdb.org/t/p/w780/c0QYwNyeURswT7fxmR2mlfpdk0l.jpg",
     "rating": 8.2,
     "votes": 741,
-    "popRank": 18
+    "popRank": 18,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "dying-to-survive-2018-tmdb",
@@ -4821,7 +4982,8 @@
     "image": "https://image.tmdb.org/t/p/w780/dDQho10aLlZNJ2Gq6fcCx2t8aQQ.jpg",
     "rating": 8.2,
     "votes": 229,
-    "popRank": 19
+    "popRank": 19,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "one-direction-this-is-us-2013-tmdb",
@@ -4843,7 +5005,8 @@
     "image": "https://image.tmdb.org/t/p/w780/7e9uENnSM93CQXyzLSuzBUgxm4P.jpg",
     "rating": 8.2,
     "votes": 1085,
-    "popRank": 20
+    "popRank": 20,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "shutter-island-2010-tmdb",
@@ -4864,7 +5027,8 @@
     "image": "https://image.tmdb.org/t/p/w780/lavdyiJWciCJvyLG37ZOs6HJijg.jpg",
     "rating": 8.2,
     "votes": 26879,
-    "popRank": 21
+    "popRank": 21,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "mommy-2014-tmdb",
@@ -4885,7 +5049,8 @@
     "image": "https://image.tmdb.org/t/p/w780/2Zx1fHyMq7gvIugNErIWWFg9NBT.jpg",
     "rating": 8.2,
     "votes": 2934,
-    "popRank": 22
+    "popRank": 22,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-legend-of-the-nahuala-2007-tmdb",
@@ -4907,7 +5072,8 @@
     "image": "https://image.tmdb.org/t/p/w780/umAxZQoJ0I6YlwYB5NqLqD7NjdX.jpg",
     "rating": 8.2,
     "votes": 289,
-    "popRank": 23
+    "popRank": 23,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "memento-2000-tmdb",
@@ -4930,7 +5096,8 @@
     "image": "https://image.tmdb.org/t/p/w780/7Wev9JMo6R5XAfz2KDvXb7oPMmy.jpg",
     "rating": 8.2,
     "votes": 17093,
-    "popRank": 24
+    "popRank": 24,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "good-will-hunting-1997-tmdb",
@@ -4951,7 +5118,8 @@
     "image": "https://image.tmdb.org/t/p/w780/xj1Sv1xm4Y0ydBueGuf10Y9qM0O.jpg",
     "rating": 8.2,
     "votes": 14639,
-    "popRank": 25
+    "popRank": 25,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-truman-show-1998-tmdb",
@@ -4972,7 +5140,8 @@
     "image": "https://image.tmdb.org/t/p/w780/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
     "rating": 8.2,
     "votes": 21289,
-    "popRank": 26
+    "popRank": 26,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "silenced-2011-tmdb",
@@ -4993,7 +5162,8 @@
     "image": "https://image.tmdb.org/t/p/w780/3xTS1lDlbpwg63slWSMeHdamOS1.jpg",
     "rating": 8.2,
     "votes": 832,
-    "popRank": 27
+    "popRank": 27,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-departed-2006-tmdb",
@@ -5014,7 +5184,8 @@
     "image": "https://image.tmdb.org/t/p/w780/6WRrGYalXXveItfpnipYdayFkQB.jpg",
     "rating": 8.2,
     "votes": 16983,
-    "popRank": 28
+    "popRank": 28,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "queen-days-of-our-lives-2011-tmdb",
@@ -5035,7 +5206,8 @@
     "image": "https://image.tmdb.org/t/p/w780/dXl3zlrPYA1f3rikYsZIAlC7B6X.jpg",
     "rating": 8.1,
     "votes": 201,
-    "popRank": 29
+    "popRank": 29,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "maquia-when-the-promised-flower-blooms-2018-tmdb",
@@ -5060,7 +5232,8 @@
     "image": "https://image.tmdb.org/t/p/w780/5nkKy7eEDsXqsxFLJy3GxZhE90J.jpg",
     "rating": 8.1,
     "votes": 753,
-    "popRank": 30
+    "popRank": 30,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "better-days-2019-tmdb",
@@ -5084,7 +5257,8 @@
     "image": "https://image.tmdb.org/t/p/w780/putsivYODgbKrhvwl9n4OqhPOkO.jpg",
     "rating": 8.1,
     "votes": 597,
-    "popRank": 31
+    "popRank": 31,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "capernaum-2018-tmdb",
@@ -5105,7 +5279,8 @@
     "image": "https://image.tmdb.org/t/p/w780/sEW8q9al73rtow257dXAusD9yS7.jpg",
     "rating": 8.1,
     "votes": 2078,
-    "popRank": 32
+    "popRank": 32,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "my-little-pony-equestria-girls-rainbow-rocks-2014-tmdb",
@@ -5127,7 +5302,8 @@
     "image": "https://image.tmdb.org/t/p/w780/4SrsduRig5tQPE3EIsQhFWM3OWy.jpg",
     "rating": 8.1,
     "votes": 216,
-    "popRank": 33
+    "popRank": 33,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "be-with-you-2018-tmdb",
@@ -5148,7 +5324,8 @@
     "image": "https://image.tmdb.org/t/p/w780/dw9KDRImNzj3jWYSkTte7wvzamO.jpg",
     "rating": 8.1,
     "votes": 232,
-    "popRank": 34
+    "popRank": 34,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "full-metal-jacket-1987-tmdb",
@@ -5169,7 +5346,8 @@
     "image": "https://image.tmdb.org/t/p/w780/3k2TRmqMjgt7tcwkYwZQdctnty3.jpg",
     "rating": 8.1,
     "votes": 11985,
-    "popRank": 35
+    "popRank": 35,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "taxi-driver-1976-tmdb",
@@ -5190,7 +5368,8 @@
     "image": "https://image.tmdb.org/t/p/w780/9uddYYTNcLWpzUkl5iw1RUYhLhY.jpg",
     "rating": 8.1,
     "votes": 14056,
-    "popRank": 36
+    "popRank": 36,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-salt-of-the-earth-2014-tmdb",
@@ -5211,7 +5390,8 @@
     "image": "https://image.tmdb.org/t/p/w780/lqtzWKCpejXdKb22cav5bB6MqSR.jpg",
     "rating": 8.1,
     "votes": 704,
-    "popRank": 37
+    "popRank": 37,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-hunt-2012-tmdb",
@@ -5233,7 +5413,8 @@
     "image": "https://image.tmdb.org/t/p/w780/jmVWlCZ8hRtmrQGbKXXFHsrSohp.jpg",
     "rating": 8.1,
     "votes": 5112,
-    "popRank": 38
+    "popRank": 38,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "pink-floyd-live-at-pompeii-1972-tmdb",
@@ -5254,7 +5435,8 @@
     "image": "https://image.tmdb.org/t/p/w780/jqcKHIV4sCzvCffzQmuOJfG4jiQ.jpg",
     "rating": 8.1,
     "votes": 245,
-    "popRank": 39
+    "popRank": 39,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "paris-texas-1984-tmdb",
@@ -5276,7 +5458,8 @@
     "image": "https://image.tmdb.org/t/p/w780/fWrq3u16gaBJ6nYNWcR3XaOhQPq.jpg",
     "rating": 8.1,
     "votes": 2386,
-    "popRank": 41
+    "popRank": 41,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "samsara-2011-tmdb",
@@ -5299,7 +5482,8 @@
     "image": "https://image.tmdb.org/t/p/w780/tbSjemOf1nXPOjWELdaeZ7qj1iX.jpg",
     "rating": 8.1,
     "votes": 726,
-    "popRank": 42
+    "popRank": 42,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "dear-zachary-a-letter-to-a-son-about-his-father-2008-tmdb",
@@ -5320,7 +5504,8 @@
     "image": "https://image.tmdb.org/t/p/w780/fCOIOhteWbyvSKLyJrMrvh04U6G.jpg",
     "rating": 8.1,
     "votes": 627,
-    "popRank": 43
+    "popRank": 43,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "there-will-be-blood-2007-tmdb",
@@ -5341,7 +5526,8 @@
     "image": "https://image.tmdb.org/t/p/w780/9UAKA6ceZi6TgQwTAAMt7DWwYPI.jpg",
     "rating": 8.1,
     "votes": 7919,
-    "popRank": 44
+    "popRank": 44,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "along-with-the-gods-the-two-worlds-2017-tmdb",
@@ -5364,7 +5550,8 @@
     "image": "https://image.tmdb.org/t/p/w780/wyv2Y9vXYJwJzF6cNVuVwVOsOUj.jpg",
     "rating": 8.1,
     "votes": 1294,
-    "popRank": 45
+    "popRank": 45,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "front-of-the-class-2008-tmdb",
@@ -5385,7 +5572,8 @@
     "image": "https://image.tmdb.org/t/p/w780/yGmSkfaYDp1JzrtXRcPq0Qcy6DL.jpg",
     "rating": 8.1,
     "votes": 343,
-    "popRank": 46
+    "popRank": 46,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "elite-squad-2007-tmdb",
@@ -5407,7 +5595,8 @@
     "image": "https://image.tmdb.org/t/p/w780/huUgrGkCetYSkDl5fMvZCXCbFKl.jpg",
     "rating": 8.1,
     "votes": 2877,
-    "popRank": 47
+    "popRank": 47,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "pride-prejudice-2005-tmdb",
@@ -5428,7 +5617,8 @@
     "image": "https://image.tmdb.org/t/p/w780/1Onam6oWyFAUCcoxtdWkACtEiNr.jpg",
     "rating": 8.1,
     "votes": 9086,
-    "popRank": 48
+    "popRank": 48,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "along-with-the-gods-the-last-49-days-2018-tmdb",
@@ -5451,7 +5641,8 @@
     "image": "https://image.tmdb.org/t/p/w780/ul4WiN9EJxsMokdg7z4Y6iisvHS.jpg",
     "rating": 8.0,
     "votes": 794,
-    "popRank": 49
+    "popRank": 49,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "a-taxi-driver-2017-tmdb",
@@ -5474,7 +5665,8 @@
     "image": "https://image.tmdb.org/t/p/w780/5l2kTFOC9QicBxOVpocy5pSu4i8.jpg",
     "rating": 8.0,
     "votes": 1255,
-    "popRank": 50
+    "popRank": 50,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "ran-1985-tmdb",
@@ -5496,7 +5688,8 @@
     "image": "https://image.tmdb.org/t/p/w780/vxEfLEdPbUJW8ZD9ymGQ6ZJzuyf.jpg",
     "rating": 8.0,
     "votes": 1982,
-    "popRank": 51
+    "popRank": 51,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "oppenheimer-2023-tmdb",
@@ -5517,7 +5710,8 @@
     "image": "https://image.tmdb.org/t/p/w780/neeNHeXjMF5fXoCJRsOmkNGC7q.jpg",
     "rating": 8.0,
     "votes": 12967,
-    "popRank": 52
+    "popRank": 52,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "flipped-2010-tmdb",
@@ -5538,7 +5732,8 @@
     "image": "https://image.tmdb.org/t/p/w780/wdOGA0LC1NiWgAX1OaiKtNA247i.jpg",
     "rating": 8.0,
     "votes": 3490,
-    "popRank": 53
+    "popRank": 53,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "kill-shot-2023-tmdb",
@@ -5562,7 +5757,8 @@
     "image": "https://image.tmdb.org/t/p/w780/gTydwZInr9ncMVFdYUzTcXtiTiT.jpg",
     "rating": 8.0,
     "votes": 228,
-    "popRank": 54
+    "popRank": 54,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "paris-is-burning-1991-tmdb",
@@ -5585,7 +5781,8 @@
     "image": "https://image.tmdb.org/t/p/w780/1DOLRxIQbRxhZcllLVx4DUAGqfS.jpg",
     "rating": 8.0,
     "votes": 583,
-    "popRank": 55
+    "popRank": 55,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "hachi-a-dog-s-tale-2009-tmdb",
@@ -5606,7 +5803,8 @@
     "image": "https://image.tmdb.org/t/p/w780/gOeSj4YzwxZb6FgcYPRK2hEzTdt.jpg",
     "rating": 8.0,
     "votes": 7418,
-    "popRank": 56
+    "popRank": 56,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "requiem-for-a-dream-2000-tmdb",
@@ -5629,7 +5827,8 @@
     "image": "https://image.tmdb.org/t/p/w780/fAGYRJCujRBMw7TCuTp893eSG8e.jpg",
     "rating": 8.0,
     "votes": 11521,
-    "popRank": 57
+    "popRank": 57,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "believe-me-the-abduction-of-lisa-mcvey-2018-tmdb",
@@ -5650,7 +5849,8 @@
     "image": "https://image.tmdb.org/t/p/w780/gPW90IPq6Go8hlT0n7Es3cFl7ly.jpg",
     "rating": 8.0,
     "votes": 725,
-    "popRank": 58
+    "popRank": 58,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-second-mother-2015-tmdb",
@@ -5671,7 +5871,8 @@
     "image": "https://image.tmdb.org/t/p/w780/9h5BsxRmxLAvASADo2VcTlTUdb0.jpg",
     "rating": 8.0,
     "votes": 810,
-    "popRank": 59
+    "popRank": 59,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "el-infierno-2010-tmdb",
@@ -5692,7 +5893,8 @@
     "image": "https://image.tmdb.org/t/p/w780/bQObbnj0TY2Q1c55w78m1AN6VNX.jpg",
     "rating": 8.0,
     "votes": 842,
-    "popRank": 60
+    "popRank": 60,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "gifted-2017-tmdb",
@@ -5713,7 +5915,8 @@
     "image": "https://image.tmdb.org/t/p/w780/aH63TQfTFgAT8tYZs0CjDsqfMo2.jpg",
     "rating": 8.0,
     "votes": 6152,
-    "popRank": 61
+    "popRank": 61,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "catch-me-if-you-can-2002-tmdb",
@@ -5735,7 +5938,8 @@
     "image": "https://image.tmdb.org/t/p/w780/eS3xZQ1C8lt6mm4K5lTmjbYn2HE.jpg",
     "rating": 8.0,
     "votes": 17926,
-    "popRank": 62
+    "popRank": 62,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "codename-kids-next-door-operation-z-e-r-o-2006-tmdb",
@@ -5756,7 +5960,8 @@
     "image": "https://image.tmdb.org/t/p/w780/5VZ3GramsLcNS8RjypzmLU4h5hH.jpg",
     "rating": 8.0,
     "votes": 254,
-    "popRank": 64
+    "popRank": 64,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "before-sunrise-1995-tmdb",
@@ -5777,7 +5982,8 @@
     "image": "https://image.tmdb.org/t/p/w780/qA2TyqPldTtoTVY3LKrNIG5g6bH.jpg",
     "rating": 8.0,
     "votes": 4988,
-    "popRank": 65
+    "popRank": 65,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-cove-2009-tmdb",
@@ -5800,7 +6006,8 @@
     "image": "https://image.tmdb.org/t/p/w780/gpyu3jQeMQeUFAVjCSrVCrYYK3f.jpg",
     "rating": 8.0,
     "votes": 709,
-    "popRank": 66
+    "popRank": 66,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "coraline-2009-tmdb",
@@ -5821,7 +6028,8 @@
     "image": "https://image.tmdb.org/t/p/w780/hofnlIyF6bePkgQOpcuRWLvzf15.jpg",
     "rating": 8.0,
     "votes": 9810,
-    "popRank": 67
+    "popRank": 67,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "no-country-for-old-men-2007-tmdb",
@@ -5842,7 +6050,8 @@
     "image": "https://image.tmdb.org/t/p/w780/fCCvn3xsG29TGKJPvZgTRppsDgk.jpg",
     "rating": 7.9,
     "votes": 14121,
-    "popRank": 68
+    "popRank": 68,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "braveheart-1995-tmdb",
@@ -5863,7 +6072,8 @@
     "image": "https://image.tmdb.org/t/p/w780/1m1c5gIWWkb1FEC9lzsoXHhhs7b.jpg",
     "rating": 7.9,
     "votes": 11671,
-    "popRank": 69
+    "popRank": 69,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "in-this-corner-of-the-world-2016-tmdb",
@@ -5884,7 +6094,8 @@
     "image": "https://image.tmdb.org/t/p/w780/bh5jnK2SeUw7iTbg9QHIi24S01Q.jpg",
     "rating": 7.9,
     "votes": 667,
-    "popRank": 70
+    "popRank": 70,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-cure-1995-tmdb",
@@ -5905,7 +6116,8 @@
     "image": "https://image.tmdb.org/t/p/w780/cXliQvK1xSi9lSqP7qaBUyED1Az.jpg",
     "rating": 7.9,
     "votes": 378,
-    "popRank": 71
+    "popRank": 71,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "no-manches-frida-2-para-so-destruido-2019-tmdb",
@@ -5927,7 +6139,8 @@
     "image": "https://image.tmdb.org/t/p/w780/1TPzecXAb5uCqmscA6WaQqKMmvV.jpg",
     "rating": 7.9,
     "votes": 979,
-    "popRank": 72
+    "popRank": 72,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "ghost-in-the-shell-1995-tmdb",
@@ -5951,7 +6164,8 @@
     "image": "https://image.tmdb.org/t/p/w780/jIpagj2Dud9g3ZVJFvaWikEWsYz.jpg",
     "rating": 7.9,
     "votes": 4169,
-    "popRank": 73
+    "popRank": 73,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "freedom-writers-2007-tmdb",
@@ -5972,7 +6186,8 @@
     "image": "https://image.tmdb.org/t/p/w780/oVCyqxwLkRPJC51w89Dwp6VL9vk.jpg",
     "rating": 7.9,
     "votes": 2532,
-    "popRank": 74
+    "popRank": 74,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "batman-the-dark-knight-returns-part-2-2013-tmdb",
@@ -5993,7 +6208,8 @@
     "image": "https://image.tmdb.org/t/p/w780/9Eh5xzWTpJeZM1FGCblWKZ8GTpw.jpg",
     "rating": 7.9,
     "votes": 1668,
-    "popRank": 75
+    "popRank": 75,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "hearts-of-darkness-a-filmmaker-s-apocalypse-1991-tmdb",
@@ -6014,7 +6230,8 @@
     "image": "https://image.tmdb.org/t/p/w780/crw9RXI54qmSfc0tIiH5hip79uw.jpg",
     "rating": 7.9,
     "votes": 447,
-    "popRank": 76
+    "popRank": 76,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "mirror-1975-tmdb",
@@ -6035,7 +6252,8 @@
     "image": "https://image.tmdb.org/t/p/w780/9UAcMhSCDJ2OCo5QdPpSERjhMA1.jpg",
     "rating": 7.9,
     "votes": 1160,
-    "popRank": 77
+    "popRank": 77,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "my-way-2011-tmdb",
@@ -6056,7 +6274,8 @@
     "image": "https://image.tmdb.org/t/p/w780/4QHF7kAYjIpZ5U8A0amvhRkHlZ1.jpg",
     "rating": 7.9,
     "votes": 475,
-    "popRank": 78
+    "popRank": 78,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "unforgiven-1992-tmdb",
@@ -6077,7 +6296,8 @@
     "image": "https://image.tmdb.org/t/p/w780/rvRGFevvZK48onX0PYI1eQLbuJd.jpg",
     "rating": 7.9,
     "votes": 5232,
-    "popRank": 79
+    "popRank": 79,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "ne-zha-2019-tmdb",
@@ -6100,7 +6320,8 @@
     "image": "https://image.tmdb.org/t/p/w780/k1pJslKr4aDayw9kWwWnlC3MIP3.jpg",
     "rating": 7.9,
     "votes": 999,
-    "popRank": 80
+    "popRank": 80,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "castaway-on-the-moon-2009-tmdb",
@@ -6121,7 +6342,8 @@
     "image": "https://image.tmdb.org/t/p/w780/t9T6jKk2TqDqzpWTCMSeMNjYcX7.jpg",
     "rating": 7.9,
     "votes": 766,
-    "popRank": 81
+    "popRank": 81,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "titanic-1997-tmdb",
@@ -6142,7 +6364,8 @@
     "image": "https://image.tmdb.org/t/p/w780/sCzcYW9h55WcesOqA12cgEr9Exw.jpg",
     "rating": 7.9,
     "votes": 28133,
-    "popRank": 82
+    "popRank": 82,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "simone-woman-of-the-century-2022-tmdb",
@@ -6165,7 +6388,8 @@
     "image": "https://image.tmdb.org/t/p/w780/p30hhjHTRFA08f3Bo3GENQCu6ST.jpg",
     "rating": 7.9,
     "votes": 386,
-    "popRank": 83
+    "popRank": 83,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "violet-perfume-nobody-hears-you-2001-tmdb",
@@ -6186,7 +6410,8 @@
     "image": "https://image.tmdb.org/t/p/w780/1fJZzkyOKNv4ExSf7uXQNUzycr9.jpg",
     "rating": 7.9,
     "votes": 241,
-    "popRank": 84
+    "popRank": 84,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-gangster-the-cop-the-devil-2019-tmdb",
@@ -6210,7 +6435,8 @@
     "image": "https://image.tmdb.org/t/p/w780/jJJQ1PPXUEchqyZ9YyWzgSNU39Z.jpg",
     "rating": 7.9,
     "votes": 1627,
-    "popRank": 85
+    "popRank": 85,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "raging-bull-1980-tmdb",
@@ -6232,7 +6458,8 @@
     "image": "https://image.tmdb.org/t/p/w780/tvNuhRlpRozDgsX1zR9gQ2aHv1X.jpg",
     "rating": 7.9,
     "votes": 5004,
-    "popRank": 86
+    "popRank": 86,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "miracle-in-cell-no-7-2013-tmdb",
@@ -6254,7 +6481,8 @@
     "image": "https://image.tmdb.org/t/p/w780/6MZdEVe0COl9sB1sCIPOOFpngjO.jpg",
     "rating": 7.9,
     "votes": 516,
-    "popRank": 87
+    "popRank": 87,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-notebook-2004-tmdb",
@@ -6275,7 +6503,8 @@
     "image": "https://image.tmdb.org/t/p/w780/zdXnJqBaGFVtLoPNuMeKfEYUViZ.jpg",
     "rating": 7.9,
     "votes": 13085,
-    "popRank": 88
+    "popRank": 88,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "captain-fantastic-2016-tmdb",
@@ -6298,7 +6527,8 @@
     "image": "https://image.tmdb.org/t/p/w780/d84M69u6Q202dm6EvhVxbiqrK9f.jpg",
     "rating": 7.9,
     "votes": 7063,
-    "popRank": 89
+    "popRank": 89,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-pursuit-of-happyness-2006-tmdb",
@@ -6319,7 +6549,8 @@
     "image": "https://image.tmdb.org/t/p/w780/5jhG1lTgV0MS6tDkBMQSSitttTT.jpg",
     "rating": 7.9,
     "votes": 11053,
-    "popRank": 90
+    "popRank": 90,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "koyaanisqatsi-1983-tmdb",
@@ -6342,7 +6573,8 @@
     "image": "https://image.tmdb.org/t/p/w780/g2ULq1sv4rDY7UsLzaiGdb6zjbj.jpg",
     "rating": 7.9,
     "votes": 817,
-    "popRank": 91
+    "popRank": 91,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "a-street-cat-named-bob-2016-tmdb",
@@ -6364,7 +6596,8 @@
     "image": "https://image.tmdb.org/t/p/w780/3YDuN1mhQpYtCym4QatX0gkHahL.jpg",
     "rating": 7.9,
     "votes": 1613,
-    "popRank": 92
+    "popRank": 92,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "where-hands-touch-2018-tmdb",
@@ -6385,7 +6618,8 @@
     "image": "https://image.tmdb.org/t/p/w780/2reDfi3bl3givTawULOVvjEF1rR.jpg",
     "rating": 7.9,
     "votes": 543,
-    "popRank": 93
+    "popRank": 93,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "persepolis-2007-tmdb",
@@ -6406,7 +6640,8 @@
     "image": "https://image.tmdb.org/t/p/w780/4pfb85bv0rKkmslTp2hzAqA7RT4.jpg",
     "rating": 7.9,
     "votes": 2281,
-    "popRank": 94
+    "popRank": 94,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "downfall-2004-tmdb",
@@ -6430,7 +6665,8 @@
     "image": "https://image.tmdb.org/t/p/w780/xgAEfHByamMdRCA31oERQrsiutF.jpg",
     "rating": 7.9,
     "votes": 4557,
-    "popRank": 95
+    "popRank": 95,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "kill-bill-vol-2-2004-tmdb",
@@ -6451,7 +6687,8 @@
     "image": "https://image.tmdb.org/t/p/w780/pgG6tzJzC8mjGqhaT8IWwEk00xf.jpg",
     "rating": 7.9,
     "votes": 15718,
-    "popRank": 96
+    "popRank": 96,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "departures-2008-tmdb",
@@ -6472,7 +6709,8 @@
     "image": "https://image.tmdb.org/t/p/w780/kYYpR0okoW7O1gwXwWMlRkgL2sa.jpg",
     "rating": 7.9,
     "votes": 981,
-    "popRank": 97
+    "popRank": 97,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "children-of-heaven-1997-tmdb",
@@ -6493,7 +6731,8 @@
     "image": "https://image.tmdb.org/t/p/w780/9W250lyDDC3P9AgW5ZKGRj7R2Pv.jpg",
     "rating": 7.9,
     "votes": 765,
-    "popRank": 98
+    "popRank": 98,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "wild-tales-2014-tmdb",
@@ -6514,7 +6753,8 @@
     "image": "https://image.tmdb.org/t/p/w780/dHnki2Dh6lbOtfksrh8H5lg08f5.jpg",
     "rating": 7.9,
     "votes": 3961,
-    "popRank": 99
+    "popRank": 99,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "searching-for-sugar-man-2012-tmdb",
@@ -6535,7 +6775,8 @@
     "image": "https://image.tmdb.org/t/p/w780/8RafTGqYqAN9FJzvC75USKmJCso.jpg",
     "rating": 7.9,
     "votes": 1092,
-    "popRank": 100
+    "popRank": 100,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-pluto-channel",
@@ -6547,7 +6788,8 @@
     "source": "pluto",
     "url": "https://pluto.tv/us/live-tv/star-trek-1",
     "description": "Pluto TV's free, official Star Trek live channel: a nonstop lineup of classic Star Trek episodes, free with ads in the US.",
-    "tvRank": 3
+    "tvRank": 3,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "the-twilight-zone-1959",
@@ -6571,7 +6813,8 @@
     "endYear": 1964,
     "rating": 8.5,
     "votes": 1107,
-    "tvRank": 27
+    "tvRank": 28,
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-continues",
@@ -6585,7 +6828,8 @@
     "youtubeId": "3G-ziTBAkbQ",
     "url": "https://www.youtube.com/playlist?list=PLhvh2eq-XLgqNxH6npvQxGxLCUHy90IpZ",
     "embedUrl": "https://www.youtube-nocookie.com/embed/3G-ziTBAkbQ",
-    "image": "https://i.ytimg.com/vi/3G-ziTBAkbQ/hqdefault.jpg"
+    "image": "https://i.ytimg.com/vi/3G-ziTBAkbQ/hqdefault.jpg",
+    "addedAt": "2026-11-24"
   },
   {
     "id": "prelude-to-axanar",
@@ -6599,7 +6843,8 @@
     "youtubeId": "1W1_8IV8uhA",
     "url": "https://www.youtube.com/watch?v=1W1_8IV8uhA",
     "embedUrl": "https://www.youtube-nocookie.com/embed/1W1_8IV8uhA",
-    "image": "https://i.ytimg.com/vi/1W1_8IV8uhA/hqdefault.jpg"
+    "image": "https://i.ytimg.com/vi/1W1_8IV8uhA/hqdefault.jpg",
+    "addedAt": "2026-11-24"
   },
   {
     "id": "star-trek-new-voyages-come-what-may",
@@ -6613,6 +6858,31 @@
     "youtubeId": "_pX9lE1lFvQ",
     "url": "https://www.youtube.com/watch?v=_pX9lE1lFvQ",
     "embedUrl": "https://www.youtube-nocookie.com/embed/_pX9lE1lFvQ",
-    "image": "https://i.ytimg.com/vi/_pX9lE1lFvQ/hqdefault.jpg"
+    "image": "https://i.ytimg.com/vi/_pX9lE1lFvQ/hqdefault.jpg",
+    "addedAt": "2026-11-24"
+  },
+  {
+    "id": "the-outer-limits-1995",
+    "title": "The Outer Limits",
+    "year": 1995,
+    "releaseDate": "1995-03-26",
+    "type": "tv",
+    "genre": "Sci-Fi",
+    "source": "tmdb",
+    "providers": [
+      "The Roku Channel"
+    ],
+    "tmdbKind": "tv",
+    "tmdbId": 21561,
+    "url": "https://www.themoviedb.org/tv/21561/watch?locale=US",
+    "description": "Anthology series composed of distinct story episodes, sometimes with a plot twist at the end, with occasional recurring story elements that were often tied together during season-finale clip shows.",
+    "tmdbPopularity": 40.0,
+    "image": "https://image.tmdb.org/t/p/w780/yeuPvfPYK7Y3J3ZWqLF2IcWEi36.jpg",
+    "lastAirDate": "2002-01-18",
+    "endYear": 2002,
+    "allowRoku": true,
+    "rating": 7.7,
+    "tvRank": 27,
+    "addedAt": "2026-11-24"
   }
 ]

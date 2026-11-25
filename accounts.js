@@ -5,7 +5,7 @@ const { initializeApp } = await import(`https://www.gstatic.com/firebasejs/${V}/
 const A = await import(`https://www.gstatic.com/firebasejs/${V}/firebase-auth.js`);
 const F = await import(`https://www.gstatic.com/firebasejs/${V}/firebase-firestore.js`);
 
-let auth, db, user = null, H, HOME = null, SUBS = null;
+let auth, db, user = null, H, HOME = null, SUBS = null, WL = null;
 const LOGGED = new Set();
 const $ = (s, el = document) => el.querySelector(s);
 
@@ -19,6 +19,7 @@ export async function init(cfg, helpers) {
   A.getRedirectResult(auth).catch(() => {});
   A.onAuthStateChanged(auth, async (u) => {
     user = u; btn.textContent = u ? 'Sign out' : 'Sign in';
+    document.body.classList.toggle('signed-in', !!u); WL = null;
     SUBS = null; await syncNotify();
     if (u) F.getDoc(F.doc(db, 'users', u.uid, 'prefs', 'site')).then((d) => { const s = d.exists() && d.data().season; if (s && window.__rfSeason) window.__rfSeason(s); }).catch(() => {});
     if (H.page === 'home' && HOME) renderPersonal();
@@ -30,6 +31,13 @@ export async function init(cfg, helpers) {
   window.addEventListener('reelfree:rendered', () => syncNotify());
   window.addEventListener('reelfree:season', (e) => { if (user) F.setDoc(F.doc(db, 'users', user.uid, 'prefs', 'site'), { season: e.detail, updatedAt: F.serverTimestamp() }, { merge: true }).catch(() => {}); });
   document.addEventListener('click', onNotifyClick);
+  document.addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-add]'); if (!b) return;
+    e.preventDefault(); e.stopPropagation();
+    if (!user) { location.href = '/account'; return; }
+    const on = await toggleWatch(b.dataset.add); markWatch();
+    if (H.page === 'home' && HOME) renderPersonal();
+  }, true);
   // Genre-browser / request cards open outside the site: log them to history for recommendations.
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[data-tmdb]'); if (!a || !user) return;
@@ -51,8 +59,10 @@ async function renderTitleActions(t) {
   if (user && !LOGGED.has(t.id)) { LOGGED.add(t.id); logHistory(t.id, [t.genre]); trackProgress(t); }
   if (!user) { box.innerHTML = `<p class="small muted"><a href="/account">Sign in</a> to save favorites and make private lists.</p>`; return; }
   const fav = (await F.getDoc(favRef(t.id))).exists();
+  await loadWatch();
   const lists = await getLists();
   box.innerHTML = `<div class="actions">
+    <button class="btn ${WL.has(t.id) ? 'primary' : 'ghost'}" data-add="${H.esc(t.id)}" data-wl-btn>${WL.has(t.id) ? '✓ In My List' : '+ My List'}</button>
     <button class="btn ${fav ? 'primary' : 'ghost'}" id="fav-btn">${fav ? '★ Favorited' : '☆ Add to favorites'}</button>
     <select id="list-pick" aria-label="Add to list"><option value="">Add to list…</option>
       ${lists.map((l) => `<option value="${H.esc(l.id)}">${(l.items || []).includes(t.id) ? '✓ ' : ''}${H.esc(l.name)}</option>`).join('')}
@@ -195,7 +205,10 @@ async function renderPersonal() {
   const recs = recommend(hist.map((h) => ({ ...h, id: h.id })), cands.filter((c) => !(c.tmdb && watchedTmdb.has(`tmdb-${c.tmdb}`))));
   const recHtml = `<section class="row"><div class="row-head"><h2>Recommended for you</h2><span class="muted small">Based on what you've opened</span></div>${
     recs.length ? `<div class="rail">${recs.map((c) => c.html()).join('')}</div>` : '<p class="muted">Watch something to get picks.</p>'}</section>`;
-  box.innerHTML = cwHtml + recHtml;
+  await loadWatch();
+  const mine = [...WL].map((id) => byId[id]).filter(Boolean);
+  const wlHtml = mine.length ? `<section class="row"><div class="row-head"><h2>My List</h2><span class="muted small">Tap + on any card to add or remove</span></div><div class="rail">${mine.map(H.card).join('')}</div></section>` : '';
+  box.innerHTML = wlHtml + cwHtml + recHtml; markWatch();
 }
 
 // ---------- Continue watching ----------
@@ -242,4 +255,26 @@ async function onNotifyClick(e) {
     if (b.dataset.tmdbId) d.tmdbId = Number(b.dataset.tmdbId); if (b.dataset.genreId) d.genreId = Number(b.dataset.genreId);
     await F.setDoc(ref, d); (SUBS ||= new Set()).add(key); syncNotify();
   } catch { b.textContent = 'Could not save. Try again.'; }
+}
+
+// ---------- My List (watchlist): users/{uid}/lists/watchlist, same rules as other lists ----------
+const wlRef = () => F.doc(db, 'users', user.uid, 'lists', 'watchlist');
+async function loadWatch() {
+  if (WL) return WL;
+  try { const d = await F.getDoc(wlRef()); WL = new Set(d.exists() ? d.data().items || [] : []); } catch { WL = new Set(); }
+  return WL;
+}
+async function toggleWatch(id) {
+  await loadWatch(); const has = WL.has(id);
+  if (has) WL.delete(id); else WL.add(id);
+  await F.setDoc(wlRef(), { name: 'My List', items: [...WL].slice(-500), createdAt: F.serverTimestamp(), updatedAt: F.serverTimestamp() });
+  return !has;
+}
+function markWatch() {
+  if (!WL) return;
+  document.querySelectorAll('[data-add]').forEach((b) => {
+    const on = WL.has(b.dataset.add); b.classList.toggle('on', on);
+    if (b.hasAttribute('data-wl-btn')) { b.textContent = on ? '✓ In My List' : '+ My List'; b.classList.toggle('primary', on); b.classList.toggle('ghost', !on); }
+    else b.textContent = on ? '✓' : '+';
+  });
 }

@@ -10,7 +10,8 @@ const SOURCES = {
   plex: { label: 'Plex', short: 'Plex' },
   tmdb: { label: 'Free streaming (via TMDB)', short: 'Free' },
 };
-const srcShort = (t) => (t.source === 'tmdb' && t.providers && t.providers[0]) || SOURCES[t.source].short;
+const srcShort0 = (t) => (t.source === 'tmdb' && t.providers && t.providers[0]) || SOURCES[t.source].short;
+const srcShort = (t) => srcShort0(t) === 'The Roku Channel' ? 'Roku Channel' : srcShort0(t);
 const srcLabel = (t) => (t.source === 'tmdb' && t.providers && t.providers.length) ? t.providers.join(', ') : SOURCES[t.source].label;
 const yearsOf = (t) => t.type === 'tv' && t.lastAirDate ? `${t.year}–${t.endYear || ''}` : `${t.year}`;
 // How each source plays, based on observed response headers (see README "Playback").
@@ -38,12 +39,13 @@ async function loadData() {
 }
 
 let IMG = {};
+const isNew = (t) => t.addedAt && (Date.now() - Date.parse(t.addedAt)) < 7 * 864e5;
 function card(t) {
   const img = IMG[t.id] || t.image;
   return `<a class="card${img ? '' : ' noimg'}" href="/title/${esc(t.id)}">
     <span class="art">${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.parentNode.classList.add('noimg');this.remove()">` : ''}<img class="fallback" src="/icons/logo-128.png" alt="" aria-hidden="true"></span>
     <span class="scrim"></span>
-    <span class="badge src-${t.source}">${esc(srcShort(t))}</span>${t.fanMade ? '<span class="badge fan">Fan-made</span>' : ''}
+    <span class="badge src-${t.source}">${esc(srcShort(t))}</span>${t.fanMade ? '<span class="badge fan">Fan-made</span>' : ''}${isNew(t) ? '<span class="badge new">New this week</span>' : ''}<button class="addlist" type="button" data-add="${esc(t.id)}" aria-label="Add ${esc(t.title)} to My List">+</button>
     <span class="kind">${t.type === 'tv' ? 'TV' : 'Movie'}</span>
     <span class="info"><h3>${esc(t.title)}</h3><span class="meta">${esc(yearsOf(t))}${t.rating ? ` · ★ ${esc(t.rating)}` : ''} · ${esc(t.genre)}</span></span>
   </a>`;
@@ -77,6 +79,7 @@ async function home() {
   const { titles, isHidden, status } = await loadData();
   IMG = Object.fromEntries(Object.entries(status.titles || {}).filter(([, v]) => v.image).map(([k, v]) => [k, v.image]));
   const visible = titles.filter((t) => !isHidden(t.id));
+  window.__rfTitles = visible;
   const rd = (t) => t.releaseDate || `${t.year}-01-01`;
   const newest = (a, b) => rd(b).localeCompare(rd(a)) || a.title.localeCompare(b.title);
   // Top row: movies from 2010 on only, newest first, max 25. Never backfilled with older titles.
@@ -120,7 +123,43 @@ async function home() {
   genreBrowser();
   requestTitle(titles);
   sportsBrowser();
+  collections(visible);
+  trailers();
   window.dispatchEvent(new CustomEvent('reelfree:home', { detail: { visible } }));
+}
+
+// Hand-picked collections built from verified catalog titles (chips, one collection at a time).
+const COLLECTIONS = [
+  ['Halloween Horror', (t) => /horror/i.test(t.genre)],
+  ['90s Sci-Fi', (t) => /sci-fi|science fiction/i.test(t.genre) && t.year >= 1990 && t.year <= 1999],
+  ['Classic Westerns', (t) => /western/i.test(t.genre) && t.year < 1980],
+  ['Family Night', (t) => /family|animation/i.test(t.genre)],
+  ['Space & Aliens', (t) => /\b(space|alien|aliens|planet|galaxy|starship|astronaut|mars|ufo)\b/i.test(`${t.title} ${t.description}`)],
+  ['Film Noir & Crime Classics', (t) => /crime|mystery|noir/i.test(t.genre) && t.year < 1970],
+];
+function collections(visible) {
+  const box = $('#collections'); if (!box) return;
+  const cs = COLLECTIONS.map(([name, f]) => [name, visible.filter(f).sort((a, b) => (b.releaseDate || `${b.year}`).localeCompare(a.releaseDate || `${a.year}`))]).filter(([, l]) => l.length);
+  $('#coll-chips').innerHTML = cs.map(([n, l], i) => `<button class="chip${i ? '' : ' on'}" data-i="${i}">${esc(n)} <span>${l.length}</span></button>`).join('');
+  const show = (i) => { document.querySelectorAll('#coll-chips .chip').forEach((c) => c.classList.toggle('on', +c.dataset.i === i)); $('#coll-grid').innerHTML = cs[i][1].slice(0, 60).map(card).join(''); };
+  $('#coll-chips').addEventListener('click', (e) => { const b = e.target.closest('.chip'); if (b) show(+b.dataset.i); });
+  if (cs.length) show(0); else box.hidden = true;
+}
+// Official TMDB trailers (YouTube). Click to play; nothing autoplays on load.
+async function trailers() {
+  const box = $('#trailers'); if (!box) return;
+  let j; try { j = await getJSON('/data/trailers.json', 8000); } catch { box.hidden = true; return; }
+  const tr = j.trailers || []; if (!tr.length) { box.hidden = true; return; }
+  box.querySelector('.rail').innerHTML = tr.map((x) => `<button class="card trailer" type="button" data-yt="${esc(x.youtubeId)}" aria-label="Play trailer: ${esc(x.title)}">
+    <span class="art"><img src="https://i.ytimg.com/vi/${esc(x.youtubeId)}/hqdefault.jpg" alt="" loading="lazy"></span><span class="scrim"></span>
+    <span class="badge src-youtube">${x.upcoming ? 'Coming soon' : 'In theaters'}</span><span class="play">▶</span>
+    <span class="info"><h3>${esc(x.title)}</h3><span class="meta">${esc(x.releaseDate || '')} · Trailer</span></span></button>`).join('');
+  box.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-yt]'); if (!b) return;
+    const d = document.createElement('div'); d.className = 'card trailer playing';
+    d.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(b.dataset.yt)}?autoplay=1&rel=0" title="Trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    b.replaceWith(d);
+  });
 }
 
 // Sports: one sport at a time. Official YouTube playlists embed in-site (loaded only for the chosen sport);
@@ -286,7 +325,7 @@ function wireReport(t) {
 const page = document.body.dataset.page;
 if (page === 'home') home();
 if (page === 'title') titlePage();
-if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK }));
+if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK, TITLES: () => window.__rfTitles }));
 else if (page === 'account') $('#account-root').innerHTML = '<h1>My lists</h1><p class="muted">Accounts are coming soon. Favorites and private lists will appear here.</p>';
 
 // Optional TMDB enrichment: only active when the server has TMDB env vars.
