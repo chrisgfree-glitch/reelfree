@@ -45,3 +45,32 @@ C = [
  ("ex-machina","Ex Machina",2014,"pluto","https://pluto.tv/us/movies/62a2200bcb032400134e4695/","Sci-Fi","movie","A young programmer is invited to test the consciousness of a remarkable humanoid AI."),
  ("green-room","Green Room",2015,"pluto","https://pluto.tv/us/movies/6323b4136cb7a00013a63164/","Thriller","movie","A punk band witnesses a crime at a remote club and must fight its way out."),
 ]
+C += [
+ # Internet Archive (public domain) – batch 2
+ ("detour-1945","Detour",1945,"archive","Detour","Thriller","movie","Edgar G. Ulmer's lean, fatalistic noir about a hitchhiking pianist whose luck goes from bad to deadly."),
+ ("last-man-on-earth","The Last Man on Earth",1964,"archive","the-last-man-on-earth-1964_202312","Horror","movie","Vincent Price is the lone survivor of a plague that turned humanity into vampire-like creatures."),
+ ("little-shop-of-horrors-1960","The Little Shop of Horrors",1960,"archive","The_Little_Shop_of_Horrors.mpeg","Comedy","movie","Roger Corman's cult comedy about a flower-shop clerk and a bloodthirsty plant. Look for a young Jack Nicholson."),
+ ("doa-1949","D.O.A.",1949,"archive","d.-o.-a.-1950","Thriller","movie","A poisoned man has only hours to find out who murdered him in this classic noir."),
+ # Wikimedia Commons (public domain), official embed player
+ ("trip-to-the-moon","A Trip to the Moon",1902,"commons","File:Le Voyage dans la Lune (1902).webm","Sci-Fi","movie","Georges Méliès' pioneering fantasy: astronomers fire a capsule into the eye of the Man in the Moon."),
+ ("great-train-robbery","The Great Train Robbery",1903,"commons","File:The Great Train Robbery (1903).webm","Western","movie","Edwin S. Porter's landmark short western, one of the first films to tell a story with cuts between scenes."),
+ ("steamboat-willie","Steamboat Willie",1928,"commons","File:Steamboat Willie (1928) by Walt Disney.webm","Animation","movie","The 1928 cartoon that introduced Mickey Mouse and synchronized sound to animation. Now in the US public domain."),
+ ("sherlock-jr","Sherlock Jr.",1924,"commons","File:Sherlock Jr. (1924).webm","Comedy","movie","Buster Keaton plays a projectionist who dreams himself into the movie he's showing."),
+ ("the-kid-1921","The Kid",1921,"commons","File:The Kid (1921).webm","Comedy","movie","Charlie Chaplin's first feature: the Tramp raises an abandoned child, played by Jackie Coogan."),
+ ("safety-last","Safety Last!",1923,"commons","File:Safety Last (1923).webm","Comedy","movie","Harold Lloyd's thrill comedy, famous for the shot of him dangling from a skyscraper clock."),
+ ("the-gold-rush","The Gold Rush",1925,"commons","File:The Gold Rush (1925).webm","Comedy","movie","Chaplin's Tramp heads to the Klondike, where he battles a blizzard, hunger and a jealous rival."),
+ ("plan-9-from-outer-space","Plan 9 from Outer Space",1959,"commons","File:Plan 9 from Outer Space (1959 film).webm","Sci-Fi","movie","Ed Wood's legendary so-bad-it's-good tale of aliens raising the dead to stop humanity."),
+ # Official YouTube: PBS + FilmRise
+ ("pbs-statue-of-liberty","Secrets of the Dead: The Story of America's Most Iconic Statue",2026,"youtube","9uV7jYf_ziE","Documentary","tv","A full PBS Secrets of the Dead documentary on how the Statue of Liberty came to be."),
+ ("pbs-mary-queen-of-scots","Secrets of the Dead: Decoding Letters from Mary, Queen of Scots",2026,"youtube","dQcVHJgdnHw","Documentary","tv","Codebreakers crack long-lost letters written by Mary, Queen of Scots, in this full PBS documentary."),
+ ("pbs-founding-of-nashville","Retracing the 1779 River Journey to the Founding of Nashville",2026,"youtube","X3AwBVamY0o","Documentary","tv","A full PBS documentary following the perilous 1779 river voyage that led to the founding of Nashville."),
+ ("upside-down-2012","Upside Down",2012,"youtube","difxuFbSbRA","Sci-Fi","movie","Star-crossed lovers live on twin planets with opposite gravity. With Jim Sturgess and Kirsten Dunst."),
+ ("miracle-dogs","Miracle Dogs",2003,"youtube","hZf6pQbm028","Family","movie","A boy and a special dog bring comfort to the patients of a children's hospital."),
+ ("puppet-master-4","Puppet Master 4",1993,"youtube","8d7ct2tMZog","Horror","movie","Killer puppets become unlikely heroes against demonic invaders in this cult horror sequel."),
+ # Library of Congress National Screening Room (new tab)
+ ("loc-dud-leaves-home","Dud Leaves Home",1919,"loc","https://www.loc.gov/item/00694010/","Comedy","movie","A silent comedy short: Dud cracks open his mother's bank to buy his girlfriend an ice cream cone."),
+ ("loc-buying-a-cow","Buying a Cow",1908,"loc","https://www.loc.gov/item/2006640759/","Comedy","movie","A Paris couple are so taken with a cow's milk that they buy the cow, with chaotic results."),
+ ("loc-from-wheat-to-bread","From Wheat to Bread",1945,"loc","https://www.loc.gov/item/fia54004124/","Documentary","movie","A 1945 educational film tracing bread from pioneer grist mills to modern flour mills."),
+ # Plex (free with ads, new tab)
+ ("carol-burnett-show","The Carol Burnett Show",1967,"plex","https://watch.plex.tv/show/the-carol-burnett-show","Comedy","tv","Carol Burnett's beloved variety show of sketches, songs and famous blooper-filled sketches."),
+]

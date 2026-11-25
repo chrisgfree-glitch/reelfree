@@ -72,6 +72,10 @@
     },
     "api/report.js": {
       "maxDuration": 15
+    },
+    "api/art.mjs": {
+      "maxDuration": 30,
+      "includeFiles": "data/titles.json"
     }
   }
 }

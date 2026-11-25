@@ -18,7 +18,7 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 .row{margin:26px 0}.row-head{display:flex;align-items:baseline;gap:12px;margin:0 0 10px}.row-head h2{margin:0;font-size:1.35rem}
 .rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,1fr);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;scrollbar-width:thin;scrollbar-color:#5a4a1a transparent}
 .rail .card{scroll-snap-align:start}
-.az{margin-top:30px}
+.az{margin-top:30px}.more{margin:34px 0 0}.more h2{font-size:1.15rem;margin:0 0 4px}.more{margin:34px 0 0}.more h2{font-size:1.15rem;margin:0 0 4px}
 .card{position:relative;display:block;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;border:2px solid var(--gold);box-shadow:0 0 0 1px rgba(0,0,0,.6),0 6px 18px rgba(0,0,0,.45);background:linear-gradient(150deg,#2a2210,#15151d 65%);color:var(--text);text-decoration:none;transition:transform .15s,box-shadow .15s}
 .card:hover,.card:focus-visible{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(0,0,0,.6),0 0 18px rgba(212,175,55,.35)}
 .card .art{position:absolute;inset:0}.card .art img{width:100%;height:100%;object-fit:cover;display:block}
@@ -31,7 +31,7 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 .card .kind{position:absolute;top:10px;right:10px;font-size:.68rem;color:#eee;text-transform:uppercase;letter-spacing:.08em;text-shadow:0 1px 2px #000}
 .badge{display:inline-block;font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:99px;background:#333;color:#fff;letter-spacing:.03em}
 .card .badge{position:absolute;top:8px;left:10px}
-.src-archive{background:#4a4a5a}.src-youtube{background:#c4302b}.src-tubi{background:#7b2cbf}.src-pluto{background:#1d6fd6}
+.src-archive{background:#4a4a5a}.src-youtube{background:#c4302b}.src-tubi{background:#7b2cbf}.src-pluto{background:#1d6fd6}.src-commons{background:#2f6f5e}.src-loc{background:#8a5a1f}.src-plex{background:#b7861b;color:#111}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 18px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn.ghost{background:transparent}.btn.small{min-height:36px;padding:0 12px;font-size:.88rem}
 .btn:hover{filter:brightness(1.12)}

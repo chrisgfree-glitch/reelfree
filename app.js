@@ -5,10 +5,13 @@ const SOURCES = {
   youtube: { label: 'YouTube (official)', short: 'YouTube' },
   tubi: { label: 'Tubi', short: 'Tubi' },
   pluto: { label: 'Pluto TV', short: 'Pluto TV' },
+  commons: { label: 'Wikimedia Commons', short: 'Commons' },
+  loc: { label: 'Library of Congress', short: 'LoC' },
+  plex: { label: 'Plex', short: 'Plex' },
 };
 // How each source plays, based on observed response headers (see README "Playback").
 // inline: official embed player; frame: full source page in an in-site viewer; tab: new tab (framing blocked).
-const PLAYBACK = { archive: 'inline', youtube: 'inline', pluto: 'frame', tubi: 'tab' };
+const PLAYBACK = { archive: 'inline', youtube: 'inline', commons: 'inline', pluto: 'frame', tubi: 'tab', loc: 'tab', plex: 'tab' };
 
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -94,8 +97,9 @@ function player(t) {
     return `<div class="actions"><button class="btn primary" id="watch-frame">▶ Watch free on ${esc(src)}</button>${out}</div>
       <p class="muted small">Plays inside ReelFree in ${esc(src)}'s own page, with their ads. If it doesn't load, use “Open on ${esc(src)}”.</p>`;
   }
+  const why = t.source === 'plex' ? 'Plex links always open in a new tab' : `${esc(src)} doesn't allow its pages to play inside other sites, so this opens ${esc(src)} in a new tab`;
   return `<div class="actions"><a class="btn primary" href="${esc(t.url)}" target="_blank" rel="noopener">▶ Watch free on ${esc(src)} ↗</a></div>
-    <p class="muted small">${esc(src)} doesn't allow its pages to play inside other sites, so this opens ${esc(src)} in a new tab.</p>`;
+    <p class="muted small">${why}.</p>`;
 }
 
 function reportPanel(t) {
@@ -177,3 +181,14 @@ if (page === 'home') home();
 if (page === 'title') titlePage();
 if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js').then((m) => m.init(CFG, { loadData, card, esc, page }));
 else if (page === 'account') $('#account-root').innerHTML = '<h1>My lists</h1><p class="muted">Accounts are coming soon. Favorites and private lists will appear here.</p>';
+
+// Optional TMDB enrichment: only active when the server has TMDB env vars.
+fetch('/api/art').then((r) => r.ok ? r.json() : null).then((j) => {
+  if (!j || !j.active) return;
+  const f = document.querySelector('.foot');
+  if (f) f.insertAdjacentHTML('beforeend', '<p class="small">This product uses the TMDB API but is not endorsed or certified by TMDB.</p>');
+  window.__rfTMDB = j.art || {};
+  const t = window.__rfTitleEarly, a = t && window.__rfTMDB[t.id];
+  if (a && a.releaseDate) { const m = document.querySelector('.title-page .meta'); if (m) m.insertAdjacentHTML('beforeend', ` · Released ${esc(a.releaseDate)}`); }
+  document.querySelectorAll('.card.noimg').forEach((c) => { const id = c.getAttribute('href').split('/').pop(); const p = window.__rfTMDB[id]?.poster; if (p) { c.classList.remove('noimg'); c.querySelector('.art').insertAdjacentHTML('afterbegin', `<img src="${esc(p)}" alt="" loading="lazy">`); } });
+}).catch(() => {});

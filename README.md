@@ -19,6 +19,10 @@ Sources allowed: Internet Archive public-domain items (archive.org), official st
 | Internet Archive | `/embed/<id>` has no X-Frame-Options and no `frame-ancestors` | **In-site**, official archive.org embed player |
 | YouTube (official channels) | official embed player (`youtube-nocookie.com/embed`) | **In-site**, official YouTube embed player |
 | Pluto TV | title pages send no X-Frame-Options and no CSP `frame-ancestors` | **In-site full-page viewer** (Pluto's own page in an iframe, with their ads); "Open on Pluto TV" new-tab link always shown as a fallback |
+| Wikimedia Commons | `?embedplayer=yes` file pages send no X-Frame-Options | **In-site**, Commons' official embed player; nightly check confirms the file still exists and its license is public domain |
+| Library of Congress (National Screening Room) | `X-Frame-Options: sameorigin` + CSP | **New tab** (loc.gov) |
+| Plex | not framed by policy | **New tab**; checker requires the page title to still say "Free on Plex" |
+| Fandango at Home | free section is JavaScript-only, no titles listed individually | One "Browse free on Fandango" **new-tab** link on the home page |
 | Tubi | `X-Frame-Options: SAMEORIGIN` on title pages; no public embed option found | **New tab** (`target="_blank" rel="noopener"`). Framing is not worked around. |
 
 No pop-up windows (`window.open`) or ad-style overlays are used anywhere. If a source changes its headers, update `PLAYBACK` in `app.js`.
@@ -38,6 +42,10 @@ GitHub Actions would also work, but the GitHub token available when this was bui
 - Vercel env vars: `GH_REPORT_TOKEN` (GitHub token that can create issues and commit `data/status.json` here; best is a fine-grained PAT limited to this repo with Contents + Issues read/write), `GH_REPO=chrisgfree-glitch/reelfree`, `CRON_SECRET` (random; Vercel sends it to cron routes).
 
 ## Artwork
+Commons cards use the file's own still-frame thumbnail (`Special:FilePath/...?width=640`), LoC cards use the item's `image_url` from the loc.gov JSON API, Plex cards use the page's `og:image`. Wikidata artwork wasn't needed (every title already has source artwork), and TVmaze isn't used yet, so there's no TVmaze credit line.
+
+**TMDB (optional, off until env vars exist):** `api/art.mjs` reads `TMDB_READ_TOKEN` (Bearer, preferred) or `TMDB_API_KEY` (`?api_key=`, fallback) at **runtime**. When either is set, the site shows TMDB release dates on title pages, fills any missing card images, and adds the TMDB credit line to the footer. Redeploy after adding the vars.
+
 Card images come only from the approved sources' own public artwork: archive.org `/services/img/<id>`, YouTube `i.ytimg.com` thumbnails, and the `og:image` on Tubi/Pluto title pages. TMDB was skipped (needs an API key/sign-up). Cards without an image fall back to the logo on a gradient.
 
 ## Accounts (off by default)
