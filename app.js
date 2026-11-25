@@ -88,8 +88,8 @@ async function home() {
   // Popular: free movies from 1970 on, ranked by TMDB rating (min vote count, see data/meta.json), tiebreak vote count.
   const pop = visible.filter((t) => t.popRank).sort((a, b) => a.popRank - b.popRank);
   $('#sections').innerHTML =
-    (top.length ? row('newest', `Top ${top.length} newest`, top, 'Free movies from 2010 on, newest first') : '') +
-    (pop.length ? row('popular', `Top ${pop.length} popular movies`, pop, 'Best rated on TMDB first (1970 on)') : '') +
+    (top.length ? row('newest', top.length >= 100 ? 'Top 100 newest' : `${top.length} newest good movies`, top, 'Free movies from 2010 on, rated ★6+ on TMDB (100+ votes), newest first') : '') +
+    (pop.length ? row('popular', `Top ${pop.length} popular movies`, pop, 'Weighted TMDB rating, 1,000+ votes, 1970 on') : '') +
     row('tv', 'TV shows', visible.filter((t) => t.tvRank).sort((a, b) => a.tvRank - b.tvRank), 'Free now: sci-fi favorites and current hits') +
     row('fan', 'Fan-made Star Trek', visible.filter((t) => t.fanMade), 'Not official: free fan productions on their makers\' own YouTube channels. Star Trek is owned by CBS/Paramount and is not public domain.') +
     row('classics', 'Timeless classics', visible.filter((t) => t.year < 1970 && !t.tvRank && !t.fanMade).sort(newest), 'Before 1970: public-domain and vintage favorites');
@@ -129,17 +129,24 @@ async function home() {
 }
 
 // Hand-picked collections built from verified catalog titles (chips, one collection at a time).
+const inOctober = new Date().getMonth() === 9;
 const COLLECTIONS = [
-  ['Halloween Horror', (t) => /horror/i.test(t.genre)],
-  ['90s Sci-Fi', (t) => /sci-fi|science fiction/i.test(t.genre) && t.year >= 1990 && t.year <= 1999],
-  ['Classic Westerns', (t) => /western/i.test(t.genre) && t.year < 1980],
+  ["Critics' Picks", (t) => (t.rating || 0) >= 7.5 && (t.votes || 0) >= 1000],
+  ['Comedy Night', (t) => /comedy/i.test(t.genre)],
+  ['Action & Martial Arts', (t) => /action/i.test(t.genre) || /kung fu|martial art|ip man/i.test(`${t.title} ${t.description}`)],
   ['Family Night', (t) => /family|animation/i.test(t.genre)],
+  ['90s Rewind', (t) => t.year >= 1990 && t.year <= 1999],
+  ['2000s Favorites', (t) => t.year >= 2000 && t.year <= 2009],
+  ['Golden Age Classics', (t) => t.year < 1960],
+  ['Sci-Fi TV Marathon', (t) => t.type === 'tv' && /sci-fi|science fiction/i.test(t.genre)],
   ['Space & Aliens', (t) => /\b(space|alien|aliens|planet|galaxy|starship|astronaut|mars|ufo)\b/i.test(`${t.title} ${t.description}`)],
-  ['Film Noir & Crime Classics', (t) => /crime|mystery|noir/i.test(t.genre) && t.year < 1970],
+  ['Documentaries', (t) => /documentary/i.test(t.genre)],
+  ...(inOctober ? [['Halloween Horror', (t) => /horror/i.test(t.genre)]] : []),
 ];
+const COLL_MIN = 8; // collections with fewer titles are hidden
 function collections(visible) {
   const box = $('#collections'); if (!box) return;
-  const cs = COLLECTIONS.map(([name, f]) => [name, visible.filter(f).sort((a, b) => (b.releaseDate || `${b.year}`).localeCompare(a.releaseDate || `${a.year}`))]).filter(([, l]) => l.length);
+  const cs = COLLECTIONS.map(([name, f]) => [name, visible.filter(f).sort((a, b) => (b.releaseDate || `${b.year}`).localeCompare(a.releaseDate || `${a.year}`))]).filter(([, l]) => l.length >= COLL_MIN);
   $('#coll-chips').innerHTML = cs.map(([n, l], i) => `<button class="chip${i ? '' : ' on'}" data-i="${i}">${esc(n)} <span>${l.length}</span></button>`).join('');
   const show = (i) => { document.querySelectorAll('#coll-chips .chip').forEach((c) => c.classList.toggle('on', +c.dataset.i === i)); $('#coll-grid').innerHTML = cs[i][1].slice(0, 60).map(card).join(''); };
   $('#coll-chips').addEventListener('click', (e) => { const b = e.target.closest('.chip'); if (b) show(+b.dataset.i); });
@@ -325,7 +332,7 @@ function wireReport(t) {
 const page = document.body.dataset.page;
 if (page === 'home') home();
 if (page === 'title') titlePage();
-if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK, TITLES: () => window.__rfTitles }));
+if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js?v=20261124c').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK, TITLES: () => window.__rfTitles }));
 else if (page === 'account') $('#account-root').innerHTML = '<h1>My lists</h1><p class="muted">Accounts are coming soon. Favorites and private lists will appear here.</p>';
 
 // Optional TMDB enrichment: only active when the server has TMDB env vars.

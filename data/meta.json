@@ -1,1 +1,15 @@
-{"popularMinVotes": 200, "generated": "2026-11-24"}
+{
+ "generated": "2026-11-24",
+ "popular": {
+  "minVotes": 1000,
+  "minRating": 6.5,
+  "m": 1000,
+  "C": 7.22,
+  "pool": 400
+ },
+ "newest": {
+  "minVotes": 100,
+  "minRating": 6.0,
+  "count": 100
+ }
+}
