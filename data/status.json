@@ -1,0 +1,326 @@
+{
+  "titles": {
+    "the-general": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "3 video file(s)"
+    },
+    "nosferatu": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "2 video file(s)"
+    },
+    "his-girl-friday": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "night-of-the-living-dead": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "14 video file(s)"
+    },
+    "cabinet-of-dr-caligari": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "3 video file(s)"
+    },
+    "phantom-of-the-opera-1925": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "3 video file(s)"
+    },
+    "house-on-haunted-hill": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "3 video file(s)"
+    },
+    "carnival-of-souls": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "scarlet-street": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "the-stranger-1946": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "meet-john-doe": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "gullivers-travels-1939": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "the-flying-deuces": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "the-lost-world-1925": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "battleship-potemkin": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "3 video file(s)"
+    },
+    "bonanza-pd": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "60 video file(s)"
+    },
+    "sherlock-holmes-1954-shy-ballerina": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "4 video file(s)"
+    },
+    "knightriders": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "by Popcornflix"
+    },
+    "saturn-3": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "by Popcornflix"
+    },
+    "trancers": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "by FilmRise Movies"
+    },
+    "birders-guide-to-everything": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "by Popcornflix"
+    },
+    "canterville-ghost-1996": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "by Popcornflix"
+    },
+    "stuck-in-love": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "by FilmRise Movies"
+    },
+    "tourist-trap": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "by FilmRise Movies"
+    },
+    "hanna": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "kong-skull-island": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "magnificent-seven-2016": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "i-am-legend": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "robots": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "meet-the-parents": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "columbo": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "midsomer-murders": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "scooby-doo-where-are-you": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "miami-vice": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "planes-trains-automobiles": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "trading-places": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "star-trek-iv-voyage-home": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "star-trek-ii-wrath-of-khan": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "ex-machina": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    },
+    "green-room": {
+      "ok": true,
+      "hidden": false,
+      "consecutiveFailures": 0,
+      "lastChecked": "2026-11-25T05:08:53.892Z",
+      "lastOk": "2026-11-25T05:08:53.892Z",
+      "detail": "title present"
+    }
+  },
+  "updated": "2026-11-25T05:08:53.892Z",
+  "hideAfter": 2
+}

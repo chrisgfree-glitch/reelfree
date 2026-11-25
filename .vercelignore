@@ -1,0 +1,5 @@
+scripts/
+.github/
+firebase.json
+firestore.rules
+README.md
