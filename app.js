@@ -8,10 +8,14 @@ const SOURCES = {
   commons: { label: 'Wikimedia Commons', short: 'Commons' },
   loc: { label: 'Library of Congress', short: 'LoC' },
   plex: { label: 'Plex', short: 'Plex' },
+  tmdb: { label: 'Free streaming (via TMDB)', short: 'Free' },
 };
+const srcShort = (t) => (t.source === 'tmdb' && t.providers && t.providers[0]) || SOURCES[t.source].short;
+const srcLabel = (t) => (t.source === 'tmdb' && t.providers && t.providers.length) ? t.providers.join(', ') : SOURCES[t.source].label;
+const yearsOf = (t) => t.type === 'tv' && t.lastAirDate ? `${t.year}–${t.endYear || ''}` : `${t.year}`;
 // How each source plays, based on observed response headers (see README "Playback").
 // inline: official embed player; frame: full source page in an in-site viewer; tab: new tab (framing blocked).
-const PLAYBACK = { archive: 'inline', youtube: 'inline', commons: 'inline', pluto: 'frame', tubi: 'tab', loc: 'tab', plex: 'tab' };
+const PLAYBACK = { archive: 'inline', youtube: 'inline', commons: 'inline', pluto: 'frame', tubi: 'tab', loc: 'tab', plex: 'tab', tmdb: 'tab' };
 
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -39,9 +43,9 @@ function card(t) {
   return `<a class="card${img ? '' : ' noimg'}" href="/title/${esc(t.id)}">
     <span class="art">${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.parentNode.classList.add('noimg');this.remove()">` : ''}<img class="fallback" src="/icons/logo-128.png" alt="" aria-hidden="true"></span>
     <span class="scrim"></span>
-    <span class="badge src-${t.source}">${esc(SOURCES[t.source].short)}</span>
+    <span class="badge src-${t.source}">${esc(srcShort(t))}</span>
     <span class="kind">${t.type === 'tv' ? 'TV' : 'Movie'}</span>
-    <span class="info"><h3>${esc(t.title)}</h3><span class="meta">${esc(t.year)} · ${esc(t.genre)}</span></span>
+    <span class="info"><h3>${esc(t.title)}</h3><span class="meta">${esc(yearsOf(t))} · ${esc(t.genre)}</span></span>
   </a>`;
 }
 
@@ -60,8 +64,8 @@ async function home() {
   $('#sections').innerHTML =
     (top.length ? row('newest', `Top ${top.length} newest`, top, 'Movies from 2010 on, newest first') : '') +
     row('popular', 'Popular movies', visible.filter((t) => t.type === 'movie' && t.year >= 1970 && !inTop.has(t.id)).sort(newest), 'Newest first') +
-    row('tv', 'TV shows', visible.filter((t) => t.type === 'tv').sort(newest), 'Newest first') +
-    row('classics', 'Timeless classics', visible.filter((t) => t.year < 1970).sort(newest), 'Before 1970: public-domain and vintage favorites');
+    row('tv', 'TV shows', visible.filter((t) => t.tvRank).sort((a, b) => a.tvRank - b.tvRank), 'Free now: sci-fi favorites and current hits') +
+    row('classics', 'Timeless classics', visible.filter((t) => t.year < 1970 && !t.tvRank).sort(newest), 'Before 1970: public-domain and vintage favorites');
   const genres = [...new Set(visible.map((t) => t.genre))].sort();
   $('#genre').insertAdjacentHTML('beforeend', genres.map((g) => `<option>${esc(g)}</option>`).join(''));
   const p = new URLSearchParams(location.search);
@@ -87,11 +91,31 @@ async function home() {
   $('#source').addEventListener('change', (e) => { st.source = e.target.value; render(); });
   document.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => { st.type = b.dataset.type; render(); }));
   render();
+  genreBrowser();
+}
+
+async function genreBrowser() {
+  const box = $('#genres'); if (!box) return;
+  let data;
+  try { data = await getJSON('/data/genres.json', 10000); } catch { box.hidden = true; return; }
+  const gs = data.genres || [];
+  if (!gs.length) { box.hidden = true; return; }
+  $('#genre-chips').innerHTML = gs.map((g, i) => `<button class="chip${i ? '' : ' on'}" data-i="${i}">${esc(g.name)} <span>${g.count}</span></button>`).join('');
+  const show = (i) => {
+    const g = gs[i];
+    document.querySelectorAll('#genre-chips .chip').forEach((c) => c.classList.toggle('on', +c.dataset.i === i));
+    $('#genre-grid').innerHTML = g.items.map((m) => `<a class="card${m.image ? '' : ' noimg'}" href="${esc(m.url)}" target="_blank" rel="noopener">
+      <span class="art">${m.image ? `<img src="${esc(m.image)}" alt="" loading="lazy" decoding="async">` : ''}<img class="fallback" src="/icons/logo-128.png" alt="" aria-hidden="true"></span>
+      <span class="scrim"></span><span class="badge src-tmdb">${esc(m.providers[0] || 'Free')}</span><span class="kind">Movie ↗</span>
+      <span class="info"><h3>${esc(m.title)}</h3><span class="meta">${esc(m.year)} · ${esc(m.providers.join(', '))}</span></span></a>`).join('');
+  };
+  $('#genre-chips').addEventListener('click', (e) => { const b = e.target.closest('.chip'); if (b) show(+b.dataset.i); });
+  show(0);
 }
 
 function player(t) {
   const mode = PLAYBACK[t.source];
-  const src = SOURCES[t.source].label;
+  const src = srcLabel(t);
   const out = `<a class="btn ghost" href="${esc(t.url)}" target="_blank" rel="noopener">Open on ${esc(src)} ↗</a>`;
   if (mode === 'inline') {
     const allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
@@ -102,6 +126,8 @@ function player(t) {
     return `<div class="actions"><button class="btn primary" id="watch-frame">▶ Watch free on ${esc(src)}</button>${out}</div>
       <p class="muted small">Plays inside ReelFree in ${esc(src)}'s own page, with their ads. If it doesn't load, use “Open on ${esc(src)}”.</p>`;
   }
+  if (t.source === 'tmdb') return `<div class="actions"><a class="btn primary" href="${esc(t.url)}" target="_blank" rel="noopener">▶ Watch free on ${esc(src)} ↗</a></div>
+    <p class="muted small">Opens TMDB's where-to-watch page (powered by JustWatch) in a new tab, with links to the free, ad-supported service.</p>`;
   const why = t.source === 'plex' ? 'Plex links always open in a new tab' : `${esc(src)} doesn't allow its pages to play inside other sites, so this opens ${esc(src)} in a new tab`;
   return `<div class="actions"><a class="btn primary" href="${esc(t.url)}" target="_blank" rel="noopener">▶ Watch free on ${esc(src)} ↗</a></div>
     <p class="muted small">${why}.</p>`;
@@ -134,8 +160,8 @@ async function titlePage() {
   const hidden = isHidden(t.id);
   root.innerHTML = `
     <p class="crumbs"><a href="/">← All titles</a></p>
-    <h1>${esc(t.title)} <span class="year">${esc(t.year)}</span></h1>
-    <p class="meta"><span class="badge src-${t.source}">${esc(SOURCES[t.source].label)}</span> ${t.type === 'tv' ? 'TV' : 'Movie'} · ${esc(t.genre)}</p>
+    <h1>${esc(t.title)} <span class="year">${esc(yearsOf(t))}</span></h1>
+    <p class="meta"><span class="badge src-${t.source}">${esc(srcLabel(t))}</span> ${t.type === 'tv' ? 'TV' : 'Movie'} · ${esc(t.genre)}</p>
     ${!hidden && PLAYBACK[t?.source] !== 'inline' && (st.image || t.image) ? `<div class="poster"><img src="${esc(st.image || t.image)}" alt="${esc(t.title)} artwork from ${esc(SOURCES[t.source].label)}" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></div>` : ''}
     ${hidden ? '<p class="notice">This title is temporarily hidden because its link failed our last two checks. It comes back automatically once it works again.</p>' : player(t)}
     <p class="lede">${esc(t.description)}</p>

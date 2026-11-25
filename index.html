@@ -5,10 +5,11 @@
 <section class="filters" aria-label="Filters">
 <input id="q" type="search" placeholder="Search titles, genres, descriptions" aria-label="Search" autocomplete="off">
 <select id="genre" aria-label="Genre"><option value="">All genres</option></select>
-<select id="source" aria-label="Source"><option value="">All sources</option><option value="archive">Internet Archive</option><option value="youtube">YouTube (official)</option><option value="tubi">Tubi</option><option value="pluto">Pluto TV</option><option value="commons">Wikimedia Commons</option><option value="loc">Library of Congress</option><option value="plex">Plex</option></select>
+<select id="source" aria-label="Source"><option value="">All sources</option><option value="archive">Internet Archive</option><option value="youtube">YouTube (official)</option><option value="tubi">Tubi</option><option value="pluto">Pluto TV</option><option value="commons">Wikimedia Commons</option><option value="loc">Library of Congress</option><option value="plex">Plex</option><option value="tmdb">Other free services (via TMDB)</option></select>
 <div class="seg" role="group" aria-label="Type"><button data-type="" class="on">All</button><button data-type="movie">Movies</button><button data-type="tv">TV</button></div>
 </section>
 <div id="sections"></div>
+<section id="genres" class="genres"><div class="row-head"><h2>Browse free movies by genre</h2><span class="muted small">Newest first · opens where-to-watch in a new tab</span></div><div id="genre-chips" class="chips" role="tablist" aria-label="Genres"></div><div id="genre-grid" class="grid"></div></section>
 <section class="az"><div class="row-head"><h2 id="az-title">A–Z</h2><span id="count" class="muted small"></span></div>
 <div id="grid" class="grid" aria-live="polite"></div></section>
 <section class="more"><h2>More free, legal places to browse</h2><div class="actions"><a class="btn ghost" href="https://athome.fandango.com/content/browse/free" target="_blank" rel="noopener">Browse free on Fandango ↗</a><a class="btn ghost" href="https://watch.plex.tv/on-demand" target="_blank" rel="noopener">Browse free on Plex ↗</a></div><p class="small muted">Opens in a new tab. Free with ads; availability is set by each service.</p></section>
