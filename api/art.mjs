@@ -1,10 +1,10 @@
 // Optional TMDB enrichment (env-gated stub). Reads env at RUNTIME:
-//   TMDB_READ_TOKEN (v4 read token, Bearer) preferred; TMDB_API_KEY (v3, ?api_key=) only if the token is missing.
+//   TMDB_READ_TOKEN or tmdb_read_token (v4 read token, Bearer) preferred; TMDB_API_KEY (v3, ?api_key=) only if the token is missing.
 // Not set -> { active: false } and the site shows no TMDB credit. Vercel needs a redeploy after adding env vars.
 import fs from 'node:fs';
 import path from 'node:path';
 export default async function handler(req, res) {
-  const token = process.env.TMDB_READ_TOKEN, key = process.env.TMDB_API_KEY;
+  const token = process.env.TMDB_READ_TOKEN || process.env.tmdb_read_token, key = process.env.TMDB_API_KEY;
   if (!token && !key) { res.setHeader('Cache-Control', 'public, s-maxage=3600'); return res.status(200).json({ active: false }); }
   const titles = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'titles.json'), 'utf8'));
   const tm = async (p, q) => {

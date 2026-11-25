@@ -52,11 +52,16 @@ async function home() {
   const { titles, isHidden, status } = await loadData();
   IMG = Object.fromEntries(Object.entries(status.titles || {}).filter(([, v]) => v.image).map(([k, v]) => [k, v.image]));
   const visible = titles.filter((t) => !isHidden(t.id));
-  const byYear = (a, b) => b.year - a.year || a.title.localeCompare(b.title);
+  const rd = (t) => t.releaseDate || `${t.year}-01-01`;
+  const newest = (a, b) => rd(b).localeCompare(rd(a)) || a.title.localeCompare(b.title);
+  // Top row: movies from 2010 on only, newest first, max 25. Never backfilled with older titles.
+  const top = visible.filter((t) => t.type === 'movie' && t.year >= 2010).sort(newest).slice(0, 25);
+  const inTop = new Set(top.map((t) => t.id));
   $('#sections').innerHTML =
-    row('newest', 'Top 25 newest', [...visible].sort(byYear).slice(0, 25)) +
-    row('popular', 'Popular movies', visible.filter((t) => t.type === 'movie' && t.popularRank).sort((a, b) => a.popularRank - b.popularRank), 'Staff picks') +
-    row('tv', 'TV shows', visible.filter((t) => t.type === 'tv').sort(byYear), 'Newest first');
+    (top.length ? row('newest', `Top ${top.length} newest`, top, 'Movies from 2010 on, newest first') : '') +
+    row('popular', 'Popular movies', visible.filter((t) => t.type === 'movie' && t.year >= 1970 && !inTop.has(t.id)).sort(newest), 'Newest first') +
+    row('tv', 'TV shows', visible.filter((t) => t.type === 'tv').sort(newest), 'Newest first') +
+    row('classics', 'Timeless classics', visible.filter((t) => t.year < 1970).sort(newest), 'Before 1970: public-domain and vintage favorites');
   const genres = [...new Set(visible.map((t) => t.genre))].sort();
   $('#genre').insertAdjacentHTML('beforeend', genres.map((g) => `<option>${esc(g)}</option>`).join(''));
   const p = new URLSearchParams(location.search);
@@ -68,7 +73,7 @@ async function home() {
     const list = visible.filter((t) => (!st.genre || t.genre === st.genre) && (!st.source || t.source === st.source)
       && (!st.type || t.type === st.type)
       && (!q || `${t.title} ${t.genre} ${t.description} ${t.year}`.toLowerCase().includes(q)))
-      .sort((a, b) => a.title.replace(/^(the|a|an) /i, '').localeCompare(b.title.replace(/^(the|a|an) /i, '')));
+      .sort((a, b) => filtering ? (b.releaseDate || `${b.year}`).localeCompare(a.releaseDate || `${a.year}`) || a.title.localeCompare(b.title) : a.title.replace(/^(the|a|an) /i, '').localeCompare(b.title.replace(/^(the|a|an) /i, '')));
     $('#sections').hidden = filtering;
     $('#az-title').textContent = filtering ? 'Results' : 'A–Z';
     $('#grid').innerHTML = list.map(card).join('') || '<p class="muted">No titles match. Try clearing a filter.</p>';

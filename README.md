@@ -8,7 +8,7 @@ Sources allowed: Internet Archive public-domain items (archive.org), official st
 - `index.html`, `title.html`, `about.html`, `account.html`, `app.js`, `styles.css`: static site, no build step. `/title/<id>` is rewritten to `title.html`.
 - `data/titles.json`: the curated list (id, title, year, type, genre, source, url, embedUrl where allowed, description).
 - `data/status.json`: written by the nightly checker. The site reads the live copy from raw.githubusercontent.com, so hiding/un-hiding takes effect without a redeploy (`vercel.json` `ignoreCommand` skips deploys for status-only commits)
-- Home page sections: Top 25 newest (by release year), Popular movies (hand-ranked `popularRank`), TV shows (newest first), and A–Z with search, genre, source and type filters..
+- Home page sections: Top 25 newest (movies from 2010 on only, newest first, never backfilled), Popular movies (other movies from 1970 on, newest first), TV shows (newest first), Timeless classics (before 1970), and A–Z with search, genre, source and type filters. Recent titles were picked by TMDB popularity and vote count and verified as free on Tubi or Pluto TV..
 - `api/report.js`: Vercel function behind the "Report broken link" button.
 - `lib/checker.mjs` + `scripts/check-links.mjs`: the link checker. `api/cron-check.mjs`, `api/cron-weekly.mjs`: Vercel Cron jobs.
 - `accounts.js`, `firestore.rules`, `firebase.json`: optional accounts (off by default).
@@ -44,7 +44,7 @@ GitHub Actions would also work, but the GitHub token available when this was bui
 ## Artwork
 Commons cards use the file's own still-frame thumbnail (`Special:FilePath/...?width=640`), LoC cards use the item's `image_url` from the loc.gov JSON API, Plex cards use the page's `og:image`. Wikidata artwork wasn't needed (every title already has source artwork), and TVmaze isn't used yet, so there's no TVmaze credit line.
 
-**TMDB (optional, off until env vars exist):** `api/art.mjs` reads `TMDB_READ_TOKEN` (Bearer, preferred) or `TMDB_API_KEY` (`?api_key=`, fallback) at **runtime**. When either is set, the site shows TMDB release dates on title pages, fills any missing card images, and adds the TMDB credit line to the footer. Redeploy after adding the vars.
+**TMDB (optional, off until env vars exist):** `api/art.mjs` reads `TMDB_READ_TOKEN` or `tmdb_read_token` (Bearer, preferred) or `TMDB_API_KEY` (`?api_key=`, fallback) at **runtime**. When either is set, the site shows TMDB release dates on title pages, fills any missing card images, and adds the TMDB credit line to the footer. Redeploy after adding the vars.
 
 Card images come only from the approved sources' own public artwork: archive.org `/services/img/<id>`, YouTube `i.ytimg.com` thumbnails, and the `og:image` on Tubi/Pluto title pages. TMDB was skipped (needs an API key/sign-up). Cards without an image fall back to the logo on a gradient.
 
