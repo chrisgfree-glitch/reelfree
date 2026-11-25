@@ -15,6 +15,7 @@ export async function init(cfg, helpers) {
   const btn = $('#auth-btn'); const link = $('.acct-link');
   btn.hidden = false; link.hidden = false;
   btn.addEventListener('click', async () => { if (user) { await A.signOut(auth); } else location.href = '/account'; });
+  A.getRedirectResult(auth).catch(() => {});
   A.onAuthStateChanged(auth, (u) => {
     user = u; btn.textContent = u ? 'Sign out' : 'Sign in';
     if (H.page === 'account') renderAccount();
@@ -74,6 +75,7 @@ async function renderAccount() {
         <label>Email<input type="email" name="email" autocomplete="email" required></label>
         <label>Password<input type="password" name="password" autocomplete="current-password" minlength="6" required></label>
         <div class="actions"><button class="btn primary" name="mode" value="in">Sign in</button><button class="btn ghost" name="mode" value="up">Create account</button><button class="btn small ghost" type="button" id="reset">Forgot password</button></div>
+        <div class="actions"><button class="btn ghost" type="button" id="google">Continue with Google</button></div>
         <p class="small muted" id="auth-msg" role="status"></p></form>`;
     const f = $('#auth-form'); const msg = $('#auth-msg');
     f.addEventListener('submit', async (e) => {
@@ -83,6 +85,10 @@ async function renderAccount() {
         else await A.signInWithEmailAndPassword(auth, f.email.value, f.password.value);
       } catch (err) { msg.textContent = friendly(err); }
     });
+    $('#google').onclick = async () => {
+      // Full-page redirect (no pop-up windows on this site).
+      try { await A.signInWithRedirect(auth, new A.GoogleAuthProvider()); } catch (err) { msg.textContent = friendly(err); }
+    };
     $('#reset').onclick = async () => {
       if (!f.email.value) { msg.textContent = 'Enter your email first.'; return; }
       try { await A.sendPasswordResetEmail(auth, f.email.value); msg.textContent = 'Check your email for a reset link.'; } catch (err) { msg.textContent = friendly(err); }

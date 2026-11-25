@@ -2,3 +2,5 @@ scripts/
 firebase.json
 firestore.rules
 README.md
+.firebaserc
+firestore.indexes.json

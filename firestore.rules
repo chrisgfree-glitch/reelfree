@@ -14,6 +14,21 @@ service cloud.firestore {
         && request.resource.data.name is string && request.resource.data.name.size() <= 60
         && request.resource.data.items is list && request.resource.data.items.size() <= 500;
     }
+    match /users/{uid}/history/{titleId} {
+      allow read, delete: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && titleId.size() <= 80 && request.resource.data.keys().hasOnly(['lastAt', 'count', 'genres'])
+        && request.resource.data.count is int && request.resource.data.count <= 100000
+        && request.resource.data.genres is list && request.resource.data.genres.size() <= 10;
+    }
+    match /users/{uid}/notify/{key} {
+      allow read, delete: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid && key.size() <= 40
+        && request.resource.data.keys().hasOnly(['type', 'tmdbId', 'genreId', 'name', 'email', 'createdAt'])
+        && request.resource.data.type in ['genre', 'title']
+        && request.resource.data.name is string && request.resource.data.name.size() <= 120
+        && request.resource.data.email == request.auth.token.email;
+    }
     match /{document=**} { allow read, write: if false; }
   }
 }

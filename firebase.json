@@ -1,1 +1,22 @@
-{ "firestore": { "rules": "firestore.rules" } }
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "nam5",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "auth": {
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "ReelFree",
+        "supportEmail": "chrisgfree@gmail.com",
+        "authorizedRedirectUris": [
+          "https://reelfree.net",
+          "https://www.reelfree.net",
+          "https://reelfree-three.vercel.app"
+        ]
+      }
+    }
+  }
+}
