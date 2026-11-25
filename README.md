@@ -47,3 +47,6 @@ To turn on: create a Firebase project (Spark, free), enable Email/Password sign-
 
 ## Adding titles
 Edit `scripts/candidates.py`, run `python3 scripts/build_titles.py`, then `node scripts/check-links.mjs --no-write` and only commit titles that pass. YouTube entries must come from the rights holder's official channel.
+
+## Hosting
+Vercel project `reelfree` (team chrisgfree-5870), auto-deploys from `main`. Domains: `reelfree.net` (primary) and `www.reelfree.net` (308 redirect to the apex). DNS is managed at the registrar (GoDaddy); see the Vercel domain settings for the exact records.
