@@ -180,9 +180,11 @@ async function sportsBrowser() {
     document.querySelectorAll('#sport-chips .chip').forEach((c) => c.classList.toggle('on', +c.dataset.i === i));
     $('#sport-grid').innerHTML = sp[i].items.map((it) => it.kind === 'embed'
       ? `<div class="sport-item"><div class="player"><iframe src="${esc(it.embed)}" title="${esc(it.name)} on YouTube" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><p><strong>${esc(it.name)}</strong> <span class="muted small">· ${esc(it.service)} · ${esc(it.note)}</span> <a class="small" href="${esc(it.url)}" target="_blank" rel="noopener">Channel ↗</a></p></div>`
+      : it.kind === 'frame' ? `<button class="sport-tab" type="button" data-frame="${esc(it.url)}" data-name="${esc(it.name)}"><strong>${esc(it.name)}</strong><span class="muted small">${esc(it.service)} · ${esc(it.note)}</span><span class="btn small primary">▶ Watch here</span></button>`
       : `<a class="sport-tab" href="${esc(it.url)}" target="_blank" rel="noopener"><strong>${esc(it.name)}</strong><span class="muted small">${esc(it.service)} · ${esc(it.note)}</span><span class="btn small primary">Open ↗</span></a>`).join('');
   };
   $('#sport-chips').addEventListener('click', (e) => { const b = e.target.closest('.chip'); if (b) show(+b.dataset.i); });
+  $('#sport-grid').addEventListener('click', (e) => { const b = e.target.closest('[data-frame]'); if (b) openViewer({ title: b.dataset.name, url: b.dataset.frame, source: 'pluto' }); });
   show(0);
 }
 
@@ -226,6 +228,23 @@ async function genreBrowser() {
   show(0);
 }
 
+// Best allowed free provider for TMDB-sourced titles, in a fixed order. Uses the nightly checker's provider list when present.
+// Links go to each service's own search page for the title (built from the name only; nothing is fetched).
+// Pluto TV has no linkable search URL, so Pluto-only titles keep TMDB's where-to-watch link.
+const PICK_ORDER = ['YouTube', 'Tubi', 'Pluto TV', 'Plex', 'Fandango at Home'];
+const SEARCH = {
+  YouTube: (q) => `https://www.youtube.com/results?search_query=${encodeURIComponent(q + ' full movie free with ads')}`,
+  Tubi: (q) => `https://tubitv.com/search/${encodeURIComponent(q)}`,
+  Plex: (q) => `https://watch.plex.tv/search?q=${encodeURIComponent(q)}`,
+  'Fandango at Home': (q) => `https://athome.fandango.com/content/browse/search?searchString=${encodeURIComponent(q)}`,
+};
+let STATUS = {};
+function autoPick(t) {
+  const prov = (STATUS[t.id] && STATUS[t.id].providers) || t.providers || [];
+  const name = PICK_ORDER.find((p) => prov.includes(p) && SEARCH[p]);
+  return name ? { name, url: SEARCH[name](name === 'YouTube' ? `${t.title} ${t.year}` : t.title) } : null;
+}
+
 function player(t) {
   const mode = PLAYBACK[t.source];
   const src = srcLabel(t);
@@ -241,8 +260,14 @@ function player(t) {
     return `<div class="actions"><button class="btn primary" id="watch-frame">▶ Watch free on ${esc(src)}</button>${out}</div>
       <p class="muted small">Plays inside ReelFree in ${esc(src)}'s own page, with their ads. If it doesn't load, use “Open on ${esc(src)}”.</p>`;
   }
-  if (t.source === 'tmdb') return `<div class="actions"><a class="btn primary" href="${esc(t.url)}" target="_blank" rel="noopener">▶ Watch free on ${esc(src)} ↗</a></div>
-    <p class="muted small">Opens TMDB's where-to-watch page (powered by JustWatch) in a new tab, with links to the free, ad-supported service.</p>`;
+  if (t.source === 'tmdb') {
+    const pick = autoPick(t);
+    const fallback = `<a class="small" href="${esc(t.url)}" target="_blank" rel="noopener">Other options: where to watch (TMDB/JustWatch) ↗</a>`;
+    if (!pick) return `<div class="actions"><a class="btn primary" href="${esc(t.url)}" target="_blank" rel="noopener">▶ Watch free on ${esc(src)} ↗</a></div>
+      <p class="muted small">Opens TMDB's where-to-watch page (powered by JustWatch) in a new tab.</p>`;
+    return `<div class="actions"><a class="btn primary" href="${esc(pick.url)}" target="_blank" rel="noopener">▶ Watch free on ${esc(pick.name)} ↗</a></div>
+      <p class="muted small">Opens ${esc(pick.name)}'s search for this title in a new tab (free with ads). ${fallback}</p>`;
+  }
   const why = t.source === 'plex' ? 'Plex links always open in a new tab' : `${esc(src)} doesn't allow its pages to play inside other sites, so this opens ${esc(src)} in a new tab`;
   return `<div class="actions"><a class="btn primary" href="${esc(t.url)}" target="_blank" rel="noopener">▶ Watch free on ${esc(src)} ↗</a></div>
     <p class="muted small">${why}.</p>`;
@@ -269,6 +294,7 @@ async function titlePage() {
   const { titles, isHidden, status } = await loadData();
   const t = titles.find((x) => x.id === id);
   const st = (status.titles || {})[id] || {};
+  STATUS = status.titles || {};
   const root = $('#title-root');
   if (!t) { root.innerHTML = '<h1>Title not found</h1><p><a href="/">Back to browse</a></p>'; return; }
   document.title = `${t.title} (${t.year}) · Watch free on ReelFree`;
@@ -305,8 +331,8 @@ function openViewer(t) {
     <button class="btn small" id="viewer-close">Back to ReelFree</button></div>
     <iframe src="${esc(t.url)}" title="${esc(t.title)} on ${esc(SOURCES[t.source].label)}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
   v.hidden = false; document.body.classList.add('viewing');
-  history.replaceState(null, '', '#watch');
-  $('#viewer-close').addEventListener('click', () => { v.hidden = true; v.innerHTML = ''; document.body.classList.remove('viewing'); history.replaceState(null, '', location.pathname); });
+  if (page === 'title') history.replaceState(null, '', '#watch');
+  $('#viewer-close').addEventListener('click', () => { v.hidden = true; v.innerHTML = ''; document.body.classList.remove('viewing'); if (page === 'title') history.replaceState(null, '', location.pathname); });
 }
 
 function wireReport(t) {
@@ -332,7 +358,7 @@ function wireReport(t) {
 const page = document.body.dataset.page;
 if (page === 'home') home();
 if (page === 'title') titlePage();
-if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js?v=20261124c').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK, TITLES: () => window.__rfTitles }));
+if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js?v=20261124d').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK, TITLES: () => window.__rfTitles }));
 else if (page === 'account') $('#account-root').innerHTML = '<h1>My lists</h1><p class="muted">Accounts are coming soon. Favorites and private lists will appear here.</p>';
 
 // Optional TMDB enrichment: only active when the server has TMDB env vars.

@@ -1,5 +1,5 @@
 {
- "note": "Official league/org YouTube channels and free ad-supported sports channels. Most live major games are not legally free.",
+ "note": "Full classic games (official league playlists), free 24/7 sports channels (Tubi, Pluto TV) and official replay archives. Most live major-league games are not legally free.",
  "sports": [
   {
    "sport": "Football",
@@ -8,21 +8,21 @@
     {
      "kind": "embed",
      "service": "YouTube (official)",
-     "name": "NFL",
-     "url": "https://www.youtube.com/@NFL/videos",
-     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUDVYQ4Zhbm3S2dlz7P1GBDg",
-     "note": "Latest uploads: highlights, condensed & classic games"
+     "name": "NFL Classic Full Games",
+     "url": "https://www.youtube.com/playlist?list=PLRdw3IjKY2gm1Sazu2JYtcH74HHpv_Ch0",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=PLRdw3IjKY2gm1Sazu2JYtcH74HHpv_Ch0",
+     "note": "Full classic games (NFL official)"
     },
     {
      "kind": "embed",
      "service": "YouTube (official)",
-     "name": "NFL Films",
-     "url": "https://www.youtube.com/@NFLFilms/videos",
-     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUY3NEq2LYrmdoGkevo9BH5A",
-     "note": "Latest uploads: highlights, condensed & classic games"
+     "name": "NFL Throwback",
+     "url": "https://www.youtube.com/playlist?list=PLfOOWILEC6-LqhcO3KIEFXNQEhdi6IAdg",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=PLfOOWILEC6-LqhcO3KIEFXNQEhdi6IAdg",
+     "note": "Classic games & broadcasts (NFL Throwback official)"
     },
     {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "NFL Channel",
      "url": "https://pluto.tv/us/live-tv/nfl-channel",
@@ -32,8 +32,24 @@
   },
   {
    "sport": "Baseball",
-   "count": 3,
+   "count": 4,
    "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "MLB Classic Games",
+     "url": "https://www.youtube.com/playlist?list=PLi70flcQkwNvxC7kKFsUKKaH810CZlRfW",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=PLi70flcQkwNvxC7kKFsUKKaH810CZlRfW",
+     "note": "Full classic games (MLB Vault official)"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "MLB All-Star Games",
+     "url": "https://www.youtube.com/playlist?list=PLi70flcQkwNtL6LuGHajdxKQoJI_GIP1G",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=PLi70flcQkwNtL6LuGHajdxKQoJI_GIP1G",
+     "note": "Full All-Star Games (MLB Vault official)"
+    },
     {
      "kind": "embed",
      "service": "YouTube (official)",
@@ -43,15 +59,7 @@
      "note": "Latest uploads: highlights, condensed & classic games"
     },
     {
-     "kind": "embed",
-     "service": "YouTube (official)",
-     "name": "MLB Vault",
-     "url": "https://www.youtube.com/@MLBVault/videos",
-     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUbQ07z3YBi8RUc6nBxJhg2Q",
-     "note": "Latest uploads: highlights, condensed & classic games"
-    },
-    {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "MLB",
      "url": "https://pluto.tv/us/live-tv/mlb",
@@ -66,10 +74,10 @@
     {
      "kind": "embed",
      "service": "YouTube (official)",
-     "name": "NBA",
-     "url": "https://www.youtube.com/@NBA/videos",
-     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUWJ2lWNubArHWmf3FIHbfcQ",
-     "note": "Latest uploads: highlights, condensed & classic games"
+     "name": "NBA Classic Games",
+     "url": "https://www.youtube.com/playlist?list=PLlVlyGVtvuVniS7jx4DyESaKRUANIzyhE",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=PLlVlyGVtvuVniS7jx4DyESaKRUANIzyhE",
+     "note": "Full classic games (NBA official)"
     },
     {
      "kind": "embed",
@@ -95,16 +103,16 @@
     {
      "kind": "embed",
      "service": "YouTube (official)",
-     "name": "NHL",
-     "url": "https://www.youtube.com/@NHL/videos",
-     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUqFMzb-4AUf6WAIbl132QKA",
-     "note": "Latest uploads: highlights, condensed & classic games"
+     "name": "NHL Classic Games",
+     "url": "https://www.youtube.com/playlist?list=PL1NbHSfosBuGIYi8JXverH5iTDj4uAPRN",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=PL1NbHSfosBuGIYi8JXverH5iTDj4uAPRN",
+     "note": "Full Stanley Cup & playoff games, 1959–2009 (NHL official)"
     }
    ]
   },
   {
    "sport": "Soccer",
-   "count": 3,
+   "count": 5,
    "items": [
     {
      "kind": "embed",
@@ -129,12 +137,26 @@
      "url": "https://www.youtube.com/@premierleague/videos",
      "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUG5qGWdu8nIRZqJ_GgDwQ-w",
      "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "frame",
+     "service": "Pluto TV",
+     "name": "Golazo Network",
+     "url": "https://pluto.tv/us/live-tv/golazo-network",
+     "note": "Free 24/7 soccer channel (ads)"
+    },
+    {
+     "kind": "tab",
+     "service": "FIFA+",
+     "name": "FIFA+ World Cup archive",
+     "url": "https://www.plus.fifa.com/",
+     "note": "Free full World Cup & Women's World Cup match replays (FIFA account may be required)"
     }
    ]
   },
   {
    "sport": "Racing (F1, NASCAR, IndyCar)",
-   "count": 4,
+   "count": 6,
    "items": [
     {
      "kind": "embed",
@@ -167,6 +189,20 @@
      "url": "https://www.youtube.com/@NHRA/videos",
      "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUJcErqlzaBzFmAh2uIxeqxQ",
      "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "tab",
+     "service": "Tubi",
+     "name": "NASCAR channel",
+     "url": "https://tubitv.com/live/400000121/nascar",
+     "note": "Free 24/7 race replays & shows (ads)"
+    },
+    {
+     "kind": "frame",
+     "service": "Pluto TV",
+     "name": "Monster Jam",
+     "url": "https://pluto.tv/us/live-tv/monster-jam",
+     "note": "Free 24/7 channel (ads)"
     }
    ]
   },
@@ -186,7 +222,7 @@
   },
   {
    "sport": "Boxing & MMA",
-   "count": 5,
+   "count": 9,
    "items": [
     {
      "kind": "embed",
@@ -213,18 +249,46 @@
      "note": "Latest uploads: highlights, condensed & classic games"
     },
     {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "Top Rank Classics",
      "url": "https://pluto.tv/us/live-tv/top-rank-classics",
      "note": "Free 24/7 channel (ads)"
     },
     {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "DAZN Ringside",
      "url": "https://pluto.tv/us/live-tv/dazn-ringside",
      "note": "Free 24/7 channel (ads)"
+    },
+    {
+     "kind": "tab",
+     "service": "Tubi",
+     "name": "UFC channel",
+     "url": "https://tubitv.com/live/400000106/ufc",
+     "note": "Free 24/7 UFC fights (ads)"
+    },
+    {
+     "kind": "tab",
+     "service": "Tubi",
+     "name": "Top Rank Classics (Tubi)",
+     "url": "https://tubitv.com/live/400000055/top-rank-classics",
+     "note": "Free 24/7 classic boxing (ads)"
+    },
+    {
+     "kind": "frame",
+     "service": "Pluto TV",
+     "name": "Bellator MMA",
+     "url": "https://pluto.tv/us/live-tv/bellator-mma",
+     "note": "Free 24/7 MMA fights (ads)"
+    },
+    {
+     "kind": "frame",
+     "service": "Pluto TV",
+     "name": "PFL MMA",
+     "url": "https://pluto.tv/us/live-tv/pfl",
+     "note": "Free 24/7 MMA fights (ads)"
     }
    ]
   },
@@ -260,7 +324,7 @@
   },
   {
    "sport": "Golf",
-   "count": 3,
+   "count": 4,
    "items": [
     {
      "kind": "tab",
@@ -278,11 +342,18 @@
      "note": "Latest uploads: highlights, condensed & classic games"
     },
     {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "PGA TOUR",
      "url": "https://pluto.tv/us/live-tv/pga-tour",
      "note": "Free 24/7 channel (ads)"
+    },
+    {
+     "kind": "tab",
+     "service": "Tubi",
+     "name": "PGA TOUR (Tubi)",
+     "url": "https://tubitv.com/live/400000046/pga-tour",
+     "note": "Free 24/7 tournament replays (ads)"
     }
    ]
   },
@@ -323,7 +394,7 @@
   },
   {
    "sport": "Olympics & Track",
-   "count": 2,
+   "count": 3,
    "items": [
     {
      "kind": "embed",
@@ -340,6 +411,13 @@
      "url": "https://www.youtube.com/@WorldAthletics/videos",
      "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUQk7fWv15ChjMJLCRVmtApw",
      "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "tab",
+     "service": "Olympics.com",
+     "name": "Olympics.com replays",
+     "url": "https://www.olympics.com/en/olympic-games/milano-cortina-2026/videos",
+     "note": "Free full event replays, e.g. Milano Cortina 2026 hockey gold game (3h42m)"
     }
    ]
   },
@@ -372,7 +450,7 @@
      "note": "Latest uploads: highlights, condensed & classic games"
     },
     {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "TNA Wrestling",
      "url": "https://pluto.tv/us/live-tv/tna-wrestling",
@@ -428,7 +506,7 @@
      "note": "Official channel (opens YouTube)"
     },
     {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "PBR RidePass",
      "url": "https://pluto.tv/us/watch/live-tv/18585/",
@@ -495,14 +573,14 @@
    "count": 2,
    "items": [
     {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "FOX Sports",
      "url": "https://pluto.tv/us/live-tv/fox-sports",
      "note": "Free 24/7 channel (ads)"
     },
     {
-     "kind": "tab",
+     "kind": "frame",
      "service": "Pluto TV",
      "name": "CBS Sports HQ",
      "url": "https://pluto.tv/us/live-tv/cbs-sports-hq",
