@@ -293,3 +293,46 @@ if (tb) {
     localStorage.setItem('rf-theme', l ? 'light' : 'dark'); sync();
   });
 }
+
+// ---------- Seasonal themes ----------
+// Auto picks by date; visitors can override (localStorage; signed-in users also sync to Firestore prefs).
+const SEASONS = {
+  halloween: { label: 'Halloween / Scary', banner: '🎃 Scary season: free horror & thrillers', accent: '#ff7a1a', accent2: '#b06cff', match: (t) => /horror|thriller/i.test(t.genre) || /halloween|haunt|ghost|zombie|vampire|witch/i.test(`${t.title} ${t.description}`) },
+  thanksgiving: { label: 'Thanksgiving', banner: '🦃 Thanksgiving: free family movies & feel-good picks', accent: '#c8641e', accent2: '#e8b04b', match: (t) => /family|comedy|animation/i.test(t.genre) || /thanksgiving|family|home/i.test(t.title) },
+  christmas: { label: 'Christmas', banner: '🎄 Christmas: free holiday movies', accent: '#d42a2a', accent2: '#2fa35a', match: (t) => /christmas|holiday|santa|xmas|noel|snow/i.test(`${t.title} ${t.description}`) },
+  newyear: { label: 'New Year', banner: '🎆 New Year: free crowd-pleasers to ring it in', accent: '#d4af37', accent2: '#7aa7ff', match: (t) => /new year|party|celebrat/i.test(`${t.title} ${t.description}`) || /comedy|music/i.test(t.genre) },
+  valentines: { label: "Valentine's", banner: "💘 Valentine's: free romance", accent: '#e0457b', accent2: '#ff9ab8', match: (t) => /romance/i.test(t.genre) || /love|romance|valentine/i.test(`${t.title} ${t.description}`) },
+  july4: { label: 'July 4', banner: '🎇 July 4: free American classics, history & action', accent: '#2b5bd7', accent2: '#e23b3b', match: (t) => /history|war|western/i.test(t.genre) || /america|independence|president|liberty/i.test(`${t.title} ${t.description}`) },
+  none: { label: 'None' },
+};
+function autoSeason(d = new Date()) {
+  const m = d.getMonth() + 1, day = d.getDate();
+  if (m === 10) return 'halloween';
+  if (m === 11) return 'thanksgiving';
+  if (m === 12 && day <= 26) return 'christmas';
+  if ((m === 12 && day > 26) || (m === 1 && day <= 6)) return 'newyear';
+  if (m === 2 && day <= 15) return 'valentines';
+  if ((m === 6 && day >= 25) || (m === 7 && day <= 5)) return 'july4';
+  return 'none';
+}
+let SEASON_TITLES = null;
+function applySeason(choice) {
+  const key = choice && choice !== 'auto' ? choice : autoSeason();
+  const S = SEASONS[key] || SEASONS.none; const root = document.documentElement;
+  if (S.accent) { root.style.setProperty('--accent', S.accent); root.style.setProperty('--accent2', S.accent2); } else { root.style.removeProperty('--accent'); root.style.removeProperty('--accent2'); }
+  const ban = $('#season-banner'); const sec = $('#season-row');
+  if (ban) { ban.hidden = !S.banner; ban.textContent = S.banner || ''; }
+  if (sec && SEASON_TITLES) {
+    const list = S.match ? SEASON_TITLES.filter(S.match).sort((a, b) => (b.releaseDate || `${b.year}`).localeCompare(a.releaseDate || `${a.year}`)) : [];
+    sec.innerHTML = list.length ? row('holiday', S.label === 'None' ? '' : `${S.label} picks`, list.slice(0, 100), 'Free now, newest first') : '';
+  }
+  const sel = $('#season-pick'); if (sel) sel.value = choice || 'auto';
+}
+window.__rfSeason = (c) => { localStorage.setItem('rf-season', c); applySeason(c); };
+window.addEventListener('reelfree:home', (e) => { SEASON_TITLES = e.detail.visible; applySeason(localStorage.getItem('rf-season') || 'auto'); });
+const sp = $('#season-pick');
+if (sp) {
+  sp.innerHTML = `<option value="auto">Auto (by date)</option>` + Object.entries(SEASONS).map(([k, v]) => `<option value="${k}">${esc(v.label)}</option>`).join('');
+  sp.addEventListener('change', () => { window.__rfSeason(sp.value); window.dispatchEvent(new CustomEvent('reelfree:season', { detail: sp.value })); });
+  if (page !== 'home') applySeason(localStorage.getItem('rf-season') || 'auto');
+}

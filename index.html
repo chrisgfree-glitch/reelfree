@@ -9,6 +9,8 @@
 <div class="ranges"><input id="from" type="number" min="1890" max="2030" placeholder="Year from" aria-label="Year from" inputmode="numeric"><input id="to" type="number" min="1890" max="2030" placeholder="Year to" aria-label="Year to" inputmode="numeric"><select id="rating" aria-label="Minimum TMDB rating"><option value="">Any rating</option><option value="5">★ 5+</option><option value="6">★ 6+</option><option value="7">★ 7+</option><option value="8">★ 8+</option></select></div>
 <div class="seg" role="group" aria-label="Type"><button data-type="" class="on">All</button><button data-type="movie">Movies</button><button data-type="tv">TV</button></div>
 </section>
+<div class="season-bar"><p id="season-banner" class="season-banner" hidden></p><label class="small muted">Theme <select id="season-pick" aria-label="Seasonal theme"></select></label></div>
+<div id="season-row"></div>
 <div id="personal"></div>
 <div id="sections"></div>
 <section id="genres" class="genres"><div class="row-head"><h2>Browse free movies by genre</h2><span class="muted small">Newest first · opens where-to-watch in a new tab</span></div><div id="genre-chips" class="chips" role="tablist" aria-label="Genres"></div><div id="genre-notify" class="actions"></div><div id="genre-grid" class="grid"></div></section>

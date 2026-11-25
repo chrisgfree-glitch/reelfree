@@ -20,6 +20,7 @@ export async function init(cfg, helpers) {
   A.onAuthStateChanged(auth, async (u) => {
     user = u; btn.textContent = u ? 'Sign out' : 'Sign in';
     SUBS = null; await syncNotify();
+    if (u) F.getDoc(F.doc(db, 'users', u.uid, 'prefs', 'site')).then((d) => { const s = d.exists() && d.data().season; if (s && window.__rfSeason) window.__rfSeason(s); }).catch(() => {});
     if (H.page === 'home' && HOME) renderPersonal();
     if (H.page === 'account') renderAccount();
     if (H.page === 'title' && window.__rfTitle) renderTitleActions(window.__rfTitle);
@@ -27,6 +28,7 @@ export async function init(cfg, helpers) {
   window.addEventListener('reelfree:title', (e) => { window.__rfTitle = e.detail; renderTitleActions(e.detail); });
   window.addEventListener('reelfree:home', (e) => { HOME = e.detail; renderPersonal(); });
   window.addEventListener('reelfree:rendered', () => syncNotify());
+  window.addEventListener('reelfree:season', (e) => { if (user) F.setDoc(F.doc(db, 'users', user.uid, 'prefs', 'site'), { season: e.detail, updatedAt: F.serverTimestamp() }, { merge: true }).catch(() => {}); });
   document.addEventListener('click', onNotifyClick);
   // Genre-browser / request cards open outside the site: log them to history for recommendations.
   document.addEventListener('click', (e) => {

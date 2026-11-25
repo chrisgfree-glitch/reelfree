@@ -63,3 +63,4 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 [data-theme=light] body{background:var(--bg)}[data-theme=light] .top{background:rgba(245,242,234,.9)}[data-theme=light] .card{color:#fff}[data-theme=light] .chip.on span{color:#333}
 @media (max-width:640px){.ranges{grid-template-columns:1fr 1fr}.ranges select{grid-column:1/-1}}
 .kind.cw{top:10px;right:auto;left:10px;background:var(--accent);color:#fff}.card .kind.cw ~ .badge{display:none}
+.season-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 0}.season-banner{flex:1;margin:0;padding:10px 14px;border-radius:10px;border:1px solid var(--accent);background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 25%,transparent),transparent);font-weight:600}.season-bar select{width:auto;min-height:38px;padding:4px 10px}
