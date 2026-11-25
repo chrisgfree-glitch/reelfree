@@ -43,14 +43,35 @@ function card(t) {
   return `<a class="card${img ? '' : ' noimg'}" href="/title/${esc(t.id)}">
     <span class="art">${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.parentNode.classList.add('noimg');this.remove()">` : ''}<img class="fallback" src="/icons/logo-128.png" alt="" aria-hidden="true"></span>
     <span class="scrim"></span>
-    <span class="badge src-${t.source}">${esc(srcShort(t))}</span>
+    <span class="badge src-${t.source}">${esc(srcShort(t))}</span>${t.fanMade ? '<span class="badge fan">Fan-made</span>' : ''}
     <span class="kind">${t.type === 'tv' ? 'TV' : 'Movie'}</span>
-    <span class="info"><h3>${esc(t.title)}</h3><span class="meta">${esc(yearsOf(t))} · ${esc(t.genre)}</span></span>
+    <span class="info"><h3>${esc(t.title)}</h3><span class="meta">${esc(yearsOf(t))}${t.rating ? ` · ★ ${esc(t.rating)}` : ''} · ${esc(t.genre)}</span></span>
   </a>`;
 }
 
-const row = (id, title, list, note = '') => `<section class="row" id="${id}"><div class="row-head"><h2>${title}</h2>${note ? `<span class="muted small">${note}</span>` : ''}</div>
-  <div class="rail">${list.map(card).join('')}</div></section>`;
+// Rows show the first 25 in a rail; longer lists get a "See all N" toggle that swaps in a grid (keeps the page light).
+const ROWS = {};
+const row = (id, title, list, note = '', render = card) => {
+  ROWS[id] = { list, render };
+  const more = list.length > 25 ? `<button class="btn small ghost see-all" data-row="${id}">See all ${list.length}</button>` : '';
+  return `<section class="row" id="${id}"><div class="row-head"><h2>${title}</h2>${note ? `<span class="muted small">${note}</span>` : ''}${more}</div>
+  <div class="rail">${list.slice(0, 25).map(render).join('')}</div></section>`;
+};
+document.addEventListener('click', (e) => {
+  const b = e.target.closest('.see-all'); if (!b) return;
+  const r = ROWS[b.dataset.row]; const box = b.closest('.row').querySelector('.rail, .grid');
+  const open = box.classList.contains('rail');
+  box.className = open ? 'grid' : 'rail';
+  box.innerHTML = (open ? r.list : r.list.slice(0, 25)).map(r.render).join('');
+  b.textContent = open ? 'Show fewer' : `See all ${r.list.length}`;
+});
+// Card for titles that live outside the catalog (genre browser, title requests): opens where-to-watch in a new tab.
+function extCard(m) {
+  return `<a class="card${m.image ? '' : ' noimg'}" href="${esc(m.url)}" target="_blank" rel="noopener" data-tmdb="${esc(m.tmdbId)}" data-genres="${esc((m.genres || []).join('|'))}">
+      <span class="art">${m.image ? `<img src="${esc(m.image)}" alt="" loading="lazy" decoding="async">` : ''}<img class="fallback" src="/icons/logo-128.png" alt="" aria-hidden="true"></span>
+      <span class="scrim"></span><span class="badge src-tmdb">${esc((m.providers || m.free || [])[0] || 'Free')}</span><span class="kind">${m.kind === 'tv' ? 'TV' : 'Movie'} ↗</span>
+      <span class="info"><h3>${esc(m.title)}</h3><span class="meta">${esc(m.year)}${m.rating ? ` · ★ ${esc(m.rating)}` : ''} · ${esc((m.providers || m.free || []).join(', '))}</span></span></a>`;
+}
 
 async function home() {
   const { titles, isHidden, status } = await loadData();
@@ -59,23 +80,27 @@ async function home() {
   const rd = (t) => t.releaseDate || `${t.year}-01-01`;
   const newest = (a, b) => rd(b).localeCompare(rd(a)) || a.title.localeCompare(b.title);
   // Top row: movies from 2010 on only, newest first, max 25. Never backfilled with older titles.
-  const top = visible.filter((t) => t.type === 'movie' && t.year >= 2010).sort(newest).slice(0, 25);
-  const inTop = new Set(top.map((t) => t.id));
+  // Top 100 newest: TMDB-verified free (US) movies from 2010 on, newest first. Never padded.
+  const top = visible.filter((t) => t.featuredRank).sort((a, b) => a.featuredRank - b.featuredRank);
+  // Popular: free movies from 1970 on, ranked by TMDB rating (min vote count, see data/meta.json), tiebreak vote count.
+  const pop = visible.filter((t) => t.popRank).sort((a, b) => a.popRank - b.popRank);
   $('#sections').innerHTML =
-    (top.length ? row('newest', `Top ${top.length} newest`, top, 'Movies from 2010 on, newest first') : '') +
-    row('popular', 'Popular movies', visible.filter((t) => t.type === 'movie' && t.year >= 1970 && !inTop.has(t.id)).sort(newest), 'Newest first') +
+    (top.length ? row('newest', `Top ${top.length} newest`, top, 'Free movies from 2010 on, newest first') : '') +
+    (pop.length ? row('popular', `Top ${pop.length} popular movies`, pop, 'Best rated on TMDB first (1970 on)') : '') +
     row('tv', 'TV shows', visible.filter((t) => t.tvRank).sort((a, b) => a.tvRank - b.tvRank), 'Free now: sci-fi favorites and current hits') +
-    row('classics', 'Timeless classics', visible.filter((t) => t.year < 1970 && !t.tvRank).sort(newest), 'Before 1970: public-domain and vintage favorites');
+    row('fan', 'Fan-made Star Trek', visible.filter((t) => t.fanMade), 'Not official: free fan productions on their makers\' own YouTube channels. Star Trek is owned by CBS/Paramount and is not public domain.') +
+    row('classics', 'Timeless classics', visible.filter((t) => t.year < 1970 && !t.tvRank && !t.fanMade).sort(newest), 'Before 1970: public-domain and vintage favorites');
   const genres = [...new Set(visible.map((t) => t.genre))].sort();
   $('#genre').insertAdjacentHTML('beforeend', genres.map((g) => `<option>${esc(g)}</option>`).join(''));
   const p = new URLSearchParams(location.search);
-  const st = { q: p.get('q') || '', genre: p.get('genre') || '', source: p.get('source') || '', type: p.get('type') || '' };
-  $('#q').value = st.q; $('#genre').value = st.genre; $('#source').value = st.source;
+  const st = { q: p.get('q') || '', genre: p.get('genre') || '', source: p.get('source') || '', type: p.get('type') || '', from: p.get('from') || '', to: p.get('to') || '', rating: p.get('rating') || '' };
+  $('#q').value = st.q; $('#genre').value = st.genre; $('#source').value = st.source; $('#from').value = st.from; $('#to').value = st.to; $('#rating').value = st.rating;
   const render = () => {
     const q = st.q.trim().toLowerCase();
-    const filtering = !!(q || st.genre || st.source || st.type);
+    const filtering = !!(q || st.genre || st.source || st.type || st.from || st.to || st.rating);
     const list = visible.filter((t) => (!st.genre || t.genre === st.genre) && (!st.source || t.source === st.source)
-      && (!st.type || t.type === st.type)
+      && (!st.type || t.type === st.type) && (!st.from || t.year >= +st.from) && (!st.to || t.year <= +st.to)
+      && (!st.rating || (t.rating || 0) >= +st.rating)
       && (!q || `${t.title} ${t.genre} ${t.description} ${t.year}`.toLowerCase().includes(q)))
       .sort((a, b) => filtering ? (b.releaseDate || `${b.year}`).localeCompare(a.releaseDate || `${a.year}`) || a.title.localeCompare(b.title) : a.title.replace(/^(the|a|an) /i, '').localeCompare(b.title.replace(/^(the|a|an) /i, '')));
     $('#sections').hidden = filtering;
@@ -89,9 +114,34 @@ async function home() {
   $('#q').addEventListener('input', (e) => { st.q = e.target.value; render(); });
   $('#genre').addEventListener('change', (e) => { st.genre = e.target.value; render(); });
   $('#source').addEventListener('change', (e) => { st.source = e.target.value; render(); });
+  for (const k of ['from', 'to', 'rating']) $('#' + k).addEventListener('input', (e) => { st[k] = e.target.value; render(); });
   document.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => { st.type = b.dataset.type; render(); }));
   render();
   genreBrowser();
+  requestTitle(titles);
+  window.dispatchEvent(new CustomEvent('reelfree:home', { detail: { visible } }));
+}
+
+// "Request a title": TMDB search through /api/tmdb-search; shows where it's free, or a Notify me button.
+function requestTitle(titles) {
+  const f = $('#req-form'); if (!f) return;
+  const byTmdb = Object.fromEntries(titles.filter((t) => t.tmdbId).map((t) => [String(t.tmdbId), t]));
+  f.addEventListener('submit', async (e) => {
+    e.preventDefault(); const q = f.q.value.trim(); const out = $('#req-results'); if (q.length < 2) return;
+    out.innerHTML = '<p class="muted small">Searching…</p>';
+    try {
+      const j = await getJSON(`/api/tmdb-search?q=${encodeURIComponent(q)}`, 12000);
+      out.innerHTML = (j.results || []).map((r) => {
+        const inCat = byTmdb[String(r.tmdbId)];
+        const status = inCat ? `<a class="btn small primary" href="/title/${esc(inCat.id)}">On ReelFree: watch now</a>`
+          : r.free.length ? `<a class="btn small ghost" href="${esc(r.url)}" target="_blank" rel="noopener">Free on ${esc(r.free.join(', '))} ↗</a>`
+          : '<span class="muted small">Not free on a legal service right now.</span>';
+        const bell = inCat ? '' : `<button class="btn small ghost" data-notify data-type="title" data-tmdb-id="${esc(r.tmdbId)}" data-name="${esc(r.title)}">🔔 Notify me when it's on ReelFree</button>`;
+        return `<div class="req-item">${r.image ? `<img src="${esc(r.image)}" alt="" loading="lazy">` : '<span class="req-noimg"></span>'}<div><strong>${esc(r.title)}</strong> <span class="muted small">${esc(r.year)} · ${r.kind === 'tv' ? 'TV' : 'Movie'}</span><div class="actions">${status}${bell}</div></div></div>`;
+      }).join('') || '<p class="muted small">No matches.</p>';
+      window.dispatchEvent(new Event('reelfree:rendered'));
+    } catch { out.innerHTML = '<p class="muted small">Search is unavailable right now.</p>'; }
+  });
 }
 
 async function genreBrowser() {
@@ -104,10 +154,9 @@ async function genreBrowser() {
   const show = (i) => {
     const g = gs[i];
     document.querySelectorAll('#genre-chips .chip').forEach((c) => c.classList.toggle('on', +c.dataset.i === i));
-    $('#genre-grid').innerHTML = g.items.map((m) => `<a class="card${m.image ? '' : ' noimg'}" href="${esc(m.url)}" target="_blank" rel="noopener">
-      <span class="art">${m.image ? `<img src="${esc(m.image)}" alt="" loading="lazy" decoding="async">` : ''}<img class="fallback" src="/icons/logo-128.png" alt="" aria-hidden="true"></span>
-      <span class="scrim"></span><span class="badge src-tmdb">${esc(m.providers[0] || 'Free')}</span><span class="kind">Movie ↗</span>
-      <span class="info"><h3>${esc(m.title)}</h3><span class="meta">${esc(m.year)} · ${esc(m.providers.join(', '))}</span></span></a>`).join('');
+    $('#genre-grid').innerHTML = g.items.map((m) => extCard({ ...m, genres: [g.name] })).join('');
+    $('#genre-notify').innerHTML = `<button class="btn small ghost" data-notify data-type="genre" data-name="${esc(g.name)}" data-genre-id="${esc(g.id)}">🔔 Notify me about new ${esc(g.name)} titles</button>`;
+    window.dispatchEvent(new Event('reelfree:rendered'));
   };
   $('#genre-chips').addEventListener('click', (e) => { const b = e.target.closest('.chip'); if (b) show(+b.dataset.i); });
   show(0);
@@ -119,7 +168,9 @@ function player(t) {
   const out = `<a class="btn ghost" href="${esc(t.url)}" target="_blank" rel="noopener">Open on ${esc(src)} ↗</a>`;
   if (mode === 'inline') {
     const allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-    return `<div class="player"><iframe src="${esc(t.embedUrl)}" title="${esc(t.title)} (${esc(src)} player)" allow="${allow}" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe></div>
+    const yt = t.source === 'youtube';
+    const src2 = yt ? `${t.embedUrl}${t.embedUrl.includes('?') ? '&' : '?'}enablejsapi=1&origin=${encodeURIComponent(location.origin)}` : t.embedUrl;
+    return `<div class="player"><iframe ${yt ? 'id="yt-player" ' : ''}src="${esc(src2)}" title="${esc(t.title)} (${esc(src)} player)" allow="${allow}" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe></div>
       <div class="actions">${out}</div>`;
   }
   if (mode === 'frame') {
@@ -163,6 +214,7 @@ async function titlePage() {
     <h1>${esc(t.title)} <span class="year">${esc(yearsOf(t))}</span></h1>
     <p class="meta"><span class="badge src-${t.source}">${esc(srcLabel(t))}</span> ${t.type === 'tv' ? 'TV' : 'Movie'} · ${esc(t.genre)}</p>
     ${!hidden && PLAYBACK[t?.source] !== 'inline' && (st.image || t.image) ? `<div class="poster"><img src="${esc(st.image || t.image)}" alt="${esc(t.title)} artwork from ${esc(SOURCES[t.source].label)}" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></div>` : ''}
+    <div class="actions share-row"><button class="btn small ghost" id="share-btn">Share</button><span class="small muted" id="share-msg" role="status"></span></div>
     ${hidden ? '<p class="notice">This title is temporarily hidden because its link failed our last two checks. It comes back automatically once it works again.</p>' : player(t)}
     <p class="lede">${esc(t.description)}</p>
     <div id="acct-actions"></div>
@@ -172,6 +224,12 @@ async function titlePage() {
   if (wf) wf.addEventListener('click', () => openViewer(t));
   if (location.hash === '#watch' && wf) openViewer(t);
   wireReport(t);
+  $('#share-btn').addEventListener('click', async () => {
+    const url = `https://reelfree.net/title/${encodeURIComponent(t.id)}`; const msg = $('#share-msg');
+    if (navigator.share && matchMedia('(pointer: coarse)').matches) { try { await navigator.share({ title: `${t.title} on ReelFree`, url }); } catch {} return; }
+    try { await navigator.clipboard.writeText(url); msg.textContent = 'Link copied.'; }
+    catch { msg.innerHTML = `Copy this link: <input value="${esc(url)}" readonly onclick="this.select()">`; }
+  });
   window.__rfTitleEarly = t;
   window.dispatchEvent(new CustomEvent('reelfree:title', { detail: t }));
 }
@@ -210,7 +268,7 @@ function wireReport(t) {
 const page = document.body.dataset.page;
 if (page === 'home') home();
 if (page === 'title') titlePage();
-if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js').then((m) => m.init(CFG, { loadData, card, esc, page }));
+if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK }));
 else if (page === 'account') $('#account-root').innerHTML = '<h1>My lists</h1><p class="muted">Accounts are coming soon. Favorites and private lists will appear here.</p>';
 
 // Optional TMDB enrichment: only active when the server has TMDB env vars.
@@ -223,3 +281,15 @@ fetch('/api/art').then((r) => r.ok ? r.json() : null).then((j) => {
   if (a && a.releaseDate) { const m = document.querySelector('.title-page .meta'); if (m) m.insertAdjacentHTML('beforeend', ` · Released ${esc(a.releaseDate)}`); }
   document.querySelectorAll('.card.noimg').forEach((c) => { const id = c.getAttribute('href').split('/').pop(); const p = window.__rfTMDB[id]?.poster; if (p) { c.classList.remove('noimg'); c.querySelector('.art').insertAdjacentHTML('afterbegin', `<img src="${esc(p)}" alt="" loading="lazy">`); } });
 }).catch(() => {});
+
+// Light/dark theme toggle (default dark), saved in localStorage. The <head> sets it early to avoid a flash.
+const tb = $('#theme-btn');
+if (tb) {
+  const sync = () => { const l = document.documentElement.dataset.theme === 'light'; tb.textContent = l ? '☾ Dark' : '☀ Light'; tb.setAttribute('aria-pressed', String(l)); };
+  sync();
+  tb.addEventListener('click', () => {
+    const l = document.documentElement.dataset.theme !== 'light';
+    if (l) document.documentElement.dataset.theme = 'light'; else delete document.documentElement.dataset.theme;
+    localStorage.setItem('rf-theme', l ? 'light' : 'dark'); sync();
+  });
+}

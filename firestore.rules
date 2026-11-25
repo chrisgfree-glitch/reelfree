@@ -29,6 +29,18 @@ service cloud.firestore {
         && request.resource.data.name is string && request.resource.data.name.size() <= 120
         && request.resource.data.email == request.auth.token.email;
     }
+    match /users/{uid}/progress/{titleId} {
+      allow read, delete: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid && titleId.size() <= 80
+        && request.resource.data.keys().hasOnly(['pos', 'dur', 'mode', 'updatedAt'])
+        && request.resource.data.mode in ['tracked', 'opened']
+        && request.resource.data.pos is number && request.resource.data.dur is number;
+    }
+    match /users/{uid}/prefs/{doc} {
+      allow read, delete: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid && doc == 'site'
+        && request.resource.data.keys().hasOnly(['season', 'theme', 'updatedAt']);
+    }
     match /{document=**} { allow read, write: if false; }
   }
 }

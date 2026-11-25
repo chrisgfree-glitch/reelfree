@@ -5,7 +5,11 @@
   "rewrites": [
     {
       "source": "/title/:id",
-      "destination": "/title"
+      "destination": "/api/title?id=:id"
+    },
+    {
+      "source": "/title",
+      "destination": "/tpl/title.html"
     }
   ],
   "redirects": [
@@ -65,7 +69,7 @@
   ],
   "functions": {
     "api/cron-check.mjs": {
-      "maxDuration": 60
+      "maxDuration": 300
     },
     "api/cron-weekly.mjs": {
       "maxDuration": 30
@@ -76,6 +80,13 @@
     "api/art.mjs": {
       "maxDuration": 30,
       "includeFiles": "data/titles.json"
+    },
+    "api/title.mjs": {
+      "maxDuration": 10,
+      "includeFiles": "{tpl/title.html,data/titles.json}"
+    },
+    "api/tmdb-search.mjs": {
+      "maxDuration": 15
     }
   }
 }
