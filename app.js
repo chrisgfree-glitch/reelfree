@@ -30,19 +30,30 @@ async function loadData() {
   return { titles, status, isHidden };
 }
 
+let IMG = {};
 function card(t) {
-  return `<a class="card g-${esc(t.genre.toLowerCase().replace(/[^a-z]/g, ''))}" href="/title/${esc(t.id)}">
+  const img = IMG[t.id] || t.image;
+  return `<a class="card${img ? '' : ' noimg'}" href="/title/${esc(t.id)}">
+    <span class="art">${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.parentNode.classList.add('noimg');this.remove()">` : ''}<img class="fallback" src="/icons/logo-128.png" alt="" aria-hidden="true"></span>
+    <span class="scrim"></span>
     <span class="badge src-${t.source}">${esc(SOURCES[t.source].short)}</span>
     <span class="kind">${t.type === 'tv' ? 'TV' : 'Movie'}</span>
-    <h3>${esc(t.title)}</h3>
-    <p class="meta">${esc(t.year)} · ${esc(t.genre)}</p>
-    <p class="desc">${esc(t.description)}</p>
+    <span class="info"><h3>${esc(t.title)}</h3><span class="meta">${esc(t.year)} · ${esc(t.genre)}</span></span>
   </a>`;
 }
 
+const row = (id, title, list, note = '') => `<section class="row" id="${id}"><div class="row-head"><h2>${title}</h2>${note ? `<span class="muted small">${note}</span>` : ''}</div>
+  <div class="rail">${list.map(card).join('')}</div></section>`;
+
 async function home() {
-  const { titles, isHidden } = await loadData();
+  const { titles, isHidden, status } = await loadData();
+  IMG = Object.fromEntries(Object.entries(status.titles || {}).filter(([, v]) => v.image).map(([k, v]) => [k, v.image]));
   const visible = titles.filter((t) => !isHidden(t.id));
+  const byYear = (a, b) => b.year - a.year || a.title.localeCompare(b.title);
+  $('#sections').innerHTML =
+    row('newest', 'Top 25 newest', [...visible].sort(byYear).slice(0, 25)) +
+    row('popular', 'Popular movies', visible.filter((t) => t.type === 'movie' && t.popularRank).sort((a, b) => a.popularRank - b.popularRank), 'Staff picks') +
+    row('tv', 'TV shows', visible.filter((t) => t.type === 'tv').sort(byYear), 'Newest first');
   const genres = [...new Set(visible.map((t) => t.genre))].sort();
   $('#genre').insertAdjacentHTML('beforeend', genres.map((g) => `<option>${esc(g)}</option>`).join(''));
   const p = new URLSearchParams(location.search);
@@ -50,10 +61,13 @@ async function home() {
   $('#q').value = st.q; $('#genre').value = st.genre; $('#source').value = st.source;
   const render = () => {
     const q = st.q.trim().toLowerCase();
+    const filtering = !!(q || st.genre || st.source || st.type);
     const list = visible.filter((t) => (!st.genre || t.genre === st.genre) && (!st.source || t.source === st.source)
       && (!st.type || t.type === st.type)
       && (!q || `${t.title} ${t.genre} ${t.description} ${t.year}`.toLowerCase().includes(q)))
-      .sort((a, b) => a.title.localeCompare(b.title));
+      .sort((a, b) => a.title.replace(/^(the|a|an) /i, '').localeCompare(b.title.replace(/^(the|a|an) /i, '')));
+    $('#sections').hidden = filtering;
+    $('#az-title').textContent = filtering ? 'Results' : 'A–Z';
     $('#grid').innerHTML = list.map(card).join('') || '<p class="muted">No titles match. Try clearing a filter.</p>';
     $('#count').textContent = `${list.length} of ${visible.length} titles`;
     document.querySelectorAll('.seg button').forEach((b) => b.classList.toggle('on', b.dataset.type === st.type));
@@ -102,8 +116,9 @@ function reportPanel(t) {
 
 async function titlePage() {
   const id = decodeURIComponent((location.pathname.match(/\/title\/([^/?#]+)/) || [])[1] || new URLSearchParams(location.search).get('id') || '');
-  const { titles, isHidden } = await loadData();
+  const { titles, isHidden, status } = await loadData();
   const t = titles.find((x) => x.id === id);
+  const st = (status.titles || {})[id] || {};
   const root = $('#title-root');
   if (!t) { root.innerHTML = '<h1>Title not found</h1><p><a href="/">Back to browse</a></p>'; return; }
   document.title = `${t.title} (${t.year}) · Watch free on ReelFree`;
@@ -112,6 +127,7 @@ async function titlePage() {
     <p class="crumbs"><a href="/">← All titles</a></p>
     <h1>${esc(t.title)} <span class="year">${esc(t.year)}</span></h1>
     <p class="meta"><span class="badge src-${t.source}">${esc(SOURCES[t.source].label)}</span> ${t.type === 'tv' ? 'TV' : 'Movie'} · ${esc(t.genre)}</p>
+    ${!hidden && PLAYBACK[t?.source] !== 'inline' && (st.image || t.image) ? `<div class="poster"><img src="${esc(st.image || t.image)}" alt="${esc(t.title)} artwork from ${esc(SOURCES[t.source].label)}" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></div>` : ''}
     ${hidden ? '<p class="notice">This title is temporarily hidden because its link failed our last two checks. It comes back automatically once it works again.</p>' : player(t)}
     <p class="lede">${esc(t.description)}</p>
     <div id="acct-actions"></div>

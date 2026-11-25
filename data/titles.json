@@ -9,7 +9,9 @@
     "description": "A fast-talking newspaper editor schemes to win back his star reporter, who also happens to be his ex-wife.",
     "archiveId": "his_girl_friday",
     "url": "https://archive.org/details/his_girl_friday",
-    "embedUrl": "https://archive.org/embed/his_girl_friday"
+    "embedUrl": "https://archive.org/embed/his_girl_friday",
+    "image": "https://archive.org/services/img/his_girl_friday",
+    "popularRank": 12
   },
   {
     "id": "night-of-the-living-dead",
@@ -21,7 +23,9 @@
     "description": "George A. Romero's landmark zombie classic: strangers barricade themselves in a farmhouse as the dead rise.",
     "archiveId": "night_of_the_living_dead_dvd",
     "url": "https://archive.org/details/night_of_the_living_dead_dvd",
-    "embedUrl": "https://archive.org/embed/night_of_the_living_dead_dvd"
+    "embedUrl": "https://archive.org/embed/night_of_the_living_dead_dvd",
+    "image": "https://archive.org/services/img/night_of_the_living_dead_dvd",
+    "popularRank": 11
   },
   {
     "id": "the-general",
@@ -33,7 +37,9 @@
     "description": "Buster Keaton's silent masterpiece about a train engineer chasing his stolen locomotive across Civil War lines.",
     "archiveId": "TheGeneral",
     "url": "https://archive.org/details/TheGeneral",
-    "embedUrl": "https://archive.org/embed/TheGeneral"
+    "embedUrl": "https://archive.org/embed/TheGeneral",
+    "image": "https://archive.org/services/img/TheGeneral",
+    "popularRank": 13
   },
   {
     "id": "nosferatu",
@@ -45,7 +51,9 @@
     "description": "F. W. Murnau's silent vampire film, with Max Schreck's unforgettable Count Orlok.",
     "archiveId": "nosferatu_201508",
     "url": "https://archive.org/details/nosferatu_201508",
-    "embedUrl": "https://archive.org/embed/nosferatu_201508"
+    "embedUrl": "https://archive.org/embed/nosferatu_201508",
+    "image": "https://archive.org/services/img/nosferatu_201508",
+    "popularRank": 14
   },
   {
     "id": "cabinet-of-dr-caligari",
@@ -57,7 +65,8 @@
     "description": "A sinister hypnotist and his sleepwalking servant haunt a German town in this expressionist landmark.",
     "archiveId": "DasKabinettdesDoktorCaligariTheCabinetofDrCaligari",
     "url": "https://archive.org/details/DasKabinettdesDoktorCaligariTheCabinetofDrCaligari",
-    "embedUrl": "https://archive.org/embed/DasKabinettdesDoktorCaligariTheCabinetofDrCaligari"
+    "embedUrl": "https://archive.org/embed/DasKabinettdesDoktorCaligariTheCabinetofDrCaligari",
+    "image": "https://archive.org/services/img/DasKabinettdesDoktorCaligariTheCabinetofDrCaligari"
   },
   {
     "id": "phantom-of-the-opera-1925",
@@ -69,7 +78,8 @@
     "description": "Lon Chaney stars as the masked figure lurking beneath the Paris Opera House.",
     "archiveId": "ThePhantomoftheOpera",
     "url": "https://archive.org/details/ThePhantomoftheOpera",
-    "embedUrl": "https://archive.org/embed/ThePhantomoftheOpera"
+    "embedUrl": "https://archive.org/embed/ThePhantomoftheOpera",
+    "image": "https://archive.org/services/img/ThePhantomoftheOpera"
   },
   {
     "id": "carnival-of-souls",
@@ -81,7 +91,8 @@
     "description": "After surviving a car crash, a church organist is drawn to an abandoned lakeside pavilion and a ghoulish stranger.",
     "archiveId": "CarnivalofSouls",
     "url": "https://archive.org/details/CarnivalofSouls",
-    "embedUrl": "https://archive.org/embed/CarnivalofSouls"
+    "embedUrl": "https://archive.org/embed/CarnivalofSouls",
+    "image": "https://archive.org/services/img/CarnivalofSouls"
   },
   {
     "id": "house-on-haunted-hill",
@@ -93,7 +104,9 @@
     "description": "Vincent Price offers five guests $10,000 each to survive one night in a haunted mansion.",
     "archiveId": "house_on_haunted_hill_ipod",
     "url": "https://archive.org/details/house_on_haunted_hill_ipod",
-    "embedUrl": "https://archive.org/embed/house_on_haunted_hill_ipod"
+    "embedUrl": "https://archive.org/embed/house_on_haunted_hill_ipod",
+    "image": "https://archive.org/services/img/house_on_haunted_hill_ipod",
+    "popularRank": 15
   },
   {
     "id": "scarlet-street",
@@ -105,7 +118,8 @@
     "description": "Fritz Lang noir: a meek cashier and amateur painter is drawn into a con by a femme fatale and her boyfriend.",
     "archiveId": "ScarletStreet",
     "url": "https://archive.org/details/ScarletStreet",
-    "embedUrl": "https://archive.org/embed/ScarletStreet"
+    "embedUrl": "https://archive.org/embed/ScarletStreet",
+    "image": "https://archive.org/services/img/ScarletStreet"
   },
   {
     "id": "the-stranger-1946",
@@ -117,7 +131,8 @@
     "description": "Orson Welles directs and stars as a Nazi fugitive hiding in a small Connecticut town, hunted by Edward G. Robinson.",
     "archiveId": "TheStranger_0",
     "url": "https://archive.org/details/TheStranger_0",
-    "embedUrl": "https://archive.org/embed/TheStranger_0"
+    "embedUrl": "https://archive.org/embed/TheStranger_0",
+    "image": "https://archive.org/services/img/TheStranger_0"
   },
   {
     "id": "meet-john-doe",
@@ -129,7 +144,8 @@
     "description": "Frank Capra's tale of a drifter turned into a national folk hero by a newspaper stunt, starring Gary Cooper.",
     "archiveId": "meet_john_doe",
     "url": "https://archive.org/details/meet_john_doe",
-    "embedUrl": "https://archive.org/embed/meet_john_doe"
+    "embedUrl": "https://archive.org/embed/meet_john_doe",
+    "image": "https://archive.org/services/img/meet_john_doe"
   },
   {
     "id": "the-flying-deuces",
@@ -141,7 +157,8 @@
     "description": "Laurel and Hardy join the French Foreign Legion to forget a broken heart, with predictable chaos.",
     "archiveId": "TheFlyingDeuces",
     "url": "https://archive.org/details/TheFlyingDeuces",
-    "embedUrl": "https://archive.org/embed/TheFlyingDeuces"
+    "embedUrl": "https://archive.org/embed/TheFlyingDeuces",
+    "image": "https://archive.org/services/img/TheFlyingDeuces"
   },
   {
     "id": "gullivers-travels-1939",
@@ -153,7 +170,8 @@
     "description": "The Fleischer Studios animated feature about a shipwrecked sailor in the land of tiny Lilliput.",
     "archiveId": "gullivers_travels1939",
     "url": "https://archive.org/details/gullivers_travels1939",
-    "embedUrl": "https://archive.org/embed/gullivers_travels1939"
+    "embedUrl": "https://archive.org/embed/gullivers_travels1939",
+    "image": "https://archive.org/services/img/gullivers_travels1939"
   },
   {
     "id": "the-lost-world-1925",
@@ -165,7 +183,8 @@
     "description": "An expedition discovers dinosaurs on a remote plateau in this pioneering stop-motion adventure.",
     "archiveId": "lost_world",
     "url": "https://archive.org/details/lost_world",
-    "embedUrl": "https://archive.org/embed/lost_world"
+    "embedUrl": "https://archive.org/embed/lost_world",
+    "image": "https://archive.org/services/img/lost_world"
   },
   {
     "id": "battleship-potemkin",
@@ -177,7 +196,8 @@
     "description": "Sergei Eisenstein's revolutionary silent epic, famous for the Odessa Steps sequence.",
     "archiveId": "BattleshipPotemkin",
     "url": "https://archive.org/details/BattleshipPotemkin",
-    "embedUrl": "https://archive.org/embed/BattleshipPotemkin"
+    "embedUrl": "https://archive.org/embed/BattleshipPotemkin",
+    "image": "https://archive.org/services/img/BattleshipPotemkin"
   },
   {
     "id": "bonanza-pd",
@@ -189,7 +209,8 @@
     "description": "Public-domain episodes of the classic western about the Cartwright family and their Ponderosa ranch.",
     "archiveId": "Bonanza_pd",
     "url": "https://archive.org/details/Bonanza_pd",
-    "embedUrl": "https://archive.org/embed/Bonanza_pd"
+    "embedUrl": "https://archive.org/embed/Bonanza_pd",
+    "image": "https://archive.org/services/img/Bonanza_pd"
   },
   {
     "id": "sherlock-holmes-1954-shy-ballerina",
@@ -201,7 +222,8 @@
     "description": "An episode of the 1954 Sherlock Holmes TV series starring Ronald Howard as the great detective.",
     "archiveId": "SherlockHolmes-TheCaseoftheShyBallerina",
     "url": "https://archive.org/details/SherlockHolmes-TheCaseoftheShyBallerina",
-    "embedUrl": "https://archive.org/embed/SherlockHolmes-TheCaseoftheShyBallerina"
+    "embedUrl": "https://archive.org/embed/SherlockHolmes-TheCaseoftheShyBallerina",
+    "image": "https://archive.org/services/img/SherlockHolmes-TheCaseoftheShyBallerina"
   },
   {
     "id": "knightriders",
@@ -213,7 +235,8 @@
     "description": "George A. Romero's cult drama about a traveling troupe that stages medieval jousts on motorcycles. Stars Ed Harris.",
     "youtubeId": "B7RsU9_DTfU",
     "url": "https://www.youtube.com/watch?v=B7RsU9_DTfU",
-    "embedUrl": "https://www.youtube-nocookie.com/embed/B7RsU9_DTfU"
+    "embedUrl": "https://www.youtube-nocookie.com/embed/B7RsU9_DTfU",
+    "image": "https://i.ytimg.com/vi/B7RsU9_DTfU/hqdefault.jpg"
   },
   {
     "id": "saturn-3",
@@ -225,7 +248,9 @@
     "description": "Kirk Douglas and Farrah Fawcett face a murderous robot on a remote research station near Saturn.",
     "youtubeId": "wgBnLO4Pnb0",
     "url": "https://www.youtube.com/watch?v=wgBnLO4Pnb0",
-    "embedUrl": "https://www.youtube-nocookie.com/embed/wgBnLO4Pnb0"
+    "embedUrl": "https://www.youtube-nocookie.com/embed/wgBnLO4Pnb0",
+    "image": "https://i.ytimg.com/vi/wgBnLO4Pnb0/hqdefault.jpg",
+    "popularRank": 18
   },
   {
     "id": "canterville-ghost-1996",
@@ -237,7 +262,8 @@
     "description": "Patrick Stewart plays a centuries-old ghost whose haunting plans are upended by an American family and their daughter (Neve Campbell).",
     "youtubeId": "oWMJSl_ARSA",
     "url": "https://www.youtube.com/watch?v=oWMJSl_ARSA",
-    "embedUrl": "https://www.youtube-nocookie.com/embed/oWMJSl_ARSA"
+    "embedUrl": "https://www.youtube-nocookie.com/embed/oWMJSl_ARSA",
+    "image": "https://i.ytimg.com/vi/oWMJSl_ARSA/hqdefault.jpg"
   },
   {
     "id": "birders-guide-to-everything",
@@ -249,7 +275,8 @@
     "description": "A teen birdwatcher and his friends set out on a road trip to confirm a sighting of a supposedly extinct duck. With Ben Kingsley.",
     "youtubeId": "bopJV_Xk_Ls",
     "url": "https://www.youtube.com/watch?v=bopJV_Xk_Ls",
-    "embedUrl": "https://www.youtube-nocookie.com/embed/bopJV_Xk_Ls"
+    "embedUrl": "https://www.youtube-nocookie.com/embed/bopJV_Xk_Ls",
+    "image": "https://i.ytimg.com/vi/bopJV_Xk_Ls/hqdefault.jpg"
   },
   {
     "id": "stuck-in-love",
@@ -261,7 +288,8 @@
     "description": "A novelist (Greg Kinnear) and his family navigate love and heartbreak over one year. With Jennifer Connelly and Lily Collins.",
     "youtubeId": "H9Yjuul5GIU",
     "url": "https://www.youtube.com/watch?v=H9Yjuul5GIU",
-    "embedUrl": "https://www.youtube-nocookie.com/embed/H9Yjuul5GIU"
+    "embedUrl": "https://www.youtube-nocookie.com/embed/H9Yjuul5GIU",
+    "image": "https://i.ytimg.com/vi/H9Yjuul5GIU/hqdefault.jpg"
   },
   {
     "id": "trancers",
@@ -273,7 +301,8 @@
     "description": "A cop from the future travels back to 1985 Los Angeles to hunt down a cult leader and his zombie-like followers.",
     "youtubeId": "IV1no2B0g5I",
     "url": "https://www.youtube.com/watch?v=IV1no2B0g5I",
-    "embedUrl": "https://www.youtube-nocookie.com/embed/IV1no2B0g5I"
+    "embedUrl": "https://www.youtube-nocookie.com/embed/IV1no2B0g5I",
+    "image": "https://i.ytimg.com/vi/IV1no2B0g5I/hqdefault.jpg"
   },
   {
     "id": "tourist-trap",
@@ -285,7 +314,8 @@
     "description": "Stranded travelers stumble into a roadside museum of eerie mannequins and a telekinetic killer.",
     "youtubeId": "raz1Zn0BajQ",
     "url": "https://www.youtube.com/watch?v=raz1Zn0BajQ",
-    "embedUrl": "https://www.youtube-nocookie.com/embed/raz1Zn0BajQ"
+    "embedUrl": "https://www.youtube-nocookie.com/embed/raz1Zn0BajQ",
+    "image": "https://i.ytimg.com/vi/raz1Zn0BajQ/hqdefault.jpg"
   },
   {
     "id": "hanna",
@@ -295,7 +325,9 @@
     "genre": "Action",
     "source": "tubi",
     "description": "Raised in isolation to be the perfect assassin, a 16-year-old girl sets out across Europe on a dangerous mission.",
-    "url": "https://tubitv.com/movies/100001993/hanna"
+    "url": "https://tubitv.com/movies/100001993/hanna",
+    "image": "https://canvas-lb.tubitv.com/opts/XJNiZTW2oHmZzA==/a5a9d84c-35a8-43ab-95e4-c5d61dc5169d/CNcHEKgEOgUxLjEuOQ==",
+    "popularRank": 6
   },
   {
     "id": "kong-skull-island",
@@ -305,7 +337,9 @@
     "genre": "Action",
     "source": "tubi",
     "description": "Scientists and soldiers venture onto an uncharted island ruled by the mighty Kong.",
-    "url": "https://tubitv.com/movies/100025912/kong-skull-island"
+    "url": "https://tubitv.com/movies/100025912/kong-skull-island",
+    "image": "https://canvas-lb.tubitv.com/opts/vVYcVwJryPj27A==/d707124b-b9d8-4be3-aba4-fd2d038fdc29/CNcHEKgEOgUxLjEuOQ==",
+    "popularRank": 4
   },
   {
     "id": "magnificent-seven-2016",
@@ -315,7 +349,9 @@
     "genre": "Western",
     "source": "tubi",
     "description": "Seven gunslingers band together to protect a town from a ruthless industrialist.",
-    "url": "https://tubitv.com/movies/100057731/the-magnificent-seven"
+    "url": "https://tubitv.com/movies/100057731/the-magnificent-seven",
+    "image": "https://canvas-lb.tubitv.com/opts/4vo8RQUXAybiuQ==/0482129d-3b07-4c57-b434-1f485391d7b5/CNcHEKgEOgUxLjEuOQ==",
+    "popularRank": 8
   },
   {
     "id": "i-am-legend",
@@ -325,7 +361,9 @@
     "genre": "Sci-Fi",
     "source": "tubi",
     "description": "In a plague-ravaged New York, a scientist who may be the last man alive battles infected mutants.",
-    "url": "https://tubitv.com/movies/594084/i-am-legend"
+    "url": "https://tubitv.com/movies/594084/i-am-legend",
+    "image": "https://canvas-lb.tubitv.com/opts/WyqGSbzStR2tww==/ad448d5c-53c5-4216-b94e-9399ad6e0b79/CNcHEKgEOgUxLjEuOQ==",
+    "popularRank": 5
   },
   {
     "id": "robots",
@@ -335,7 +373,9 @@
     "genre": "Animation",
     "source": "tubi",
     "description": "A young inventor robot heads to the big city and leads a rebellion against being scrapped as outdated.",
-    "url": "https://tubitv.com/movies/626983/robots"
+    "url": "https://tubitv.com/movies/626983/robots",
+    "image": "https://canvas-lb.tubitv.com/opts/2Wc9XqXlfCQw-Q==/5f86926b-1864-4a8d-bdcd-9858454744e7/CNcHEKgEOgUxLjEuOQ==",
+    "popularRank": 10
   },
   {
     "id": "meet-the-parents",
@@ -345,7 +385,9 @@
     "genre": "Comedy",
     "source": "tubi",
     "description": "Greg Focker tries to impress his girlfriend's suspicious ex-CIA father before proposing.",
-    "url": "https://tubitv.com/movies/100002083/meet-the-parents"
+    "url": "https://tubitv.com/movies/100002083/meet-the-parents",
+    "image": "https://canvas-lb.tubitv.com/opts/R1Rnx2tOrXmtcQ==/0527bd7b-ad0d-4e3a-989f-c72cc489ee08/CNcHEKgEOgUxLjEuOQ==",
+    "popularRank": 7
   },
   {
     "id": "columbo",
@@ -355,7 +397,8 @@
     "genre": "Mystery",
     "source": "tubi",
     "description": "Peter Falk's rumpled, relentless LAPD lieutenant always gets his killer. Just one more thing...",
-    "url": "https://tubitv.com/series/300006728/columbo"
+    "url": "https://tubitv.com/series/300006728/columbo",
+    "image": "https://canvas-lb.tubitv.com/opts/TbzxE5FCx08KCw==/64665029-c46d-44e2-b419-d6e2fc625e99/CNcHEKgEOgUxLjEuOQ=="
   },
   {
     "id": "midsomer-murders",
@@ -365,7 +408,8 @@
     "genre": "Mystery",
     "source": "tubi",
     "description": "Detectives solve murders in the deceptively peaceful villages of an English county.",
-    "url": "https://tubitv.com/series/300004985/midsomer-murders"
+    "url": "https://tubitv.com/series/300004985/midsomer-murders",
+    "image": "https://canvas-lb.tubitv.com/opts/e4SUIZrichtqXw==/00512da1-74c8-4728-a2e3-6abd7903d7fd/CNcHEKgEOgUxLjEuOQ=="
   },
   {
     "id": "scooby-doo-where-are-you",
@@ -375,7 +419,8 @@
     "genre": "Animation",
     "source": "tubi",
     "description": "The original adventures of Scooby-Doo and Mystery Inc. as they unmask spooky villains.",
-    "url": "https://tubitv.com/series/300006854/scooby-doo-where-are-you"
+    "url": "https://tubitv.com/series/300006854/scooby-doo-where-are-you",
+    "image": "https://canvas-lb.tubitv.com/opts/_t1p4E0PgVhhig==/c1ad7208-db4f-49c9-b38c-71367c97be55/CNcHEKgEOgUxLjEuOQ=="
   },
   {
     "id": "miami-vice",
@@ -385,7 +430,8 @@
     "genre": "Crime",
     "source": "tubi",
     "description": "Detectives Crockett and Tubbs go undercover in neon-soaked 1980s Miami.",
-    "url": "https://tubitv.com/series/300010244/miami-vice"
+    "url": "https://tubitv.com/series/300010244/miami-vice",
+    "image": "https://canvas-lb.tubitv.com/opts/9THHJdviPLITQA==/c748c43d-310e-4a48-b2cc-758755b1bdd5/CNcHEKgEOgUxLjEuOQ=="
   },
   {
     "id": "planes-trains-automobiles",
@@ -395,7 +441,9 @@
     "genre": "Comedy",
     "source": "pluto",
     "description": "Steve Martin and John Candy endure a disastrous cross-country trip to make it home for Thanksgiving.",
-    "url": "https://pluto.tv/us/movies/5cc35d4535f85ad1b1a12c85/"
+    "url": "https://pluto.tv/us/movies/5cc35d4535f85ad1b1a12c85/",
+    "image": "https://wwwimage-us.plutostatic.tv/thumbnails/photos/w600-q80/pplcrn/ptvm/episodes/5cc35d4535f85ad1b1a12c85/poster16_9_1791412094930.jpg?format=webp",
+    "popularRank": 2
   },
   {
     "id": "trading-places",
@@ -405,7 +453,9 @@
     "genre": "Comedy",
     "source": "pluto",
     "description": "A con artist and a snobbish commodities broker have their lives swapped as part of a cruel bet.",
-    "url": "https://pluto.tv/us/movies/5ab2fb91b71f50edcf89a94f/"
+    "url": "https://pluto.tv/us/movies/5ab2fb91b71f50edcf89a94f/",
+    "image": "https://wwwimage-us.plutostatic.tv/thumbnails/photos/w600-q80/pplcrn/ptvm/episodes/5ab2fb91b71f50edcf89a94f/poster16_9_1785522602161.jpg?format=webp",
+    "popularRank": 3
   },
   {
     "id": "star-trek-ii-wrath-of-khan",
@@ -415,7 +465,9 @@
     "genre": "Sci-Fi",
     "source": "pluto",
     "description": "Admiral Kirk faces his old enemy Khan, who has escaped exile and seeks revenge.",
-    "url": "https://pluto.tv/us/movies/5ca3a396e55c19b8c55b1f69/"
+    "url": "https://pluto.tv/us/movies/5ca3a396e55c19b8c55b1f69/",
+    "image": "https://wwwimage-us.plutostatic.tv/thumbnails/photos/w600-q80/pplcrn/ptvm/episodes/5ca3a396e55c19b8c55b1f69/poster16_9_1793376808461.jpg?format=webp",
+    "popularRank": 1
   },
   {
     "id": "star-trek-iv-voyage-home",
@@ -425,7 +477,9 @@
     "genre": "Sci-Fi",
     "source": "pluto",
     "description": "Kirk and crew travel back to 1986 San Francisco to find humpback whales and save the future.",
-    "url": "https://pluto.tv/us/movies/5f7e16d4b93a07001a851f89/"
+    "url": "https://pluto.tv/us/movies/5f7e16d4b93a07001a851f89/",
+    "image": "https://wwwimage-us.plutostatic.tv/thumbnails/photos/w600-q80/pplcrn/ptvm/assets/manual/49f7fc0d-7199-4cab-ac61-0454e1f64ad8.jpg?format=webp",
+    "popularRank": 16
   },
   {
     "id": "ex-machina",
@@ -435,7 +489,9 @@
     "genre": "Sci-Fi",
     "source": "pluto",
     "description": "A young programmer is invited to test the consciousness of a remarkable humanoid AI.",
-    "url": "https://pluto.tv/us/movies/62a2200bcb032400134e4695/"
+    "url": "https://pluto.tv/us/movies/62a2200bcb032400134e4695/",
+    "image": "https://wwwimage-us.plutostatic.tv/thumbnails/photos/w600-q80/pplcrn/ptvm/episodes/62a2200bcb032400134e4695/poster16_9_1756152778893.jpg?format=webp",
+    "popularRank": 9
   },
   {
     "id": "green-room",
@@ -445,6 +501,8 @@
     "genre": "Thriller",
     "source": "pluto",
     "description": "A punk band witnesses a crime at a remote club and must fight its way out.",
-    "url": "https://pluto.tv/us/movies/6323b4136cb7a00013a63164/"
+    "url": "https://pluto.tv/us/movies/6323b4136cb7a00013a63164/",
+    "image": "https://wwwimage-us.plutostatic.tv/thumbnails/photos/w600-q80/pplcrn/ptvm/episodes/6323b4136cb7a00013a63164/poster16_9_1789409161973.jpg?format=webp",
+    "popularRank": 17
   }
 ]
