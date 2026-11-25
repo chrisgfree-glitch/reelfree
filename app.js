@@ -119,7 +119,25 @@ async function home() {
   render();
   genreBrowser();
   requestTitle(titles);
+  sportsBrowser();
   window.dispatchEvent(new CustomEvent('reelfree:home', { detail: { visible } }));
+}
+
+// Sports: one sport at a time. Official YouTube playlists embed in-site (loaded only for the chosen sport);
+// free FAST channels (Pluto TV, Tubi) open in a new tab.
+async function sportsBrowser() {
+  const box = $('#sports'); if (!box) return;
+  let data; try { data = await getJSON('/data/sports.json', 10000); } catch { box.hidden = true; return; }
+  const sp = data.sports || []; if (!sp.length) { box.hidden = true; return; }
+  $('#sport-chips').innerHTML = sp.map((x, i) => `<button class="chip${i ? '' : ' on'}" data-i="${i}">${esc(x.sport)} <span>${x.count}</span></button>`).join('');
+  const show = (i) => {
+    document.querySelectorAll('#sport-chips .chip').forEach((c) => c.classList.toggle('on', +c.dataset.i === i));
+    $('#sport-grid').innerHTML = sp[i].items.map((it) => it.kind === 'embed'
+      ? `<div class="sport-item"><div class="player"><iframe src="${esc(it.embed)}" title="${esc(it.name)} on YouTube" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><p><strong>${esc(it.name)}</strong> <span class="muted small">· ${esc(it.service)} · ${esc(it.note)}</span> <a class="small" href="${esc(it.url)}" target="_blank" rel="noopener">Channel ↗</a></p></div>`
+      : `<a class="sport-tab" href="${esc(it.url)}" target="_blank" rel="noopener"><strong>${esc(it.name)}</strong><span class="muted small">${esc(it.service)} · ${esc(it.note)}</span><span class="btn small primary">Open ↗</span></a>`).join('');
+  };
+  $('#sport-chips').addEventListener('click', (e) => { const b = e.target.closest('.chip'); if (b) show(+b.dataset.i); });
+  show(0);
 }
 
 // "Request a title": TMDB search through /api/tmdb-search; shows where it's free, or a Notify me button.

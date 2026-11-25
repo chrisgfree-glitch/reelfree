@@ -1,0 +1,514 @@
+{
+ "note": "Official league/org YouTube channels and free ad-supported sports channels. Most live major games are not legally free.",
+ "sports": [
+  {
+   "sport": "Football",
+   "count": 3,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "NFL",
+     "url": "https://www.youtube.com/@NFL/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUDVYQ4Zhbm3S2dlz7P1GBDg",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "NFL Films",
+     "url": "https://www.youtube.com/@NFLFilms/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUY3NEq2LYrmdoGkevo9BH5A",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "NFL Channel",
+     "url": "https://pluto.tv/us/live-tv/nfl-channel",
+     "note": "Free 24/7 channel (ads)"
+    }
+   ]
+  },
+  {
+   "sport": "Baseball",
+   "count": 3,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "MLB",
+     "url": "https://www.youtube.com/@MLB/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUoLrcjPV5PbUrUyXq5mjc_A",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "MLB Vault",
+     "url": "https://www.youtube.com/@MLBVault/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUbQ07z3YBi8RUc6nBxJhg2Q",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "MLB",
+     "url": "https://pluto.tv/us/live-tv/mlb",
+     "note": "Free 24/7 channel (ads)"
+    }
+   ]
+  },
+  {
+   "sport": "Basketball",
+   "count": 3,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "NBA",
+     "url": "https://www.youtube.com/@NBA/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUWJ2lWNubArHWmf3FIHbfcQ",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "WNBA",
+     "url": "https://www.youtube.com/@WNBA/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUO9a_ryN_l7DIDS-VIt-zmw",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "tab",
+     "service": "YouTube (official)",
+     "name": "NBA History",
+     "url": "https://www.youtube.com/@NBAHistory/videos",
+     "note": "Official channel (opens YouTube)"
+    }
+   ]
+  },
+  {
+   "sport": "Hockey",
+   "count": 1,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "NHL",
+     "url": "https://www.youtube.com/@NHL/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUqFMzb-4AUf6WAIbl132QKA",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Soccer",
+   "count": 3,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Major League Soccer",
+     "url": "https://www.youtube.com/@MLS/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUSZbXT5TLLW_i-5W8FZpFsg",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "FIFA",
+     "url": "https://www.youtube.com/@FIFA/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUpcTrCXblq78GZrTUTLWeBw",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Premier League",
+     "url": "https://www.youtube.com/@premierleague/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUG5qGWdu8nIRZqJ_GgDwQ-w",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Racing (F1, NASCAR, IndyCar)",
+   "count": 4,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "FORMULA 1",
+     "url": "https://www.youtube.com/@Formula1/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUB_qr75-ydFVKSF9Dmo6izg",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "NASCAR",
+     "url": "https://www.youtube.com/@NASCAR/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUuN9hYw2RpoAW8rZ3VK3isA",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "NTT INDYCAR SERIES",
+     "url": "https://www.youtube.com/@INDYCAR/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUy1F61QvUUQXAXi2Voa_fUw",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "NHRA",
+     "url": "https://www.youtube.com/@NHRA/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUJcErqlzaBzFmAh2uIxeqxQ",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Pool & Billiards",
+   "count": 1,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Accu-Stats Video Productions",
+     "url": "https://www.youtube.com/@AccuStats/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUDxrfuKTf6U0Vtd1fJTjkjA",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Boxing & MMA",
+   "count": 5,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "UFC",
+     "url": "https://www.youtube.com/@UFC/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUvgfXK4nTYKudb0rFR6noLA",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Matchroom Boxing",
+     "url": "https://www.youtube.com/@MatchroomBoxing/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UU7LReVje9aPB4B6XAsXX8WQ",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Top Rank Boxing",
+     "url": "https://www.youtube.com/@toprank/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUbzRzJNHx7ZLlJML9BjZQVQ",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "Top Rank Classics",
+     "url": "https://pluto.tv/us/live-tv/top-rank-classics",
+     "note": "Free 24/7 channel (ads)"
+    },
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "DAZN Ringside",
+     "url": "https://pluto.tv/us/live-tv/dazn-ringside",
+     "note": "Free 24/7 channel (ads)"
+    }
+   ]
+  },
+  {
+   "sport": "Tennis",
+   "count": 3,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Tennis TV",
+     "url": "https://www.youtube.com/@TennisTV/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUbcxFkd6B9xUU54InHv4Tig",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "WTA",
+     "url": "https://www.youtube.com/@WTA/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUaBIVVpHjq6j3tSyxwTE-8Q",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "US Open Tennis Championships",
+     "url": "https://www.youtube.com/@usopen/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUXbboag48Qlr78zzz6SkzkQ",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Golf",
+   "count": 3,
+   "items": [
+    {
+     "kind": "tab",
+     "service": "YouTube (official)",
+     "name": "PGA Tour",
+     "url": "https://www.youtube.com/@PGATOUR/videos",
+     "note": "Official channel (opens YouTube)"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "LPGA",
+     "url": "https://www.youtube.com/@LPGA/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUWZbPo5_riXyCFDyaMl2yRA",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "PGA TOUR",
+     "url": "https://pluto.tv/us/live-tv/pga-tour",
+     "note": "Free 24/7 channel (ads)"
+    }
+   ]
+  },
+  {
+   "sport": "Bowling",
+   "count": 1,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "PBA",
+     "url": "https://www.youtube.com/@PBA/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUU25WgyHtinIoTJpqG7tlsA",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Esports",
+   "count": 2,
+   "items": [
+    {
+     "kind": "tab",
+     "service": "YouTube (official)",
+     "name": "LoL Esports",
+     "url": "https://www.youtube.com/@lolesports/videos",
+     "note": "Official channel (opens YouTube)"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "VALORANT Champions Tour",
+     "url": "https://www.youtube.com/@valorantesports/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUA1d3HFGFUmkKr2JIUA5Vlw",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Olympics & Track",
+   "count": 2,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Olympic Games",
+     "url": "https://www.youtube.com/@Olympics/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUTl3QQTvqHFjurroKxexy2Q",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "World Athletics",
+     "url": "https://www.youtube.com/@WorldAthletics/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUQk7fWv15ChjMJLCRVmtApw",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Wrestling",
+   "count": 4,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "WWE",
+     "url": "https://www.youtube.com/@WWE/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUJ5v_MCY6GNUBTO8-D3XoAg",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "All Elite Wrestling",
+     "url": "https://www.youtube.com/@AEW/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUFN4JkGP_bVhAdBsoV9xftA",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "FloWrestling",
+     "url": "https://www.youtube.com/@FloWrestling/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UU0OFPvrlWV-FiAVIYjBHkQg",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "TNA Wrestling",
+     "url": "https://pluto.tv/us/live-tv/tna-wrestling",
+     "note": "Free 24/7 channel (ads)"
+    }
+   ]
+  },
+  {
+   "sport": "Rugby",
+   "count": 2,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "World Rugby",
+     "url": "https://www.youtube.com/@WorldRugby/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUE28rwYoaV7jvU6GVzdu_GQ",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    },
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Guinness Men's Six Nations",
+     "url": "https://www.youtube.com/@SixNationsRugby/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUL5bAcVfbxSAs-UM5f5ncWg",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Cricket",
+   "count": 1,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "ICC",
+     "url": "https://www.youtube.com/@ICC/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUt2JXOLNxqry7B_4rRZME3Q",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Rodeo",
+   "count": 3,
+   "items": [
+    {
+     "kind": "tab",
+     "service": "YouTube (official)",
+     "name": "PBR",
+     "url": "https://www.youtube.com/@PBR/videos",
+     "note": "Official channel (opens YouTube)"
+    },
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "PBR RidePass",
+     "url": "https://pluto.tv/us/watch/live-tv/18585/",
+     "note": "Free 24/7 bull riding & rodeo channel (ads)"
+    },
+    {
+     "kind": "tab",
+     "service": "Tubi",
+     "name": "Cowboy+ Sports",
+     "url": "https://tubitv.com/live/400000285/cowboy-sports",
+     "note": "Free 24/7 ProRodeo & Western sports channel (ads)"
+    }
+   ]
+  },
+  {
+   "sport": "Volleyball",
+   "count": 1,
+   "items": [
+    {
+     "kind": "embed",
+     "service": "YouTube (official)",
+     "name": "Volleyball World",
+     "url": "https://www.youtube.com/@volleyballworld/videos",
+     "embed": "https://www.youtube-nocookie.com/embed/videoseries?list=UUNMg6XDhRZI2QzL4pWOvP_w",
+     "note": "Latest uploads: highlights, condensed & classic games"
+    }
+   ]
+  },
+  {
+   "sport": "Cycling",
+   "count": 1,
+   "items": [
+    {
+     "kind": "tab",
+     "service": "YouTube (official)",
+     "name": "tourdefrance",
+     "url": "https://www.youtube.com/@tourdefrance/videos",
+     "note": "Official channel (opens YouTube)"
+    }
+   ]
+  },
+  {
+   "sport": "Action sports",
+   "count": 2,
+   "items": [
+    {
+     "kind": "tab",
+     "service": "YouTube (official)",
+     "name": "Red Bull",
+     "url": "https://www.youtube.com/@redbull/videos",
+     "note": "Official channel (opens YouTube)"
+    },
+    {
+     "kind": "tab",
+     "service": "YouTube (official)",
+     "name": "X Games",
+     "url": "https://www.youtube.com/@XGames/videos",
+     "note": "Official channel (opens YouTube)"
+    }
+   ]
+  },
+  {
+   "sport": "Sports news & multi-sport",
+   "count": 2,
+   "items": [
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "FOX Sports",
+     "url": "https://pluto.tv/us/live-tv/fox-sports",
+     "note": "Free 24/7 channel (ads)"
+    },
+    {
+     "kind": "tab",
+     "service": "Pluto TV",
+     "name": "CBS Sports HQ",
+     "url": "https://pluto.tv/us/live-tv/cbs-sports-hq",
+     "note": "Free 24/7 channel (ads)"
+    }
+   ]
+  }
+ ]
+}
