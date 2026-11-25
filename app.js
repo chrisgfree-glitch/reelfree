@@ -358,7 +358,7 @@ function wireReport(t) {
 const page = document.body.dataset.page;
 if (page === 'home') home();
 if (page === 'title') titlePage();
-if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js?v=20261124d').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK, TITLES: () => window.__rfTitles }));
+if (CFG.accountsEnabled && CFG.firebase) import('/accounts.js?v=20261124e').then((m) => m.init(CFG, { loadData, card, extCard, esc, page, getJSON, PLAYBACK, TITLES: () => window.__rfTitles }));
 else if (page === 'account') $('#account-root').innerHTML = '<h1>My lists</h1><p class="muted">Accounts are coming soon. Favorites and private lists will appear here.</p>';
 
 // Optional TMDB enrichment: only active when the server has TMDB env vars.

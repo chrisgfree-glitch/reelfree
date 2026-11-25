@@ -13,7 +13,7 @@ export default function handler(req, res) {
   if (t) {
     const url = `https://reelfree.net/title/${encodeURIComponent(t.id)}`;
     const title = `${t.title} (${t.year}) · Watch free on ReelFree`;
-    const desc = (t.description || 'Watch free and legally on ReelFree.').slice(0, 200);
+    const desc = (t.description || 'ReelFree: the only real free way to watch.').slice(0, 200);
     const img = t.image || 'https://reelfree.net/icons/icon-512.png';
     const meta = [
       `<meta property="og:type" content="${t.type === 'tv' ? 'video.tv_show' : 'video.movie'}">`, `<meta property="og:site_name" content="ReelFree">`,
