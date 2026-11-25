@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/title/:id",
-      "destination": "/title.html"
+      "destination": "/title"
     }
   ],
   "redirects": [
